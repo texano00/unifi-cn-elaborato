@@ -1,0 +1,75 @@
+\documentclass[a4paper]{article}
+
+%\usepackage[utf8]{inputenc}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{import}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{tabu}
+\usepackage{mathtools}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{listings}
+\usepackage{titling}
+\usepackage[utf8x]{inputenc}
+\usepackage[numbered,framed]{matlab-prettifier}
+
+\let\ph\mlplaceholder % shorter macro
+\lstMakeShortInline"
+
+\newcommand{\bnb}{\begin{nobreak}}
+\newcommand{\enb}{\end{nobreak}}
+
+\lstset{
+  style              = Matlab-editor,
+  basicstyle         = \mlttfamily,
+  escapechar         = ",
+  mlshowsectionrules = true,
+}
+
+\pretitle{%
+  \begin{center}
+  \LARGE
+  \includegraphics[width=\textwidth/4]{assets/logo-unifi.png}\\[\bigskipamount]
+}
+\posttitle{\end{center}}
+\date{}
+
+\begin{document}
+
+
+
+\title{\vspace{2cm}Elaborato di\\ \textbf{Calcolo Numerico}\\ Anno Accademico 2017/2018\vspace{3cm}}
+
+\author{Yuri \emph{Bacciarini} - \texttt{5530804} - \href{mailto:yuri.bacciarini@stud.unifi.it}{\textit{yuri.bacciarini@stud.unifi.it}}
+
+\maketitle
+\newpage
+\tableofcontents
+
+
+\newpage
+\section{\textbf{Capitolo 1}}
+\input{cap_1/cap_1.tex}
+
+\newpage
+\section{\textbf{Capitolo 2}}
+\input{cap_2/cap_2.tex}
+
+\newpage
+\section{\textbf{Capitolo 3}}
+\input{cap_3/cap_3.tex}
+
+\pagenumbering{roman}
+\section{\textbf{Figure}}
+\input{figure.tex}
+
+
+\end{document}
