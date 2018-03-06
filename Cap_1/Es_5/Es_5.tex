@@ -1,0 +1,21 @@
+Il seguente codice MatLab:\\
+\lstinputlisting[language=Matlab]{Cap_1/Es_5/Es_5.m}
+restituisce i seguenti valori:\\
+\begin{enumerate}
+\item $delta = 1/16$\\
+Il valore di $delta=[0.0625]_{10}$ in binario si scrive $delta=[0,0001]_2$ . Al passo 16, che sarà il valore di \textit{count} la rappresentazione di $x$ sarà uguale a 1, e siccome l'unica condizione di uscita dello while è $x~=1$, il ciclo si arresterà.
+\\
+\item $delta = 1/20$\\
+Il valore di $delta=[0,05]_{10}$ in binario si scrive $delta=[0,00\overline{0011}]_2$ . A differenza del caso precedente, si può notare che la rappresentazione del valore di delta in binario è periodica. Al passo 10 la rappresentazione di $x$ sarà diversa da 1, poichè la somma riguarda numeri periodici, e siccome l'unica condizione di uscita dello while è $x~=1$, il ciclo non si arresterà mai.\\
+Possiamo provarlo effettuando la somma in binario di:
+\[
+\Big[\frac{1}{20}\Big]_{10}=\Big[0,00\overline{0011}\Big]_2
+\]
+\[
+\Big[0,00\overline{0011}\Big]_2+\Big[0,00\overline{0011}\Big]_2+ \underbrace{...}_{6 volte}+\Big[0,00\overline{0011}\Big]_2+\Big[0,00\overline{0011}\Big]_2 = 
+\]
+\[
+= [0.100011]_2 \approx [0.546875]_{10} \neq [1.00000]_{10}
+\]
+che spiegherebbe il motivo del loop dello while.
+\end{enumerate}

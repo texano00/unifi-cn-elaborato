@@ -1,10 +1,9 @@
 \documentclass[a4paper]{article}
-
-%\usepackage[utf8]{inputenc}
-
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage[export]{adjustbox}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{url}
@@ -20,8 +19,8 @@
 \usepackage{titling}
 \usepackage[utf8x]{inputenc}
 \usepackage[numbered,framed]{matlab-prettifier}
-
-\let\ph\mlplaceholder % shorter macro
+\usepackage{amsmath}
+\let\ph\mlplaceholder
 \lstMakeShortInline"
 
 \newcommand{\bnb}{\begin{nobreak}}
@@ -40,35 +39,43 @@
   \includegraphics[width=\textwidth/4]{assets/logo-unifi.png}\\[\bigskipamount]
 }
 \posttitle{\end{center}}
+
+\title{\vspace{2cm}Elaborato di\\ \textbf{Calcolo Numerico}\\ Anno Accademico 2017/2018\vspace{1cm}}
+
+\author
+{Mattia D'Autilia - \texttt{5765968} mattia.dautilia@stud.unifi.it\\Yuri Bacciarini - \texttt{5654547} yuri.bacciarini@stud.unifi.it}
+
 \date{}
+
+\addto\captionsenglish{\renewcommand{\contentsname}{Capitoli}}
 
 \begin{document}
 
-
-
-\title{\vspace{2cm}Elaborato di\\ \textbf{Calcolo Numerico}\\ Anno accademico 2017/2018\vspace{3cm}}
-
-\author
-{Yuri \emph{Bacciarini} - \texttt{5654547} - {\textit{yuri.bacciarini@stud.unifi.it}}}
-{Mattia \emph{D'Autilia} - \texttt{5765968} - {\textit{mattia.dautilia@stud.unifi.it}}}
+\pagenumbering{Roman}
 
 \maketitle
+
+\begin{center}
+\today{}
+\end{center}
+
 \newpage
+
+\newpage
+
 \tableofcontents
-
-
 \newpage
-\section{\textbf{Capitolo 1}}
-\input{cap_1/cap_1.tex}
 
+\pagenumbering{arabic}
+
+\input{Cap_1/Cap_1.tex}
 \newpage
-\section{\textbf{Capitolo 2}}
-\input{cap_2/cap_2.tex}
-
+\input{Cap_2/Cap_2.tex}
 \newpage
-\section{\textbf{Capitolo 3}}
-\input{cap_3/cap_3.tex}
-
-\pagenumbering{roman}
+\input{Cap_3/Cap_3.tex}
+%\newpage
+%\input{cap_4/cap4.tex}
+%\newpage
+%\input{cap_5/cap5.tex}
 
 \end{document}
