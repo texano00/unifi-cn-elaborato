@@ -1,0 +1,113 @@
+\lstinputlisting[language=Matlab]{Cap_3/Es_5/Es_5.m}
+
+\begin{flushleft}
+	\textbf{Esempio $risolutoreLDL^t$}
+	
+	Esempio: 
+	A = 
+	\[\begin{bmatrix}
+		1 & 3   & 4    \\ 
+		3 & 1   & -60  \\
+		4 & -60 & -640 
+	\end{bmatrix}\]
+	x =
+	\[\begin{bmatrix}
+		1 \\
+		2 \\
+		3 
+	\end{bmatrix}\]
+	
+	Dove A = $LDL^t$
+	
+	L = 
+	\[\begin{bmatrix}
+		1 & 0 & 0 \\ 
+		3 & 1 & 0 \\
+		4 & 9 & 1 
+	\end{bmatrix}\]
+	
+	D = 
+	\[\begin{bmatrix}
+		1 & 0  & 0  \\ 
+		0 & -8 & 0  \\
+		0 & 0  & -8 
+	\end{bmatrix}\]
+	
+	
+	$L^t$ = 
+	\[\begin{bmatrix}
+		1 & 3 & 4 \\ 
+		0 & 1 & 9 \\
+		0 & 0 & 1 
+	\end{bmatrix}\]
+	
+	Il risultato ottenuto di x è
+	\[\begin{bmatrix}
+		-22.3750000000000 \\
+		9.12500000000000  \\
+		-1                
+	\end{bmatrix}\]
+	
+\end{flushleft}
+\begin{flushleft}
+	\textbf{Esempio risolutoreLUP}
+	
+	Esempio: 
+	A = 
+	\[\begin{bmatrix}
+		2 & 4 & 9 \\ 
+		6 & 5 & 6 \\
+		8 & 2 & 9 
+	\end{bmatrix}\]
+	xx =
+	\[\begin{bmatrix}
+		1 \\
+		2 \\
+		3 
+	\end{bmatrix}\]
+	
+	Dove $A = LU$
+	L = 
+	\[\begin{bmatrix}
+		1 & 0 & 0 \\ 
+		6 & 1 & 0 \\
+		8 & 2 & 1 
+	\end{bmatrix}\]
+	
+	U = 
+	\[\begin{bmatrix}
+		2 & 4 & 9 \\ 
+		0 & 5 & 6 \\
+		0 & 0 & 9 
+	\end{bmatrix}\]
+	
+	P = 
+	\[\begin{bmatrix}
+		1 & 0 & 0 \\ 
+		0 & 1 & 0 \\
+		0 & 0 & 1 
+	\end{bmatrix}\]
+	
+	Il risultato ottenuto di xx è
+	\[\begin{bmatrix}
+		1.40000000000000  \\
+		-1.20000000000000 \\
+		0.333333333333333 
+	\end{bmatrix}\]
+	
+\end{flushleft}
+
+\begin{tabular}{ | l | c | r | }
+	\hline
+	$K(A)$    & $\frac{\|R\|}{\|b\|}$ & $\frac{\|x-\tilde{x}\|}{\|\tilde{x}\|}$ \\
+	\hline
+	nero    & 0           & zero                                          \\
+	marrone & 1           & uno                                           \\
+	rosso   & 2           & due                                           \\
+	arancio & 3           & tre                                           \\
+	giallo  & 4           & quattro                                       \\
+	verde   & 5           & cinque                                        \\
+	blu     & 6           & sei                                           \\
+	viola   & 7           & sette                                         \\
+	\hline
+\end{tabular}
