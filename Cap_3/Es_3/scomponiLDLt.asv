@@ -1,10 +1,9 @@
-% scomponiLDLt(LDLt)
-% Metodo per la scomposizione di una matrice LDLt in tre matrici (L, D, Lt)
+% fattorizzazioneLDLt(A)
+% Metodo per la fattorizzazione LDLt di una matrice.
 
 % Input:
-% LDLt: matrice.
-
-function [L,D,Lt] = scomponiLDLt(LDLt)
+% A: matrice.
+function [L,D,Lt] = scomponiLDLt(LDLt);
     n = size(LDLt,1);
     L = zeros(n);
     D = zeros(n);
