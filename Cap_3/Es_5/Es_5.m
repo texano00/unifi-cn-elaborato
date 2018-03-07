@@ -1,5 +1,5 @@
-addpath('../es3/');
-addpath('../es4/');
+addpath('../Es_3/');
+addpath('../Es_4/');
 
 % A
 % 1.000    3.000    4.000
