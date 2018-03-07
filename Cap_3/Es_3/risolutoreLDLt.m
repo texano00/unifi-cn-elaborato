@@ -1,6 +1,6 @@
 function x = risolutoreLDLt(LDLt, b);
     [L,D,Lt] = scomponiLDLt(LDLt);
-    x = triangolareInferiore(L,b);
-    x = diagonale(D,x);
-    x = triangolareSuperiore(Lt,x);
+    x1 = triangolareInferiore(L,b);
+    x2 = diagonale(D,x1);
+    x = triangolareSuperiore(Lt,x2);
 end

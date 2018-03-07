@@ -1,25 +1,30 @@
-Fattorizzazione $LDL^t$
-
-\lstinputlisting[language=Matlab]{Cap_3/Es_2/Es_2.m}
+Il seguente codice MatLab, contiene l'implementazione di una funzione per la \textit{fattorizzazione} $LDL^t$ di una matrice:\\\
 \lstinputlisting[language=Matlab]{Cap_3/Es_2/fattorizzazioneLDLt.m}
-
-La matrice $A_1$ = 
-
-\[\begin{bmatrix}
+Il seguente codice MatLab, contiene la chiamata della funzione precedente con i seguenti parametri di input:\\\
+\begin{enumerate}
+\item
+\[
+A_1 =\begin{bmatrix}
 	1  & -1  & 2   & 2  \\ 
 	-1 & 5   & -14 & 2  \\
 	2  & -14 & 42  & 2  \\
 	2  & 2   & 2   & 65 
-\end{bmatrix}\]
-
-è fattorizzabile $LDL^t$, è quindi sdp.
-
-La matrice $A_2$ = 
-\[\begin{bmatrix}
+\end{bmatrix}
+\]\\
+\item
+\[
+A_2 =\begin{bmatrix}
 	1  & -1  & 2   & 2   \\ 
 	-1 & 6   & -17 & 3   \\
 	2  & -17 & 48  & -16 \\
 	2  & 3   & -16 & 4   
-\end{bmatrix}\]
-
-non è fattorizzabile $LDL^t$, quindi non è sdp.
+\end{bmatrix}
+\]\\
+\lstinputlisting[language=Matlab]{Cap_3/Es_2/Es_2.m}
+\end{enumerate}
+\begin{enumerate}
+\item
+E' fattorizzabile $LDL^t$, è quindi \textit{sdp}.
+\item
+Non è fattorizzabile $LDL^t$, quindi non è \textit{sdp}.
+\end{enumerate}

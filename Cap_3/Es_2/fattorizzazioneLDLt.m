@@ -1,4 +1,10 @@
-function A = fattorizzazioneLDLt(A);
+% fattorizzazioneLDLt(A)
+% Metodo per la fattorizzazione LDLt di una matrice.
+
+% Input:
+% A: matrice.
+
+function A = fattorizzazioneLDLt(A)
     if A(1,1)<=0
         error('La matrice non SDP');
     end
@@ -7,8 +13,9 @@ function A = fattorizzazioneLDLt(A);
     for j = 2:n
         v = ( A(j,1:j-1).') .* diag(A(1:j-1,1:j-1));
         A(j,j) = A(j,j) - A(j,1:j-1)*v;
-        if A(j,j)<=0, error('la matrice non SDP'), end
+        if A(j,j)<=0
+            error('la matrice non SDP')
+        end
         A(j+1:n,j) = (A(j+1:n,j) - A(j+1:n,1:j-1)*v)/A(j,j);
-    end
-    
+    end  
 end
