@@ -1,1 +1,0 @@
-secantisqrtalpha(5, 5, 3, 100, eps);
