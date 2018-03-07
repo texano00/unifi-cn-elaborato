@@ -1,4 +1,4 @@
-% aitken(f, f1, x0, imax, tolx, s, g, gs)
+% aitken(f, f1, x0, imax, tolx)
 % Metodo di accelerazione di Aitken.
 %
 % Input:
