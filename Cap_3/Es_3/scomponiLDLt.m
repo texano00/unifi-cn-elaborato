@@ -9,7 +9,6 @@ function [L,D,Lt] = scomponiLDLt(LDLt)
     L = zeros(n);
     D = zeros(n);
     Lt = zeros(n);
-
     for i=1:n
         for j=1:n
             if(j<i)

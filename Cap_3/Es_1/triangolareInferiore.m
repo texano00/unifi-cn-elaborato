@@ -1,5 +1,5 @@
 % triangolareInferiore(A, b)
-% Metodo per la risoluzione di una matrice tringolare inferiore
+% Metodo per la risoluzione di una matrice tringolare inferiore.
 
 % Input:
 % A: matrice triangolare inferiore;

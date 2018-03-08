@@ -1,5 +1,12 @@
-Risoluzione A x = b con A in formato LU
-
+Per la risoluzione di un sistema lineare $Ax=b$ con $A=LU$ , viene chiamato il seguente codice in MatLab:\\\
 \lstinputlisting[language=Matlab]{Cap_3/Es_4/risolutoreLUP.m}
+il quale implementa in ordine:
+\begin{enumerate}
+\item
+una funzione di scomposizione di un matrice $LU$ passata come input e restituisce una matrice triangolare inferiore a diagonale unitaria \textit{L} e una matrice triangolare superiore $U$:\\\
 \lstinputlisting[language=Matlab]{Cap_3/Es_4/scomponiLU.m}
-\lstinputlisting[language=Matlab]{Cap_3/Es_4/triangolareSuperiore.m}
+\item
+una funzione per il calcolo del vettore incognite $x_1$ di una matrice triangolare inferiore a diagonale unitaria \textit{L} passata come input insieme al vettore dei termini noti \textit{b} del sistema, permutato con una matrice di permutazione elementare $P*b$ (guarda esercizio 3.3). \\\
+\item
+una funzione per il calcolo del vettore incognite finale $x$ del sistema lineare di una matrice triangolare superiore $U$ passata come input insieme al vettore dei termini noti $b=x_1$ (guarda esercizio 3.3).\\\
+\end{enumerate}
