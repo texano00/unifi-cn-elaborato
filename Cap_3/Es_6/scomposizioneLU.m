@@ -22,4 +22,6 @@ function [L,U]=scomposizioneLU(A)
         L(k+1:n,k)=U(k+1:n,k)/U(k,k);
         U(k+1:n,:)=U(k+1:n,:) - L(k+1:n,k)*U(k,:);
     end
+    L
+    U
 end

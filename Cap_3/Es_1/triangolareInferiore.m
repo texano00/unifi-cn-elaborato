@@ -4,27 +4,29 @@
 % Input:
 % A: matrice triangolare inferiore;
 % b: vettore dei termini noti.
+% Output:
+% x: vettore delle soluzioni del sistema.
 
 function x = triangolareInferiore(A,b)
     x = b;
     if ~ismatrix(A)
-        error('The input must be a matrix');
+        error("A non e' una matrice");
     end
     [n,m] = size(A);
     if(n~=m)
-        error('The input must be a square matrix');
+        error("A non e' una matrice quadratica");
     end
     for j=1:n
         if(A(j,j)~=1)
-            error("The matrix is not a unitary diagonal matrix")
+            error("A non ha coefficienti diagonali unitari")
         end
     end
     if(~isvector(x))
-        error('The second parameter must be a vector');
+        error("b non e' un vettore");
     end
-    vectorSize = size(x,1);
+    vectorSize = size(x);
     if(vectorSize~=n)
-        error('The vector must have %i rows, %i passed', n, vectorSize);
+        error("Il vettore deve avere %i riche, invece ha %i righe', n, vectorSize");
     end
     for j=1:n
 %       x(j) = x(j)/A(j,j); because A(j,j)=1  

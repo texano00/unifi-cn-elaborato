@@ -1,13 +1,15 @@
 % risolutoreLDLt(LDLt,b)
-% Metodo per il calcolo di una matrice LDLt.
+% Metodo per la risoluzione di una matrice LDLt.
 
 % Input:
 % LDLt: matrice;
 % b: vettore dei termini noti.
+% Output:
+% x: vettore delle soluzioni del sistema.
 
 function x = risolutoreLDLt(LDLt, b)
-    [L,D,Lt] = scomponiLDLt(LDLt);
-    x1 = triangolareInferiore(L,b);
-    x2 = diagonale(D,x1);
-    x = triangolareSuperiore(Lt,x2);
+    LDLt = fattorizzazioneLDLt(LDLt);
+    x1 = triangolareInferiore(tril(LDLt,-1)+eye(length(LDLt)),b);
+    x2 = diagonale(diag(LDLt),x1);
+    x = triangolareSuperiore(tril(LDLt,-1)+eye(length(LDLt))',x2);
 end

@@ -1,12 +1,13 @@
 Per la risoluzione di un sistema lineare $Ax=b$ con $A=LU$ , viene chiamato il seguente codice in MatLab:\\\
-\lstinputlisting[language=Matlab]{Cap_3/Es_4/risolutoreLUP.m}
+\lstinputlisting[language=Matlab]{Cap_3/Es_4/risolutoreLUpiv.m}
 il quale implementa in ordine:
 \begin{enumerate}
 \item
-una funzione di scomposizione di un matrice $LU$ passata come input e restituisce una matrice triangolare inferiore a diagonale unitaria \textit{L} e una matrice triangolare superiore $U$:\\\
-\lstinputlisting[language=Matlab]{Cap_3/Es_4/scomponiLU.m}
+Una funzione di fattorizzazione di un matrice \textit{LU} passata come input che restituisce una matrice \textit{A} riscritta con le informazioni di \textit{L} e \textit{U} insieme a un vettore \textit{p} che indica le righe permutate :\\\
+\lstinputlisting[language=Matlab]{Cap_3/Es_4/fattorizzazioneLUpiv.m}
 \item
-una funzione per il calcolo del vettore incognite $x_1$ di una matrice triangolare inferiore a diagonale unitaria \textit{L} passata come input insieme al vettore dei termini noti \textit{b} del sistema, permutato con una matrice di permutazione elementare $P*b$ (guarda esercizio 3.3). \\\
+Una funzione per il calcolo del vettore incognite $x_1$ di una matrice triangolare inferiore a diagonale unitaria \textit{A} (con l'utilizzo dei comandi \textit{tril(A,k<0)} che restituisce gli elementi sotto la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti \textit{b} del sistema, moltiplicato per la matrice di permutazione \textit{P} calcolata $b*P$ (guarda es. 3.3). \\\
 \item
-una funzione per il calcolo del vettore incognite finale $x$ del sistema lineare di una matrice triangolare superiore $U$ passata come input insieme al vettore dei termini noti $b=x_1$ (guarda esercizio 3.3).\\\
+Una funzione per il calcolo del vettore incognite finale $x$ del sistema lineare di una matrice triangolare superiore a diagonale unitaria \textit{A} (con l'utilizzo dei comandi \textit{tril(A,k>0)} che restituisce gli elementi sopra la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti $b=x_1$ (guarda es. 3.3).\\\
 \end{enumerate}
+Come descritto nei codici, a scapito di eleganza e leggibilità del codice stesso, si è deciso di non estrarre da $LU$ i fattori \textit{L} e \textit{U} in modo esplicito, così da non occupare inutilmente posizioni di memoria che si erano risparmiate riscrivendo $LU$ con \textit{L} e \textit{U}.

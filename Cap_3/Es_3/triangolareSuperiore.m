@@ -4,21 +4,24 @@
 % Input:
 % A: matrice triangolare superiore;
 % b: vettore dei termini noti.
+% Output:
+% x: vettore delle soluzioni del sistema.
 
-function x = triangolareSuperiore(A,x)
+function x = triangolareSuperiore(A,b)
+    x = b;
     if ~ismatrix(A)
-        error('The input must be a matrix');
+        error("A non e' una matrice");
     end
     [n,m] = size(A);   
     if(n~=m)
-        error('The input must be a square matrix');
+        error("A non e' una matrice quadratica");
     end  
     if(~isvector(x))
-        error('The second parameter must be a vector');
+        error("b non e' un vettore");
     end 
     vectorSize = size(x,1);
     if(vectorSize~=n)
-        error('The vector must have %i rows, %i passed', n, vectorSize);
+        error('Il vettore deve avere %i riche, invece ha %i righe', n, vectorSize);
     end   
     for j=n:-1:1
         x(j) = x(j)/A(j,j); 

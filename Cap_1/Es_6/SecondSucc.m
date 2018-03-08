@@ -9,5 +9,4 @@ for i = 2:7
     r(i+1) = x(i+1)-conv;
 end
 
-x
-r
+x, r
