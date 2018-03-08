@@ -2,24 +2,23 @@ Per la risoluzione di un sistema lineare $Ax=b$ con $A=LDL^t$ , viene chiamato i
 \begin{itemize}
 \item \textbf{Metodo risoluzione $LDL^tx=b$}
 \lstinputlisting[language=Matlab]{Cap_3/Es_3/risolutoreLDLt.m}
-\end{itemize}
 il quale implementa in ordine:
 \begin{enumerate}
-\item
+\item \textbf{fattorizzazioneLDLt($LDL^t$)}\\
 Una funzione di fattorizzazione di un matrice $LDL^t$ passata come input e restituisce una matrice \textit{A} riscritta con le informazioni di \textit{L}, \textit{D} e $L^t$ (guarda es. 3.2).\\\
-\item
-Una funzione per il calcolo del vettore incognite $x_1$ di una matrice triangolare inferiore a diagonale unitaria \textit{A} (con l'utilizzo dei comandi \textit{tril(A,k<0)} che restituisce gli elementi sotto la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti \textit{b} del sistema (guarda es. 3.1). \\\
-\item
-Una funzione per il calcolo del vettore incognite $x_2$ di una matrice diagonale \textit{A} (con l'utilizzo del comando \textit{diag(A)} che restituisce un vettore colonna degli elementi diagonali principali di A) passata come input insieme al vettore dei termini noti $x_1$:\\\
+\item \textbf{triangolareInferiore(L,b)}\\
+Una funzione per il calcolo del vettore incognite $x_1$ di una matrice triangolare inferiore a diagonale unitaria \textit{L} (con l'utilizzo dei comandi \textit{tril($LDL^t$,k<0)} che restituisce gli elementi sotto la k-esima diagonale di $LDL^t$; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti \textit{b} del sistema (guarda es. 3.1). \\\
+\item \textbf{diagonale(D,$x_1$)}\\
+Una funzione per il calcolo del vettore incognite $x_2$ di una matrice diagonale \textit{D} (con l'utilizzo del comando \textit{diag(A)} due volte, in quando la prima mi restituisce un vettore colonna degli elementi diagonali principali di $LDL^t$ e la seconda una matrice diagonale con tutti e solo gli elementi della diagonale $\neq 0$ ) passata come input insieme al vettore dei termini noti $x_1$:\\\
 \begin{itemize}
 \item \textbf{Metodo 'vettore' diagonale}
 \lstinputlisting[language=Matlab]{Cap_3/Es_3/diagonale.m}
 \end{itemize}
-\item
-Una funzione per il calcolo del vettore incognite finale $x$ del sistema lineare di una matrice triangolare superiore a diagonale unitaria \textit{A} (con l'utilizzo dei comandi \textit{tril(A,k>0)} che restituisce gli elementi sopra la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti $x_2$:\\\
+\item \textbf{triangolareSuperiore($L^t$,b)}\\
+Una funzione per il calcolo del vettore incognite finale $x$ del sistema lineare di una matrice triangolare superiore a diagonale unitaria \textit{$L^t$} (con l'utilizzo dei comandi \textit{tril($LDL^t$,k<0)} che restituisce gli elementi sotto la k-esima diagonale di $LDL^t$; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}; al tutto viene aggiunta un \textit{apice " ' "} per calcolarne la trasposta) passata come input insieme al vettore dei termini noti $x_2$:\\\
 \begin{itemize}
 \item \textbf{Metodo matrice triangolare superiore}
 \lstinputlisting[language=Matlab]{Cap_3/Es_3/triangolareSuperiore.m}
 \end{itemize}
 \end{enumerate}
-Come descritto nei codici, a scapito di eleganza e leggibilità del codice stesso, si è deciso di non estrarre da $LDL^t$ i fattori \textit{L}, \textit{D} e $L^t$ in modo esplicito, così da non occupare inutilmente posizioni di memoria che si erano risparmiate riscrivendo $LDL^t$ con \textit{L}, \textit{D} e $L^t$.
+\end{itemize}

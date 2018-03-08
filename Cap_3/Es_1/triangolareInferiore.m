@@ -29,9 +29,8 @@ function x = triangolareInferiore(A,b)
         error("Il vettore deve avere %i riche, invece ha %i righe', n, vectorSize");
     end
     for j=1:n
-%       x(j) = x(j)/A(j,j); because A(j,j)=1  
         for i = j+1:n
             x(i) = x(i)-A(i,j)*x(j);
-        end
+        end     
     end
 end
