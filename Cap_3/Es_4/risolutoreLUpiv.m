@@ -1,4 +1,4 @@
-% risolutoreLUPiv(LU, P, b)
+% risolutoreLUPiv(LU,b)
 % Metodo per la risoluzione di una matrice LUPiv.
 
 % Input:

@@ -1,4 +1,4 @@
-% diagonale(d,x)
+% diagonale(D,b)
 % Metodo per il cacolo del vettore incognite di una matrice diagonale.
 %
 % Input:

@@ -1,34 +1,63 @@
+Il seguente codice MatLab, contiene l'implementazione di una funzione per la \textit{fattorizzazione LU} di una matrice \textit{A}:\\\
+\begin{itemize}
+\item \textbf{Metodo fattorizzazione \textit{LU}}	
 \lstinputlisting[language=Matlab]{Cap_3/Es_6/fattorizzazioneLU.m}
+\end{itemize}
+Il seguente codice Matlab, contiene la chiamata della funzione di \textit{fattorizzazione LU} e successivamente i comandi $U \backslash (L \backslash b)$ \textit{Gauss senza pivoting} e $A \backslash b$ \textit{Gauss con pivoting}:\\\
 \lstinputlisting[language=Matlab]{Cap_3/Es_6/Es_6.m}
-
-L = 
-\[\begin{bmatrix}
+restituendo rispettivamente:\\\
+\begin{enumerate}
+\item 
+\begin{itemize}
+\item \textbf{Fattorizzazione LU}
+\[
+A =\begin{bmatrix}
+	10^{(-3)} &   1  \\
+	 1000   & -999 \\
+\end{bmatrix}
+\]\\
+\[
+L*U =\begin{bmatrix}
 	1    & 0 \\
 	1000 & 1 \\
-\end{bmatrix}\]
-\
-
-U = 
-\[\begin{bmatrix}
-	10^(-3) & 1    \\
+\end{bmatrix} *
+\begin{bmatrix}
+	10^{(-3)} & 1    \\
 	0       & -999 \\
-\end{bmatrix}\]
-\
-
-b = 
-\[\begin{bmatrix}
+\end{bmatrix} 
+= \begin{bmatrix}
+	10^{(-3)} &   1  \\
+	 1000   & -999 \\
+\end{bmatrix} = LU
+\]\\\
+\end{itemize}
+\item
+\[
+e = \begin{bmatrix}
+	1 \\
+	1
+\end{bmatrix} \quad 
+b = Ae =\begin{bmatrix}
 	1.001000000000000 \\
 	2                 
-\end{bmatrix}\]
-
-(Gauss senza pivoting)= 
-\[\begin{bmatrix}
-	1.000000000000001 \\
-	1.000000000000000 
-\end{bmatrix}\]
-
-(Gauss con pivoting) = 
-\[\begin{bmatrix}
-	1.000000000000000 \\
-	1.000000000000000 
-\end{bmatrix}\]
+\end{bmatrix}
+\]\\\
+\begin{itemize}
+\item \textbf{Gauss senza pivoting}
+\[
+U \backslash (L \backslash b) = \begin{bmatrix}
+	1.000000000000001e+00 \\
+    9.999999999999999e-01
+\end{bmatrix}
+\]\\\
+\end{itemize}
+\begin{itemize}
+\item \textbf{Gauss con pivoting}
+\[
+A \backslash b =\begin{bmatrix}
+	1.000000000000000e+00 \\
+    9.999999999999998e-01 
+\end{bmatrix}
+\]
+\end{itemize}
+\end{enumerate}

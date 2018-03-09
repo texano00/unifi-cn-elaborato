@@ -1,24 +1,22 @@
+% A = fattorizzazioneLU(A)
+% Fattorizzazione LU di una matrice nonsingolare con tutti i minori
+% principali non nulli.
+%
+% Input:
+% A: la matrice nonsingolare da fattorizzare LU.
+% Output:
+% A: la matrice riscritta con le informazioni dei fattori L ed U.
+
 function A = fattorizzazioneLU(A)
-    [m,n]=size(A);
+	[m,n]=size(A);
     if m~=n
-        error('matrice non quadrata');
+        error("La matrice non e' quadrata!");
     end
-    L=eye(n);
-    U=A; 
-    for k=1:n
-        [pivot, m]=max(abs(U(k:n,k)));
-        if pivot==0
-            error('Errore: Matrice singolare');
-        end   
-        m=m+k - 1;
-        if m~=k
-            if k >= 2
-                L([k,m],1:k - 1) = L([m,k],1:k - 1);
-            end
-        end  
-        L(k+1:n,k)=U(k+1:n,k)/U(k,k);
-        U(k+1:n,:)=U(k+1:n,:) - L(k+1:n,k)*U(k,:);
-    end
-    A = L*U;
-    L, U
+	for i=1:n-1
+        if A(i,i)==0
+            error("La matrice non e' fattorizzabile LU!");
+        end
+        A(i+1:n,i) = A(i+1:n,i)/A(i,i);
+        A(i+1:n,i+1:n) = A(i+1:n,i+1:n)-A(i+1:n,i)*A(i,i+1:n);
+	end
 end
