@@ -3,7 +3,7 @@ Il seguente codice MatLab, contiene l'implementazione di una funzione per la \te
 \item \textbf{Metodo fattorizzazione \textit{LU}}	
 \lstinputlisting[language=Matlab]{Cap_3/Es_6/fattorizzazioneLU.m}
 \end{itemize}
-Il seguente codice Matlab, contiene la chiamata della funzione di \textit{fattorizzazione LU} e successivamente i comandi $U \backslash (L \backslash b)$ \textit{Gauss senza pivoting} e $A \backslash b$ \textit{Gauss con pivoting}:\\\
+Il seguente codice Matlab, contiene la chiamata della funzione di \textit{fattorizzazione LU} (\textit{L} viene ricavata con l'utilizzo dei comandi \textit{tril(A,k<0)} che restituisce gli elementi sotto la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}), (\textit{U} viene ricavata con l'utilizzo del comando \textit{tril(A)} che restituisce la parte triangolare superiore di A) e successivamente vengono eseguiti i comandi $U \backslash (L \backslash b)$ \textit{Gauss senza pivoting} e $A \backslash b$ \textit{Gauss con pivoting}:\\\
 \lstinputlisting[language=Matlab]{Cap_3/Es_6/Es_6.m}
 restituendo rispettivamente:\\\
 \begin{enumerate}

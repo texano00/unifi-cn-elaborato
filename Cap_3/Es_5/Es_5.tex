@@ -4,15 +4,20 @@ Il seguente codice MatLab, contiene la chiamata delle due funzioni descritte neg
 \item \textbf{Esempio :} \textit{$risolutoreLDL^t$}\\\\
 	con i seguenti parametri di input :\\\	 
 	\[
-	A = LDL^t =\begin{bmatrix}
+	A_1 = LDL^t =\begin{bmatrix}
 		 3 & 2 & -1 \\ 
 		 2 & 7 &  7 \\
 		-1 & 7 & 30 
 	\end{bmatrix} \quad
-	b =\begin{bmatrix}
-		1 \\
-		2 \\
+	\hat{x_1} =\begin{bmatrix}
+		4 \\
+		5 \\
 		3                
+	\end{bmatrix} \quad
+	b_1 = LDL^t \hat{x_1} =\begin{bmatrix}
+		19 \\
+		64 \\
+		121                
 	\end{bmatrix}
 	\]\\
 	\[
@@ -34,67 +39,91 @@ Il seguente codice MatLab, contiene la chiamata delle due funzioni descritte neg
 	\]\\\\
 	Il risultato ottenuto è:\\
 	\[
-	x =\begin{bmatrix}
-		0.2744 \\
-		0.1280 \\
-		0.0793                
+	x_1 =\begin{bmatrix}
+		4 \\
+		5 \\
+		3                
+	\end{bmatrix} \quad
+	r_1 = LDL^t*x_1-b_1 =\begin{bmatrix}
+		  0 \\
+		  -7.1054e-15 \\
+		  0
 	\end{bmatrix}
-	\]\\\
-\item \textbf{Esempio :} \textit{$risolutoreLUP$}\\\\	
+	\]\\\\
+\item \textbf{Esempio :} \textit{risolutoreLUpiv}\\\\	
 	con i seguenti parametri di input :\\\	  
 	\[
-	A = LU =\begin{bmatrix}
-		1  & 3 & 2 \\ 
-		-1 & 2 & 1 \\
-		4  & 1 & 2 
+	A_2 = LU =\begin{bmatrix}
+		-23 & 5 & -21 & 8 \\ 
+		0 & 0 & 5 & 7 \\
+		1 & 54 & 7 & 9 \\
+		0 & -8 & 12 & 4  
 	\end{bmatrix} \quad
-	b =\begin{bmatrix}
-		1 \\
+	\hat{x_2} =\begin{bmatrix}
 		2 \\
-		3 
+		8 \\
+		3 \\
+		5               
+	\end{bmatrix} \quad
+	b_2 = LDL^t \hat{x_2} =\begin{bmatrix}
+		-29 \\
+		50 \\
+		500 \\
+		-8                
 	\end{bmatrix}
 	\]\\
 	\[
 	L =\begin{bmatrix}
-		   1   &  0  & 0 \\ 
-		0.3333 &  1  & 0 \\
-		0.6667 & 0.2 & 1 
+		   1   &  0  & 0 & 0 \\ 
+		-0.0435 &  1  & 0 & 0 \\
+		   0   &  -0.1476  & 1 & 0 \\
+		   0   &  0  & 0.3877 & 1 		    
 	\end{bmatrix} \quad
 	U =\begin{bmatrix}
-		3 &    2    &    1   \\ 
-		0 & -1.6667 & 3.6667 \\
-		0 &    0    &   0.6 
+		-23 & 5 & -21 & 8   \\ 
+		0 & 54.2174 & 6.0870 & 9.3478   \\ 
+		0 & 0 & 12.8982 & 5.3793  \\ 
+		0 & 0 & 0 & 4.92147		
 	\end{bmatrix}
 	\]\\ 
 	\[
 	P =\begin{bmatrix}
-		0 & 1 & 0 \\ 
-		1 & 0 & 0 \\
-		0 & 0 & 1 
+		1 & 0 & 0 & 0 \\ 
+		0 & 0 & 1 & 0 \\
+		0 & 0 & 0 & 1 \\
+		0 & 1 & 0 & 0 
 	\end{bmatrix} \quad
 	Pb =\begin{bmatrix}
-		2 \\
-		1 \\
-		3                
+		-29 \\
+		500 \\
+		-8 \\
+		50               
 	\end{bmatrix}
 	\]\\\\
 	Il risultato ottenuto è:\\
 	\[
-	xx =\begin{bmatrix}
-		  -4   \\
-		5.6667 \\
-		2.6667 
+	x_2 =\begin{bmatrix}
+		  2 \\
+		  8 \\
+		  3 \\
+		  5 
+	\end{bmatrix} \quad
+	r_2 = LU*x_2-b_2 =\begin{bmatrix}
+		  7.1054e-15 \\
+		  7.1054e-15 \\
+		  0 \\
+		  -3.5527e-15 
 	\end{bmatrix}
 	\]\\\\
 \end{description}
-La tabella sottostante contiene, per ogni esempio considerato, il numero di condizionamento di \textit{A}, in \textit{norma 2}, con l'utilizzo del comando \textit{cond} di Matlab :\\\
+La tabella sottostante contiene, per ogni esempio considerato, il numero di condizionamento di \textit{A}, in \textit{norma 2}, con l'utilizzo del comando \textit{cond} e \textit{norm} di Matlab :\\\
 \begin{center}
-\begin{tabular}{ | l | c | r | }
+\begin{tabular}{ | c | c | c | c | }
 	\hline
-	$K(A)$    & $\frac{\|r\|}{\|b\|}$ & $\frac{\|x-\tilde{x}\|}{\|\tilde{x}\|}$ \\
+	\textit{A} & $K_2(A)$ & $\frac{\|r\|}{\|b\|}$ & $\frac{\|x-\tilde{x}\|}{\|\tilde{x}\|}$ \\
 	\hline
-	nero    & 0           & zero                                          \\
-	marrone & 1           & uno                                           \\
+	$A_1$ & 20.0572 & $5.1416e-17$ & $1.4043e-16$ \\
+	$A_2$ &	17.6716 & $2.1173e-17$ & $1.0771e-16$ \\
 	\hline
 \end{tabular}
 \end{center}

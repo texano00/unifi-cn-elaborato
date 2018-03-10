@@ -1,9 +1,19 @@
 LDLt = [3 2 -1; 2 7 7; -1 7 30];
-b = [1; 2; 3];
-x = risolutoreLDLt(LDLt,b);
-LDLt, b, x
+xt1 = [4; 5; 3];
+b1 = LDLt*xt1;
+x1 = risolutoreLDLt(LDLt,b1);
+LDLt, b1, x1, xt1
+r1 = LDLt*x1-b1
+k1 = cond(LDLt)
+krb1 = norm(r1)/norm(b1)
+kxtx1 = norm(x1 - xt1)/norm(xt1)
 
-LU = [1 -1 4; 3 2 1; 2 1 2];
-b = [1; 2 ; 3];
-xx = risolutoreLUpiv(LU, b);
-LU, b, xx
+LU = [-23 5 -21 8;0 0 5 7;];
+xt2 =[2; 8; 3];
+b2 = LU*xt2;
+x2 = risolutoreLUpiv(LU, b2);
+LU, b2, x2, xt2
+r2 = LU*x2-b2
+k2 = cond(LU)
+krb2 = norm(r2)/norm(b2)
+kxtx2 = norm(x2 - xt2)/norm(xt2)

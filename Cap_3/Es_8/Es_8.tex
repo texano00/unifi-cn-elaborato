@@ -1,2 +1,11 @@
-\lstinputlisting[language=Matlab]{Cap_3/Es_8/decomposizioneQR.m}
+Il seguente codice MatLab, contiene l'implementazione di una funzione per la \textit{fattorizzazione QR} di una matrice \textit{A}:\\\
+\begin{itemize}
+\item \textbf{Metodo fattorizzazione QR}
+\lstinputlisting[language=Matlab]{Cap_3/Es_8/fattorizzazioneQR.m}
+\end{itemize}
+Il seguente codice Matlab, contiene la chiamata della funzione di \textit{fattorizzazione QR},quindi viene ricostruita la matrice $Q^t$ a partire dalle informazioni presenti nella matrice \textit{QR} riscritta sui vettori di Householder. Viene allora moltiplicata $Q^t$ per il vettore $b(=g)$, per risolvere infine il sistema lineare $\hat{R}x=g_1$, dove $\hat{R}$ viene
+estratto come parte triangolare superiore di \textit{QR} con l'utilizzo del comando \textit{triu(QR)} e $g_1$ è il vettore formato dalle prime \textit{n} componenti di \textit{g}: \\\
+\begin{itemize}
+\item \textbf{Metodo risoluzione QR}
 \lstinputlisting[language=Matlab]{Cap_3/Es_8/risolutoreQR.m}
+\end{itemize}
