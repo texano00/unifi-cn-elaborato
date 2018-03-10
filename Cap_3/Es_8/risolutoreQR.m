@@ -10,7 +10,6 @@
 % x: vettore delle soluzioni del sistema lineare sovradeterminato.
 
 function x = risolutoreQR(QR, b)
-    QRc = QR;
     [m,n] = size(QR);
     QR = fattorizzazioneQR(QR);
     Qt = eye(m);
@@ -18,5 +17,6 @@ function x = risolutoreQR(QR, b)
         Qt= [eye(i-1) zeros(i-1,m-i+1);zeros(i-1, m-i+1)' (eye(m-i+1) - (2/norm([1; QR(i+1:m, i)], 2)^2)*([1; QR(i+1:m, i)]*[1 QR(i+1:m, i)']))]*Qt;
     end
     R = triu(QR(1:n, :))
+    Q = Qt'
     x = triangolareSuperiore(R, Qt(1:n, :)*b);
 end
