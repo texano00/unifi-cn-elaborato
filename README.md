@@ -25,9 +25,9 @@
 | 2     | ✔                  |
 | 3     | ✔                  |
 | 4     | ✔                  |
-| 5     | ✔ (finire tabella) |
-| 6     | ✔                  |
-| 7     | ✗                  |
+| 5     | ✔ (conttrolo) |
+| 6     | ✔  (controllo) |
+ | 7     | ✗                  |
 | 8     | ✔                  |
 | 9     | ✔ (controllare)    |
 | 10    | ✗                  |
