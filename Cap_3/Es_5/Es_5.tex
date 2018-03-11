@@ -1,129 +1,129 @@
 Il seguente codice MatLab, contiene la chiamata delle due funzioni descritte negli esercizi precedenti, (\textit{risolutoreLDLt}  dell'es. 3.3 e risolutoreLUpiv dell'es. 3.4) per dimostrarne l'utilizzo tramite alcuni esempi:\\\
-\lstinputlisting[language=Matlab]{Cap_3/Es_5/Es_5.m}
+	\lstinputlisting[language=Matlab]{Cap_3/Es_5/Es_5.m}
 \begin{description}
-\item \textbf{Esempio :} \textit{$risolutoreLDL^t$}\\\\
-	con i seguenti parametri di input :\\\	 
-	\[
-	A_1 = LDL^t =\begin{bmatrix}
-		 3 & 2 & -1 \\ 
-		 2 & 7 &  7 \\
-		-1 & 7 & 30 
-	\end{bmatrix} \quad
-	\hat{x_1} =\begin{bmatrix}
-		4 \\
-		5 \\
-		3                
-	\end{bmatrix} \quad
-	b_1 = LDL^t \hat{x_1} =\begin{bmatrix}
-		19 \\
-		64 \\
-		121                
-	\end{bmatrix}
-	\]\\
-	\[
-	L =\begin{bmatrix}
-		   1   &   0    & 0 \\ 
-		0,6667 &   1    & 0 \\
-	   -0,3333 & 1.3529 & 1 
-	\end{bmatrix} \quad
-	D =\begin{bmatrix}
-		3 &   0    &   0    \\ 
-		0 & 5.6667 &   0    \\
-		0 &   0    & 19.2941 
-	\end{bmatrix} \quad
-	L^t =\begin{bmatrix}
-		1 & 0.6667 & -0.3333 \\ 
-		0 &    1   &  1.3529 \\
-		0 &    0   &    1 
-	\end{bmatrix}
-	\]\\\\
+	\item \textbf{Esempio :} \textit{$risolutoreLDL^t$}\\\\
+		con i seguenti parametri di input :\\\	 
+		\[
+		A_1 = LDL^t =\begin{bmatrix}
+			3 & 2 & -1 \\ 
+			2 & 7 &  7 \\
+			-1 & 7 & 30 
+		\end{bmatrix} \quad
+		\hat{x_1} =\begin{bmatrix}
+			4 \\
+			5 \\
+			3                
+		\end{bmatrix} \quad
+		b_1 = LDL^t \hat{x_1} =\begin{bmatrix}
+			19 \\
+			64 \\
+			121                
+		\end{bmatrix}
+		\]\\
+		\[
+		L =\begin{bmatrix}
+			1 		& 0 	 & 0 \\ 
+			0,6667  & 1 	 & 0 \\
+	   		-0,3333 & 1.3529 & 1 
+		\end{bmatrix} \quad
+		D =\begin{bmatrix}
+			3 & 0      & 0 	     \\ 
+			0 & 5.6667 & 0       \\
+			0 & 0      & 19.2941 
+		\end{bmatrix} \quad
+		L^t =\begin{bmatrix}
+			1 & 0.6667 & -0.3333 \\ 
+			0 & 1      &  1.3529 \\
+			0 & 0      &  1 
+		\end{bmatrix}
+		\]\\\\
 	Il risultato ottenuto è:\\
-	\[
-	x_1 =\begin{bmatrix}
-		4 \\
-		5 \\
-		3                
-	\end{bmatrix} \quad
-	r_1 = LDL^t*x_1-b_1 =\begin{bmatrix}
-		  0 \\
-		  -7.1054e-15 \\
-		  0
-	\end{bmatrix}
-	\]\\\\
+		\[
+		x_1 =\begin{bmatrix}
+			4 \\
+			5 \\
+			3                
+		\end{bmatrix} \quad
+		r_1 = LDL^t*x_1-b_1 =\begin{bmatrix}
+			0 \\
+		  	-7.1054e-15 \\
+		  	0
+		\end{bmatrix}
+		\]\\\\
 \item \textbf{Esempio :} \textit{risolutoreLUpiv}\\\\	
 	con i seguenti parametri di input :\\\	  
-	\[
-	A_2 = LU =\begin{bmatrix}
-		-23 & 5 & -21 & 8 \\ 
-		0 & 0 & 5 & 7 \\
-		1 & 54 & 7 & 9 \\
-		0 & -8 & 12 & 4  
-	\end{bmatrix} \quad
-	\hat{x_2} =\begin{bmatrix}
-		2 \\
-		8 \\
-		3 \\
-		5               
-	\end{bmatrix} \quad
-	b_2 = LDL^t \hat{x_2} =\begin{bmatrix}
-		-29 \\
-		50 \\
-		500 \\
-		-8                
-	\end{bmatrix}
-	\]\\
-	\[
-	L =\begin{bmatrix}
-		   1   &  0  & 0 & 0 \\ 
-		-0.0435 &  1  & 0 & 0 \\
-		   0   &  -0.1476  & 1 & 0 \\
-		   0   &  0  & 0.3877 & 1 		    
-	\end{bmatrix} \quad
-	U =\begin{bmatrix}
-		-23 & 5 & -21 & 8   \\ 
-		0 & 54.2174 & 6.0870 & 9.3478   \\ 
-		0 & 0 & 12.8982 & 5.3793  \\ 
-		0 & 0 & 0 & 4.92147		
-	\end{bmatrix}
-	\]\\ 
-	\[
-	P =\begin{bmatrix}
-		1 & 0 & 0 & 0 \\ 
-		0 & 0 & 1 & 0 \\
-		0 & 0 & 0 & 1 \\
-		0 & 1 & 0 & 0 
-	\end{bmatrix} \quad
-	Pb =\begin{bmatrix}
-		-29 \\
-		500 \\
-		-8 \\
-		50               
-	\end{bmatrix}
-	\]\\\\
+		\[
+		A_2 = LU =\begin{bmatrix}
+			-23 & 5  & -21 & 8 \\ 
+			0 	& 0  & 5   & 7 \\
+			1 	& 54 & 7   & 9 \\
+			0 	& -8 & 12  & 4  
+		\end{bmatrix} \quad
+		\hat{x_2} =\begin{bmatrix}
+			2 \\
+			8 \\
+			3 \\
+			5               
+		\end{bmatrix} \quad
+		b_2 = LDL^t \hat{x_2} =\begin{bmatrix}
+			-29 \\
+			50  \\
+			500 \\
+			-8                
+		\end{bmatrix}
+		\]\\
+		\[
+		L =\begin{bmatrix}
+			1   	&  0  		& 0 	 & 0 \\ 
+			-0.0435 &  1  		& 0 	 & 0 \\
+		 	0   	&  -0.1476  & 1 	 & 0 \\
+		 	0   	&  0  		& 0.3877 & 1 		    
+		\end{bmatrix} \quad
+		U =\begin{bmatrix}
+			-23 & 5 	  & -21		& 8   	   \\ 
+			0 	& 54.2174 & 6.0870 	& 9.3478   \\ 
+			0 	& 0 	  & 12.8982 & 5.3793   \\ 
+			0 	& 0 	  & 0 		& 4.92147		
+		\end{bmatrix}
+		\]\\ 
+		\[
+		P =\begin{bmatrix}
+			1 & 0 & 0 & 0 \\ 
+			0 & 0 & 1 & 0 \\
+			0 & 0 & 0 & 1 \\
+			0 & 1 & 0 & 0 
+		\end{bmatrix} \quad
+		Pb =\begin{bmatrix}
+			-29 \\
+			500 \\
+			-8  \\
+			50               
+		\end{bmatrix}
+		\]\\\\
 	Il risultato ottenuto è:\\
-	\[
-	x_2 =\begin{bmatrix}
-		  2 \\
-		  8 \\
-		  3 \\
-		  5 
-	\end{bmatrix} \quad
-	r_2 = LU*x_2-b_2 =\begin{bmatrix}
-		  7.1054e-15 \\
-		  7.1054e-15 \\
-		  0 \\
-		  -3.5527e-15 
-	\end{bmatrix}
-	\]\\\\
+		\[
+		x_2 =\begin{bmatrix}
+			2 \\
+		  	8 \\
+		  	3 \\
+		  	5 
+		\end{bmatrix} \quad
+		r_2 = LU*x_2-b_2 =\begin{bmatrix}
+			7.1054e-15 \\
+		  	7.1054e-15 \\
+		  	0 \\
+		  	-3.5527e-15 
+		\end{bmatrix}
+		\]\\\\
 \end{description}
 La tabella sottostante contiene, per ogni esempio considerato, il numero di condizionamento di \textit{A}, in \textit{norma 2}, con l'utilizzo del comando \textit{cond} e \textit{norm} di Matlab :\\\
 \begin{center}
-\begin{tabular}{ | c | c | c | c | }
-	\hline
-	\textit{A} & $K_2(A)$ & $\frac{\|r\|}{\|b\|}$ & $\frac{\|x-\tilde{x}\|}{\|\tilde{x}\|}$ \\
-	\hline
-	$A_1$ & 20.0572 & $5.1416e-17$ & $1.4043e-16$ \\
-	$A_2$ &	17.6716 & $2.1173e-17$ & $1.0771e-16$ \\
-	\hline
-\end{tabular}
+	\begin{tabular}{ | c | c | c | c | }
+		\hline
+			\textit{A} & $K_2(A)$ & $\frac{\|r\|}{\|b\|}$ & $\frac{\|x-\tilde{x}\|}{\|\tilde{x}\|}$ \\
+		\hline
+			$A_1$ & 20.0572 & $5.1416e-17$ & $1.4043e-16$ \\
+			$A_2$ &	17.6716 & $2.1173e-17$ & $1.0771e-16$ \\
+		\hline
+	\end{tabular}
 \end{center}

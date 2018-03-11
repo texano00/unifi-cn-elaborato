@@ -1,10 +1,10 @@
-% x = risolviSistemaQR(A,b)
+% x = risolutoreQR(QR,b)
 % Risoluzione di un sistema lineare sovredeterminato del tipo Ax=b
 % tramite fattorizzazione QR di Householder della matrice dei
 % coefficienti.
 %
 % Input:
-% A: matrice dei coefficienti;
+% QR: matrice dei coefficienti;
 % b: vettore dei termini noti.
 % Output:
 % x: vettore delle soluzioni del sistema lineare sovradeterminato.

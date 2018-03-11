@@ -1,18 +1,18 @@
 Per la risoluzione di un sistema lineare $Ax=b$ con $A=LU$ , viene chiamato il seguente codice in MatLab:\\\
 \begin{itemize}
-\item \textbf{Metodo risoluzione $LUx=b$ con pivoting}
-\lstinputlisting[language=Matlab]{Cap_3/Es_4/risolutoreLUpiv.m}
+	\item \textbf{Metodo risoluzione $LUx=b$ con pivoting}
+		\lstinputlisting[language=Matlab]{Cap_3/Es_4/risolutoreLUpiv.m}
 \end{itemize}
 il quale implementa in ordine:
 \begin{enumerate}
-\item \textbf{fattorizzazioneLUpiv(LU,b)}\\
-Una funzione di fattorizzazione di un matrice \textit{LU} passata come input che restituisce una matrice \textit{A} riscritta con le informazioni di \textit{L} e \textit{U} insieme a un vettore \textit{p} che indica le righe permutate :\\\
+	\item \textbf{fattorizzazioneLUpiv(LU,b)}\\
+		Una funzione di fattorizzazione di un matrice \textit{LU} passata come input che restituisce una matrice \textit{A} riscritta con le informazioni di \textit{L} e \textit{U} insieme a un vettore \textit{p} che indica le righe permutate :\\\
 \begin{itemize}
-\item \textbf{Metodo fattorizzazione $LU$ con pivoting}
-\lstinputlisting[language=Matlab]{Cap_3/Es_4/fattorizzazioneLUpiv.m}
+	\item \textbf{Metodo fattorizzazione $LU$ con pivoting}
+		\lstinputlisting[language=Matlab]{Cap_3/Es_4/fattorizzazioneLUpiv.m}
 \end{itemize}
-\item \textbf{triangolareInferiore(L,b)}
-Una funzione per il calcolo del vettore incognite $x_1$ di una matrice triangolare inferiore a diagonale unitaria \textit{A} (con l'utilizzo dei comandi \textit{tril(A,k<0)} che restituisce gli elementi sotto la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti \textit{b} del sistema, moltiplicato per la matrice di permutazione \textit{P} calcolata $P*b$ (guarda es. 3.3). \\\
-\item \textbf{triangolareSuperiore(U,b)}
-Una funzione per il calcolo del vettore incognite finale $x$ del sistema lineare di una matrice triangolare superiore a diagonale unitaria \textit{A} (con l'utilizzo dei comandi \textit{tril(A,k>0)} che restituisce gli elementi sopra la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti $b=x_1$ (guarda es. 3.3).\\\
+	\item \textbf{triangolareInferiore(L,b)}
+		Una funzione per il calcolo del vettore incognite $x_1$ di una matrice triangolare inferiore a diagonale unitaria \textit{A} (con l'utilizzo dei comandi \textit{tril(A,k<0)} che restituisce gli elementi sotto la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti \textit{b} del sistema, moltiplicato per la matrice di permutazione \textit{P} calcolata $P*b$ (guarda es. 3.3). \\\
+	\item \textbf{triangolareSuperiore(U,b)}
+		Una funzione per il calcolo del vettore incognite finale $x$ del sistema lineare di una matrice triangolare superiore a diagonale unitaria \textit{A} (con l'utilizzo dei comandi \textit{tril(A,k>0)} che restituisce gli elementi sopra la k-esima diagonale di A; \textit{eye(n)} che restituisce una matrice di identità (tutti i valori zeri a parte i termini diagonali) di grandezza \textit{n}) passata come input insieme al vettore dei termini noti $b=x_1$ (guarda es. 3.3).\\\
 \end{enumerate}

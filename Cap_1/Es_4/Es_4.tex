@@ -1,27 +1,27 @@
 Le due espressioni in aritmetica finita vengono scritte tenendo conto dell'errore di approssimazione sul valore reale:\\
 \begin{enumerate}
-\item $(x \oplus y) \oplus z \equiv fl(fl(fl(x)+fl(y))+fl(z)) = ((x(1+\varepsilon_{x})+y(1+\varepsilon_{y}))(1+\varepsilon_{a})+z(1+\varepsilon_{z}))(1+\varepsilon_{b})$
-\item $x \oplus (y \oplus z) \equiv fl(fl(x)+fl(fl(y)+fl(z))) = (x(1+\varepsilon_{x})+(y(1+\varepsilon_{y})+z(1+\varepsilon_{z}))(1+\varepsilon_{a}))(1+\varepsilon_{b})$\\
+	\item $(x \oplus y) \oplus z \equiv fl(fl(fl(x)+fl(y))+fl(z)) = ((x(1+\varepsilon_{x})+y(1+\varepsilon_{y}))(1-\varepsilon_{a})+z(1+\varepsilon_{z}))(1+\varepsilon_{b})$
+	\item $x \oplus (y \oplus z) \equiv fl(fl(x)+fl(fl(y)+fl(z))) = (x(1+\varepsilon_{x})+(y(1+\varepsilon_{y})+z(1+\varepsilon_{z}))(1+\varepsilon_{a}))(1+\varepsilon_{b})$\\
 \end{enumerate}
 Indichiamo con $\varepsilon_{x},\varepsilon_{y},\varepsilon_{z}$ i relativi errori di $x, y, z$ e con $\varepsilon_{a},\varepsilon_{b}$ gli errori delle somme e per calcolare l'errore relativo delle due espressioni consideriamo $\varepsilon_{m} = max\{\varepsilon_{x},\varepsilon_{y},\varepsilon_{z},\varepsilon_{a},\varepsilon_{b}\}$.\\
 Dalla definizione di errore relativo si ha quindi:\\
 \begin{enumerate}
     \item 
-    \[
-    \varepsilon_{1} = \frac{((x(1+\varepsilon_{x})+y(1+\varepsilon_{y}))(1+\varepsilon_{a})+z(1+\varepsilon_{z}))(1+\varepsilon_{b})-(x+y+z)}{x+y+z} \approx
-    \]
-    \[
-    \approx \frac{x(1+\varepsilon_{x}+\varepsilon_{a}+\varepsilon_{b})+y(1+\varepsilon_{y}+\varepsilon_{a}+\varepsilon_{b})+z(1+\varepsilon_{z}+\varepsilon_{b})-x-y-z}{x+y+z} \leq
-    \]
-    \[ 
-    \leq \left|\frac{3\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 2\cdot z\cdot\varepsilon_{m}}{x+y+z}\right| \leq \left|\frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z}\right| = 3\cdot\left|\varepsilon_{m}\right|
-    \]\\
+   		\[
+    	\varepsilon_{1} = \frac{((x(1+\varepsilon_{x})+y(1+\varepsilon_{y}))(1+\varepsilon_{a})+z(1+\varepsilon_{z}))(1+\varepsilon_{b})-(x+y+z)}{x+y+z} \approx
+    	\]
+    	\[
+    	\approx \frac{x(1+\varepsilon_{x}+\varepsilon_{a}+\varepsilon_{b})+y(1+\varepsilon_{y}+\varepsilon_{a}+\varepsilon_{b})+z(1+\varepsilon_{z}+\varepsilon_{b})-x-y-z}{x+y+z} \leq
+    	\]
+    	\[ 
+    	\leq \left|\frac{3\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 2\cdot z\cdot\varepsilon_{m}}{x+y+z}\right| \leq \left|\frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z}\right| = 3\cdot\left|\varepsilon_{m}\right|
+    	\]\\
     \item Seguendo gli stessi procedimenti del punto precedente possiamo scrivere:\\
-    \[
-    \varepsilon_{2} = \frac{(x(1+\varepsilon_{x})+(y(1+\varepsilon_{y})+z(1+\varepsilon_{z}))(1+\varepsilon_{a}))(1+\varepsilon_{b})-(x+y+z)}{x+y+z} = 
-    \]
-    \[
-    = ... \leq \left|\frac{2\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 3\cdot z\cdot\varepsilon_{m}}{x+y+z}\right| \leq \left|\frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z}\right| = 3\cdot\left|\varepsilon_{m}\right|
-    \]\\
+    	\[
+    	\varepsilon_{2} = \frac{(x(1+\varepsilon_{x})+(y(1+\varepsilon_{y})+z(1+\varepsilon_{z}))(1+\varepsilon_{a}))(1+\varepsilon_{b})-(x+y+z)}{x+y+z} = 
+    	\]
+    	\[
+    	= ... \leq \left|\frac{2\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 3\cdot z\cdot\varepsilon_{m}}{x+y+z}\right| \leq \left|\frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z}\right| = 3\cdot\left|\varepsilon_{m}\right|
+    	\]\\
 \end{enumerate}
 Otteniamo quindi che i valori degli errori $\varepsilon_{1}$ e $\varepsilon_{2}$ sono $\leq 3\cdot\left|\varepsilon_{m}\right|$.

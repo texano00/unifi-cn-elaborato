@@ -27,16 +27,16 @@
 \newcommand{\enb}{\end{nobreak}}
 
 \lstset{
-  style              = Matlab-editor,
-  basicstyle         = \mlttfamily,
-  escapechar         = ",
-  mlshowsectionrules = true,
+	style              = Matlab-editor,
+  	basicstyle         = \mlttfamily,
+  	escapechar         = ",
+  	mlshowsectionrules = true,
 }
 
 \pretitle{
-  \begin{center}
-  \LARGE
-  \includegraphics[width=\textwidth/4]{assets/logo-unifi.png}\\[\bigskipamount]
+	\begin{center}
+  		\LARGE
+  		\includegraphics[width=\textwidth/4]{assets/logo-unifi.png}\\[\bigskipamount]
 }
 \posttitle{\end{center}}
 
@@ -51,30 +51,31 @@
 
 \begin{document}
 
-\pagenumbering{Roman}
+	\pagenumbering{Roman}
+	
+	\maketitle
 
-\maketitle
+	\begin{center}
+		\today{}
+	\end{center}
 
-\begin{center}
-\today{}
-\end{center}
+	\newpage
 
-\newpage
+	\newpage
 
-\newpage
+	\tableofcontents
+	\newpage
 
-\tableofcontents
-\newpage
+	\pagenumbering{arabic}
 
-\pagenumbering{arabic}
-
-\input{Cap_1/Cap_1.tex}
-\newpage
-\input{Cap_2/Cap_2.tex}
-\newpage
-\input{Cap_3/Cap_3.tex}
-\newpage
-\input{Cap_4/Cap_4.tex}
-\newpage
-\input{Cap_5/Cap_5.tex}
+	\input{Cap_1/Cap_1.tex}
+		\newpage
+	\input{Cap_2/Cap_2.tex}
+		\newpage
+	\input{Cap_3/Cap_3.tex}
+		\newpage
+	\input{Cap_4/Cap_4.tex}
+		\newpage
+	\input{Cap_5/Cap_5.tex}
+		\newpage
 \end{document}
