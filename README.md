@@ -31,4 +31,4 @@
 | 8     | ✔                  |
 | 9     | ✔ (controllare)    |
 | 10    | ✗                  |
-| 11    | ✗                  |
+| 11    |  (Solo funzione) |
