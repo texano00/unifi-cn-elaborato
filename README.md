@@ -30,5 +30,5 @@
  | 7     | ✗                  |
 | 8     | ✔                  |
 | 9     | ✔ (controllare)    |
-| 10    | ✗                  |
-| 11    |  (Solo funzione) |
+| 10    | ✔  (Controllo)|
+| 11    |✗|
