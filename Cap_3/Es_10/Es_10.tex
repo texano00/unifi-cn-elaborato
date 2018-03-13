@@ -1,1 +1,44 @@
-\lstinputlisting[language=Matlab]{Cap_3/Es_10/newtonNonLin.m}
+Per la risoluzione di sistemi nonlineari, ovvero del tipo 
+	\[
+	F(x)=0 \quad F: \Omega \subseteq \mathbb{R}^n \rightarrow \mathbb{R}^n
+	\]
+con \textit{F} costituita dalle \textit{funzioni componenti}
+	\[
+	F(x)=\Bigg(\begin{matrix}
+		f_1(x) \\
+		\vdots \\
+		f_n(x)
+	\end{matrix}\Bigg) \quad
+	f_1: \Omega \subseteq \mathbb{R}^n \rightarrow \mathbb{R}^n
+	\]
+ed \textit{x} il vettore delle incognite che risolvono il sistema 
+	\[
+	x=\Bigg(\begin{matrix}
+		x_1 	\\
+		\cdots  \\
+		x_n
+	\end{matrix}\Bigg) \quad
+	\in \mathbb{R}^n	
+	\]
+si utilizza il \textbf{metodo di Newton}, ovvero un \textit{metodo iterativo} definito da
+	\[
+	x^{k+1}=x^k - J_F(x^k)^{-1}F(x^k) \quad k=0,1,...
+	\]
+partendo da un'approssimazione $x^0$ assegnata. $J_F(x)$ indica la \textbf{matrice Jacobiana}, ovvero la matrice delle derivate parziali:
+	\[
+	J_F(x)=\Bigg(\begin{matrix}
+		\frac{\partial f_1}{\partial x_1}(x) & \cdots & \frac{\partial f_1}{\partial x_n}(x) \\
+		\vdots & & \vdots \\
+		\frac{\partial f_n}{\partial x_1}(x) & \cdots & \frac{\partial f_n}{\partial x_n}(x) 
+	\end{matrix}\Bigg)
+	\]\\\
+Il seguente codice MatLab implementa la risoluzioni di sistemi nonlineari tramite l'utilizzo del \textbf{metodo di Newton}:
+	\lstinputlisting[language=Matlab]{Cap_3/Es_10/newtonNonLin.m}
+In pratica, ogni passo dell'iterazione corrisponde a risolvere il seguente sistema lineare:
+	\[
+	\Bigg\{\begin{matrix}
+		J_F(x^k)d^k = -F(x^k) \\
+		x^{k+1} = x^k + d^k
+	\end{matrix}\
+	\]\\\
+dove il vettore temporaneo delle incognite $d^k$ viene utilizzato per poter spezzare l'iterazione in due equazioni. Quindi la risoluzione del sistema nonlineare si riconduce alla risoluzione di una successione di sistemi lineari. Ovviamente, per ogni sistema lineare della successione sarà necessario fattorizzare \textit{LU} la matrice Jacobiana.

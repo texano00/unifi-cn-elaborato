@@ -1,5 +1,5 @@
 % x = newtonNonLin(f, J, x, imax, tol )
-% Risoluzione di sistemi non lineari con il metodo di Newton.
+% Metodo per la risoluzione di sistemi non lineari con il metodo di Newton.
 %
 % Input :
 % f: funzione;
