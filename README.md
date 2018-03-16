@@ -25,10 +25,10 @@
 | 2     | ✔                  |
 | 3     | ✔                  |
 | 4     | ✔                  |
-| 5     | ✔ (controllo) |
-| 6     | ✔  (controllo) |
+| 5     | ✔ (controllare) |
+| 6     | ✔  (controllare)|
  | 7     | ✗                  |
 | 8     | ✔                  |
-| 9     | ✔ (controllare)    |
-| 10    | ✔  (Controllo)|
-| 11    |✗|
+| 9     | ✔ (conrollare)    |
+| 10    | ✔  (controllare)|
+| 11  | ✔ (manca norma errore e domanda, controllare)|
