@@ -2,11 +2,13 @@
 % Metodo per la risoluzione di sistemi non lineari con il metodo di Newton.
 %
 % Input :
-% f: funzione;
+% F: sistema non lineare;
 % J: Jacobiano;
 % x: punto iniziale;
 % imax: passi massimi;
 % tol: tolleranza.
+% Ouput :
+% x: minimo relativo.
 
 function x = newtonNonLin(f, J, x, imax, tolx)
     i=0;
@@ -14,9 +16,9 @@ function x = newtonNonLin(f, J, x, imax, tolx)
     while(i<imax) && (norm(x-xold)>tolx)
         i=i+1;
         xold=x;
-        [J, p] = fattorizzazioneLUpiv(J);
-        J, p
-        x = x + risolutoreLUpiv(J, p, -feval(f,x));
-        x, i
+        val = -feval(f,x);
+        b = [val(1);val(2)];
+        x = x + risolutoreLUpiv(J, b);
+        i, b
     end
 end

@@ -8,23 +8,25 @@
 % m: la molteplicita della radice;
 % imax: il numero massimo di iterazioni;
 % tolx: la tolleranza desiderata;
+% Output :
+% x0: radici della funzione
 
-function [] = newtonMod(f, f1, x0, m, imax, tolx)
-    i = 0;
+function x0 = newtonMod(f, f1, x0, m, imax, tolx)
+    inm = 0;
     vai = true;
-    while ( i<imax ) && vai
-        i = i+1;
+    while ( inm<imax ) && vai
+        inm = inm+1;
         fx = feval(f, x0);
         f1x = feval(f1, x0);
         if f1x==0
             vai=false;
-            i=i-1;
+            inm=inm-1; 
             break
         end
         x1 = x0 - m*(fx/f1x);
         vai = abs(x1-x0)>tolx;
         x0 = x1;
     end
-    x0,i
+    inm
 end
 

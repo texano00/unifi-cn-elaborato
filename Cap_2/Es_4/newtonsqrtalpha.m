@@ -1,4 +1,4 @@
-% newtonsqrtalpha(alpha, x0, imax, tolx)
+% newtonSqrtAlpha(alpha, x0, imax, tolx)
 % Metodo di Newton ottimizzato per l'approssimazione della radice
 % quadrata.
 %
@@ -7,16 +7,26 @@
 % x0: l'approssimazione iniziale;
 % imax: il numero massimo di iterazioni;
 % tolx: la tolleranza desiderata.
+% Output:
+% xn: vettore radici;
+% exn: vettore errore.
 
-function [] = newtonsqrtalpha(alpha, x0, imax, tolx)
+function [xn,exn] = newtonSqrtAlpha(alpha, x0, imax, tolx)
     format long e;
+    xn = [];
+    exn = [];
+    i = 1; 
+    xn(i) = x0;
+    exn(i) = x0-sqrt(alpha);
+    i = i+1;
     x = (x0+alpha/x0)/2;
-    i = 1;
-    x0,x0-sqrt(alpha),x,x-sqrt(alpha),i
-	while( i<imax ) && ( abs(x-x0)>tolx )
+    xn(i) = x;
+    exn(i) = x-sqrt(alpha);
+    while( i<imax ) && ( abs(x-x0)>tolx )
         i = i+1;
         x0 = x;
         x = (x0+alpha/x0)/2;
-        x,x-sqrt(alpha),i
+        xn(i) = x;
+        exn(i) = x-sqrt(alpha);
     end
 end

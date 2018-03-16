@@ -16,7 +16,8 @@ function x = risolutoreQR(QR, b)
     for i=1:n
         Qt= [eye(i-1) zeros(i-1,m-i+1);zeros(i-1, m-i+1)' (eye(m-i+1) - (2/norm([1; QR(i+1:m, i)], 2)^2)*([1; QR(i+1:m, i)]*[1 QR(i+1:m, i)']))]*Qt;
     end
-    R = triu(QR(1:n, :))
-    Q = Qt'
+    R = triu(QR(1:n, :));
+    Q = Qt';
+    R, Q, Qt, QR
     x = triangolareSuperiore(R, Qt(1:n, :)*b);
 end

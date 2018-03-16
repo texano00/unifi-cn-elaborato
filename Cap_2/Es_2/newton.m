@@ -7,22 +7,24 @@
 % x0: l'approssimazione iniziale;
 % imax: il numero massimo di iterazioni;
 % tolx: la tolleranza desiderata;
+% Output :
+% x0: radici della funzione.
 
-function [] = newton(f, f1, x0, imax, tolx)
-    i = 0;
+function x0 = newton(f, f1, x0, imax, tolx)
+    in = 0;
     vai = true;
-    while ( i<imax ) && vai
-        i = i+1;
+    while ( in<imax ) && vai
+        in = in+1;
         fx = feval(f, x0);
         f1x = feval(f1, x0);
         if f1x==0
             vai=false;
-            i=i-1; 
+            in=in-1; 
             break
         end
         x1 = x0 - fx/f1x;
         vai = abs(x1-x0)>tolx;
         x0 = x1;        
     end
-    x0,i
+    in
 end

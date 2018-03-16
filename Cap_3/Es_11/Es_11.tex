@@ -18,7 +18,18 @@ Il seguente codice effettua la chiamata della funzione \textbf{newtonNonLin}, pa
 	\end{matrix}\Bigg)
 	\]
 	\[
-	imax=1000, \quad 
+	imax=100, \quad 
 	tolx=10^{-t} \quad t=\{3,6\}
 	\]
 \lstinputlisting[language=Matlab]{Cap_3/Es_11/Es_11.m}
+restituendo i seguenti valori ($\|x\|$ norma euclidea dell'ultimo incremento e $\|\|$ norma euclidea dell'errore con cui viene approssimato il risultato esatto):
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+			$tol_x$ & $i$ & $\|x\|$ & $\|\|$ \\
+		\hline
+    		$h^{-3}$ & $i$ = 17 & $\|x\|$ = 0.1901 & $\|x\|$ = 2.763932022500210e+00\\
+    		$h^{-6}$ & $i$ = 51 & $\|x\|$ = 0.1863 & $\|x\|$ = 2.763932022500210e+00\\
+		\hline
+	\end{tabular}
+\end{center}

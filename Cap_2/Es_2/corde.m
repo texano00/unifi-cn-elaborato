@@ -7,24 +7,24 @@
 % x0: l'approssimazione iniziale;
 % imax: il numero massimo di iterazioni;
 % tolx: la tolleranza desiderata;
+% Output :
+% x0: radici della funzione.
 
-function [] = corde(f, f1, x0, imax, tolx)
+function x0 = corde(f, f1, x0, imax, tolx)
     f1x0 = feval(f1, x0);
-	i = 0;
+	ic = 0;
     vai = true;
-    while ( i<imax ) && vai
-        i = i+1;
+    while ( ic<imax ) && vai
+        ic = ic+1;
         fx = feval(f, x0);
         if f1x0==0
             vai=false;
-            i=i-1;
-            i
-            fx
+            ic=ic-1; 
             break
         end
         x1 = x0-fx/f1x0;
         vai = abs(x1-x0)>tolx;
         x0 = x1;
     end
-    x0,i
+    ic
 end
