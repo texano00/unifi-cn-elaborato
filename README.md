@@ -1,9 +1,11 @@
-# Elaborato CN - aa 2017/2018
+# Elaborato CN - 2017/2018
 
-<img src="assets/esercizielaborato_cap1/esercizielaborato_cap1-1.jpg">
-<img src="assets/esercizielaborato_cap1/esercizielaborato_cap1-2.jpg">
+## Capitolo 1
 
-| Es n° | Capitolo1 |
+<img align="left" width="425px" src="assets/esercizielaborato_cap1/esercizielaborato_cap1-1.jpg">
+<img align="rigth" width="425px" src="assets/esercizielaborato_cap1/esercizielaborato_cap1-2.jpg">
+
+| Es n° | Stato     |
 | ----- | --------- |
 | 1     | ✔         |
 | 2     | ✔         |
@@ -14,9 +16,11 @@
 
 <hr>
 
-<img src="assets/esercizielaborato_cap2/esercizielaborato_cap2-1.jpg">
+## Capitolo 2
 
-| Es n° | Capitolo2                   |
+<img align="left" width="425px" src="assets/esercizielaborato_cap2/esercizielaborato_cap2-1.jpg">
+
+| Es n° | Stato                       |
 | ----- | --------------------------- |
 | 1     | ✔ (rispondere alla domanda) |
 | 2     | ✔ (ultima domanda?)         |
@@ -26,10 +30,12 @@
 
 <hr>
 
-<img src="assets/esercizielaborato_cap3/esercizielaborato_cap3-1.jpg">
-<img src="assets/esercizielaborato_cap3/esercizielaborato_cap3-2.jpg">
+## Capitolo 3
 
-| Es n° | Capitolo3                                   |
+<img align="left" width="425px" src="assets/esercizielaborato_cap3/esercizielaborato_cap3-1.jpg">
+<img align="rigth" width="425px" src="assets/esercizielaborato_cap3/esercizielaborato_cap3-2.jpg">
+
+| Es n° | Stato                                       |
 | ----- | ------------------------------------------- |
 | 1     | ✔                                           |
 | 2     | ✔                                           |
