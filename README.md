@@ -14,8 +14,6 @@
 | 5     | ✔         |
 | 6     | ✔         |
 
-<hr>
-
 ## Capitolo 2
 
 <img align="left" width="425px" src="assets/esercizielaborato_cap2/esercizielaborato_cap2-1.jpg">
@@ -27,8 +25,6 @@
 | 3     | ✔                           |
 | 4     | ✔                           |
 | 5     | ✔                           |
-
-<hr>
 
 ## Capitolo 3
 
