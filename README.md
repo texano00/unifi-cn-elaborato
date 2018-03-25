@@ -37,7 +37,7 @@
 | 4     | ✔                                           |
 | 5     | ✔ (controllare)                             |
 | 6     | ✔ (controllare)                             |
-| 7     | ✗                                           |
+| 7     | ✔                                           |
 | 8     | ✔                                           |
 | 9     | ✔ (conrollo)                                |
 | 10    | ✔ (controllo)                               |

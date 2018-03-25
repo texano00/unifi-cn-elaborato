@@ -1,0 +1,52 @@
+Siamo ricondotti a risolvere il sistema lineare 
+\[ Ax = b\] con A matrice così definita:
+  \[
+  A =\begin{bmatrix}
+    1      & 0      & 0      & 0  & 0 & .. \\ 
+    \alpha & 1      & 0      & 0  & 0 & .. \\
+    0      & \alpha & 1      & 0  & 0 & .. \\
+    0      & 0      & \alpha & 1  & 0 & .. \\
+    ..     & ..    & ..      & \alpha & 1 & .. 
+  \end{bmatrix}
+  \]
+
+Codice Matlab
+\lstinputlisting[language=Matlab]{Cap_3/Es_7/triangolareInferioreMod.m}
+
+Esempio d'uso:
+
+Data
+\[
+	A = \begin{bmatrix}
+	1 & 0 & 0 & 0 & 0 \\
+	5 & 1 & 0 & 0 & 0 \\
+	0 & 5 & 1 & 0 & 0 \\
+	0 & 0 & 5 & 1 & 0 \\
+	0 & 0 & 0 & 5 & 1
+	\end{bmatrix}
+\]
+
+e
+\[
+  b = \begin{bmatrix}
+  1 \\
+  2 \\
+  3 \\
+  4 \\
+  5
+  \end{bmatrix} 
+  \]
+
+\lstinputlisting[language=Matlab]{Cap_3/Es_7/Es_7.m}
+
+Da correttamente come output:
+
+\[
+  b = \begin{bmatrix}
+  1   \\
+  -3  \\
+  18  \\
+  -86 \\
+  435
+  \end{bmatrix} 
+  \]
