@@ -6,7 +6,7 @@
 | Es n° | Capitolo1 |
 | ----- | --------- |
 | 1     | ✔         |
-| 2     | ✗         |
+| 2     | ✔         |
 | 3     | ✔         |
 | 4     | ✔         |
 | 5     | ✔         |
@@ -29,16 +29,16 @@
 <img src="assets/esercizielaborato_cap3/esercizielaborato_cap3-1.jpg">
 <img src="assets/esercizielaborato_cap3/esercizielaborato_cap3-2.jpg">
 
-| Es n° | Capitolo3          |
-| ----- | ------------------ |
-| 1     | ✔                  |
-| 2     | ✔                  |
-| 3     | ✔                  |
-| 4     | ✔                  |
-| 5     | ✔ (controllare)    |
-| 6     | ✔  (controllare)   |
-| 7     | ✗                  |
-| 8     | ✔                  |
-| 9     | ✔ (conrollo)       |
-| 10    | ✔  (controllo)     |
-| 11  | ✔ (manca norma errore e domanda, controllo)|
+| Es n° | Capitolo3                                   |
+| ----- | ------------------------------------------- |
+| 1     | ✔                                           |
+| 2     | ✔                                           |
+| 3     | ✔                                           |
+| 4     | ✔                                           |
+| 5     | ✔ (controllare)                             |
+| 6     | ✔ (controllare)                             |
+| 7     | ✗                                           |
+| 8     | ✔                                           |
+| 9     | ✔ (conrollo)                                |
+| 10    | ✔ (controllo)                               |
+| 11    | ✔ (manca norma errore e domanda, controllo) |
