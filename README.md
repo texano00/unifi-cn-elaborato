@@ -5,14 +5,14 @@
 <img align="left" width="425px" src="assets/esercizielaborato_cap1/esercizielaborato_cap1-1.jpg">
 <img align="rigth" width="425px" src="assets/esercizielaborato_cap1/esercizielaborato_cap1-2.jpg">
 
-| Es n° | Stato     |
-| ----- | --------- |
-| 1     | ✔         |
-| 2     | ✔         |
-| 3     | ✔         |
-| 4     | ✔         |
-| 5     | ✔         |
-| 6     | ✔         |
+| Es n° | Stato |
+| ----- | ----- |
+| 1     | ✔     |
+| 2     | ✔     |
+| 3     | ✔     |
+| 4     | ✔     |
+| 5     | ✔     |
+| 6     | ✔     |
 
 ## Capitolo 2
 
@@ -41,6 +41,6 @@
 | 6     | ✔ (controllare)                             |
 | 7     | ✔                                           |
 | 8     | ✔                                           |
-| 9     | ✔ (conrollo)                                |
+| 9     | ✔                                           |
 | 10    | ✔ (controllo)                               |
 | 11    | ✔ (manca norma errore e domanda, controllo) |

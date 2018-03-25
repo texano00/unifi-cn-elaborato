@@ -11,7 +11,7 @@ function A = fattorizzazioneQR(A)
 	for i=1:n
         alfa = norm(A(i:m, i), 2);
         if alfa==0
-            error('La matrice non ha rango massimo!');
+            error('La matrice non ha rango massimo');
         end
         if(A(i,i))>=0
             alfa = -alfa;
