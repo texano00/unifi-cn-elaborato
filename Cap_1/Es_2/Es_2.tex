@@ -1,17 +1,26 @@
-Partiamo da
-\[f'(x) \approx \frac{f(x+h) - f(x-h)}{2h}\]
-
+Partiamo da :
+	\[
+	f'(x) \approx \frac{f(x+h) - f(x-h)}{2h}
+	\]
 Usando gli sviluppi di Taylor fino al secondo ordine otteniamo:
-\[f(x+h) = f(x) + f'(x)h + \frac{1}{2} f''(x)h^{2} + \frac{1}{6}f'''(\xi_x)h^{3}\]
-\[f(x-h) = f(x) - f'(x)h + \frac{1}{2} f''(x)h^{2} - \frac{1}{6}f'''(\mu_x)h^{3}\]
-
+	\[
+	f(x+h) = f(x) + f'(x)h + \frac{1}{2} f''(x)h^{2} + \frac{1}{6}f'''(\xi_x)h^{3}
+	\]
+	\[f(x-h) = f(x) - f'(x)h + \frac{1}{2} f''(x)h^{2} - \frac{1}{6}f'''(\mu_x)h^{3}
+	\]
 Al numeratore otteniamo
-\[f(x+h) - f(x-h) = 2f'(x) + 2f'(x)h + \frac{1}{6}(f'''(\xi_x)h^{3}+f'''(\mu_x)h^{3})\]
-
+	\[
+	f(x+h) - f(x-h) = 2f'(x) + 2f'(x)h + \frac{1}{6}(f'''(\xi_x)h^{3}+f'''(\mu_x)h^{3})
+	\]
 La relazione iniziale diventa
-\[f'(x) \approx \frac{f(x+h) - f(x-h)}{2h} - \frac{1}{12}(f'''(\xi_x) + f'''(\mu_x))h^{2}\]
-
+	\[
+	f'(x) \approx \frac{f(x+h) - f(x-h)}{2h} - \frac{1}{12}(f'''(\xi_x) + f'''(\mu_x))h^{2}
+	\]
 Abbiamo quindi verificato, usando gli sviluppi di Taylor fino al secondo ordine con resto in forma di Lagrange, se f $\in C^{3}$ risulta
-\[f'(x) = \phi_h(x) + O(h^2)\]
+	\[
+	f'(x) = \phi_h(x) + O(h^2)
+	\]
 dove
-\[\phi_h(x) = \frac{f(x+h) - f(x-h)}{2h}\]
+	\[
+	\phi_h(x) = \frac{f(x+h) - f(x-h)}{2h}
+	\]

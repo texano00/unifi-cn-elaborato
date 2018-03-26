@@ -1,52 +1,43 @@
-Siamo ricondotti a risolvere il sistema lineare 
-\[ Ax = b\] con A matrice così definita:
-  \[
-  A =\begin{bmatrix}
-    1      & 0      & 0      & 0  & 0 & .. \\ 
-    \alpha & 1      & 0      & 0  & 0 & .. \\
-    0      & \alpha & 1      & 0  & 0 & .. \\
-    0      & 0      & \alpha & 1  & 0 & .. \\
-    ..     & ..    & ..      & \alpha & 1 & .. 
-  \end{bmatrix}
-  \]
-
-Codice Matlab
-\lstinputlisting[language=Matlab]{Cap_3/Es_7/triangolareInferioreMod.m}
-
-Esempio d'uso:
-
-Data
-\[
+Il seguente codice MatLab, contiene l'implementazione di una funzione per la risoluzione di un sistema lineare $Ax = b$ con la seguenti tipologia di matrice \textit{A} :
+	\[
 	A = \begin{bmatrix}
-	1 & 0 & 0 & 0 & 0 \\
-	5 & 1 & 0 & 0 & 0 \\
-	0 & 5 & 1 & 0 & 0 \\
-	0 & 0 & 5 & 1 & 0 \\
-	0 & 0 & 0 & 5 & 1
-	\end{bmatrix}
-\]
-
-e
-\[
-  b = \begin{bmatrix}
-  1 \\
-  2 \\
-  3 \\
-  4 \\
-  5
-  \end{bmatrix} 
-  \]
-
-\lstinputlisting[language=Matlab]{Cap_3/Es_7/Es_7.m}
-
-Da correttamente come output:
-
-\[
-  b = \begin{bmatrix}
-  1   \\
-  -3  \\
-  18  \\
-  -86 \\
-  435
-  \end{bmatrix} 
-  \]
+		1     		& 0      	& 0      	& 0  	 & 0 & \cdots \\ 
+    	\alpha 		& 1      	& 0      	& 0  	 & 0 & \cdots \\
+    	0      		& \alpha 	& 1      	& 0  	 & 0 & \cdots \\
+    	0      		& 0      	& \alpha 	& 1  	 & 0 & \cdots \\
+    	\cdots     	& \cdots    & \cdots    & \alpha & 1 & \cdots 
+  	\end{bmatrix}
+  	\]
+\begin{itemize}
+	\item \textbf{Metodo matrice triangolare inferiore modificato}
+		\lstinputlisting[language=Matlab]{Cap_3/Es_7/triangolareInferioreMod.m}
+	\item \textbf{Esempio}\\\
+		Il seguente codice MatLab contiene la chiamata della funzione precedentemente definita con i rispettivi valori di input:
+		\[
+		A = \begin{bmatrix}
+			1 & 0 & 0 & 0 & 0 \\
+			5 & 1 & 0 & 0 & 0 \\
+			0 & 5 & 1 & 0 & 0 \\
+			0 & 0 & 5 & 1 & 0 \\
+			0 & 0 & 0 & 5 & 1
+		\end{bmatrix} \quad
+		b = \begin{bmatrix}
+			1 \\
+ 			2 \\
+ 	 		3 \\
+	  		4 \\
+  			5
+  		\end{bmatrix} 
+  		\]\\\
+  		\lstinputlisting[language=Matlab]{Cap_3/Es_7/Es_7.m}
+  		restituendo il seguente valore:
+  		\[
+  		b = \begin{bmatrix}
+  			1   \\
+  			-3  \\
+  			18  \\
+  			-86 \\
+  			435
+  		\end{bmatrix} 
+  		\]
+\end{itemize}

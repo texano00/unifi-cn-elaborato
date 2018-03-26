@@ -11,9 +11,7 @@ function b = triangolareInferioreMod(alpha,b)
     if(~isvector(b))
         error("b non e' un vettore");
     end
-    
     n = size(b,1);
-
     for i=2:n
         b(i) = b(i) - alpha*b(i-1);
     end
