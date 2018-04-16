@@ -44,3 +44,16 @@
 | 9     | ✔                                           |
 | 10    | ✔ (controllo)                               |
 | 11    | ✔ (manca norma errore e domanda, controllo) |
+
+## Capitolo 4
+
+<img align="left" width="425px" src="assets/esercizielaborato_cap4/esercizielaborato_cap4-1.jpg">
+
+| Es n° | Stato |
+| ----- | ----- |
+| 1     | X     |
+| 2     | X     |
+| 3     | X     |
+| 4     | X     |
+| 5     | X     |
+| 6     | X     |
