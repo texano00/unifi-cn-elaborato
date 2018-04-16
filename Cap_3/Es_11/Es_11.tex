@@ -1,4 +1,5 @@
-Il seguente codice effettua la chiamata della funzione \textbf{newtonNonLin}, partendo dalla funzione $f = f(x_1,x_2)=x_1^2+x_2^3-x_1x_2$, per risolvere il seguente sistema nonlineare con i relativi parametri di input:
+Il seguente codice effettua la chiamata della funzione \textbf{newtonNonLin}, partendo dalla funzione 
+$f = f(x_1,x_2)=x_1^2+x_2^3-x_1x_2$, per risolvere il seguente sistema nonlineare con i relativi parametri di input:
 	\[
 	F(x)=0 \quad
 	F=\Bigg(\begin{matrix}
@@ -22,14 +23,15 @@ Il seguente codice effettua la chiamata della funzione \textbf{newtonNonLin}, pa
 	tolx=10^{-t} \quad t=\{3,6\}
 	\]
 \lstinputlisting[language=Matlab]{Cap_3/Es_11/Es_11.m}
-restituendo i seguenti valori ($\|x\|$ norma euclidea dell'ultimo incremento e $\|\|$ norma euclidea dell'errore con cui viene approssimato il risultato esatto):
+restituendo i seguenti valori di $x_1 = (0.0825 , 0.169)$ e $x_2 = (0.0833 , 0.1667)$.
+Qui di seguito è riportata una tabella con le seguenti informazioni ($i$ numero di iterazioni eseguite, $\|n\|^2_2$ norma euclidea dell'ultimo incremento e $\|\|^2_2$ norma euclidea dell'errore con cui viene approssimato il risultato esatto):
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-			$tol_x$ & $i$ & $\|x\|$ & $\|\|$ \\
+			$tol_x=10^{-t}$ & $i$ & $\|n\|^2_2$ & $\|\|^2_2$ \\
 		\hline
-    		$h^{-3}$ & $i$ = 17 & $\|x\|$ = 0.1901 & $\|x\|$ = 2.763932022500210e+00\\
-    		$h^{-6}$ & $i$ = 51 & $\|x\|$ = 0.1863 & $\|x\|$ = 2.763932022500210e+00\\
+    		$10^{-3}$ & $i$ = 17 & $\|n_1\|^2_2$ = 0.1901 & $\|x\|^2_2$ = \\
+    		$10^{-6}$ & $i$ = 51 & $\|n_2\|^2_2$ = 0.1863 & $\|x\|^2_2$ = \\
 		\hline
 	\end{tabular}
 \end{center}
