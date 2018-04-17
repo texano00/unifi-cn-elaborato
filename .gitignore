@@ -24,5 +24,4 @@
 *.fdb_latexmk
 *.m~
 *.fls
-*.pdf
 *.mat
