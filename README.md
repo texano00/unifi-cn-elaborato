@@ -42,7 +42,7 @@
 | 7     | ✔                                           |
 | 8     | ✔                                           |
 | 9     | ✔                                           |
-| 10    | ✔ (controllo)                               |
+| 10    | ✔                                           |
 | 11    | ✔ (manca norma errore e domanda, controllo) |
 
 ## Capitolo 4
