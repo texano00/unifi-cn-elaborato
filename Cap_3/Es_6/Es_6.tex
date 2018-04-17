@@ -12,22 +12,22 @@ restituendo rispettivamente:\\\
 		\item \textbf{Fattorizzazione LU}
 			\[
 			A =\begin{bmatrix}
-				10^{(-3)} &   1  \\
+				10^{(-13)} &   1  \\
 	 			1000   & -999 \\
 			\end{bmatrix}
 			\]\\
 			\[
 			L*U =\begin{bmatrix}
 				1    & 0 \\
-				1000 & 1 \\
+				10^{(13)} & 1 \\
 			\end{bmatrix} *
 			\begin{bmatrix}
-				10^{(-3)} & 1    \\
-				0      	  & -999 \\
+				10^{(-13)} & 1    \\
+				0      	  & -10^{(13)} \\
 			\end{bmatrix} 
 			= \begin{bmatrix}
-				10^{(-3)} &   1  \\
-				1000   & -999 \\
+				10^{(-13)} &   1  \\
+				1   & 1 \\
 			\end{bmatrix} = LU
 			\]\\\
 	\end{itemize}
@@ -38,7 +38,7 @@ restituendo rispettivamente:\\\
 			1
 		\end{bmatrix} \quad 
 		b = Ae =\begin{bmatrix}
-			1.001000000000000 \\
+			1.000000000000100 \\
 			2                 
 		\end{bmatrix}
 		\]\\\
@@ -46,8 +46,8 @@ restituendo rispettivamente:\\\
 	\item \textbf{Gauss senza pivoting}
 		\[
 		Sp = U \backslash (L \backslash b) = \begin{bmatrix}
-			1.000000000000001e+00 \\
-    		9.999999999999999e-01
+			0.999200722162641 \\
+    		1
 		\end{bmatrix}
 		\]\\\
 	\end{itemize}
@@ -55,8 +55,8 @@ restituendo rispettivamente:\\\
 	\item \textbf{Gauss con pivoting}
 		\[
 		Cp = A \backslash b =\begin{bmatrix}
-			1.000000000000000e+00 \\
-    		9.999999999999998e-01 
+			1.000000000000000 \\
+    		1.000000000000000 
 		\end{bmatrix}
 		\]
 	\end{itemize}

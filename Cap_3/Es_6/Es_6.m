@@ -1,4 +1,4 @@
-A = [10^(-3) 1 ; 1 1];
+A = [10^(-13) 1 ; 1 1];
 LU = fattorizzazioneLU(A);
 L = tril(LU,-1)+eye(length(LU));
 U = triu(LU);
