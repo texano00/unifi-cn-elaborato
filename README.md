@@ -20,7 +20,7 @@
 
 | Es n° | Stato                       |
 | ----- | --------------------------- |
-| 1     | ✔ (rispondere alla domanda) |
+| 1     | ✔                           |
 | 2     | ✔ (ultima domanda?)         |
 | 3     | ✔                           |
 | 4     | ✔                           |
