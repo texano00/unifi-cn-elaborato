@@ -18,13 +18,13 @@
 
 <img align="left" width="425px" src="assets/esercizielaborato_cap2/esercizielaborato_cap2-1.jpg">
 
-| Es n° | Stato                       |
-| ----- | --------------------------- |
-| 1     | ✔                           |
-| 2     | ✔ (ultima domanda?)         |
-| 3     | ✔                           |
-| 4     | ✔                           |
-| 5     | ✔                           |
+| Es n° | Stato|
+| ----- | -----|
+| 1     | ✔    |
+| 2     | ✔    |
+| 3     | ✔    |
+| 4     | ✔    |
+| 5     | ✔    |
 
 ## Capitolo 3
 
