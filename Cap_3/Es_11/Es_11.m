@@ -1,8 +1,3 @@
-addpath('../Es_10');
-addpath('../Es_4');
-addpath('../Es_3');
-addpath('../Es_1');
-
 format short;
 
 zero = [1/12;1/6];
