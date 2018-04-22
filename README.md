@@ -53,9 +53,9 @@
 | Es n° | Stato |
 | ----- | ----- |
 | 1     | X |
-| 2     | X|
-| 3     | X |
-| 4     | X |
+| 2     | ✔     |
+| 3     | Correggere Hermite |
+| 4     | Concludere con es.1-3 |
 | 5     | X |
 | 6     | X|
 | 7     | X|
