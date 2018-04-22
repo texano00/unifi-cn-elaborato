@@ -57,7 +57,7 @@
 | 3     | Correggere Hermite |
 | 4     | Concludere con es.1-3 |
 | 5     | X |
-| 6     | X|
+| 6     | ✔     |
 | 7     | X|
 | 8     | X|
 | 9     | X|
