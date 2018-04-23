@@ -1,5 +1,5 @@
-% y = newton(xi, fi, x)
-%   Calcola il polinomio interpolante di grado n in forma di Newton, nei
+% y = lagrange(xi, fi, x)
+%   Calcola il polinomio interpolante di grado n in forma di Lagrange, nei
 %   punti x.
 % 
 % Input:
@@ -14,15 +14,16 @@
 %   -y : vettore contenente il valore del polinomio interpolante calcolato
 %   sulle x.
 
-function [y] = newton(xi, fi, x)
-    n = length(xi)-1;
-    for j = 1:n
-        for i = n+1:-1:j+1
-            fi(i) = (fi(i)-fi(i-1))/(xi(i)-xi(i-j));
+function [y] = lagrange(xi, fi, x)
+    n = length(xi);
+    m = length(x);
+    y = zeros(m,1);
+    for i = 1:m
+        y(i) = 0;
+        for j = 1:n
+            range = [1:j-1, j+1:n];
+            bl = prod(x(i) - xi(range))/prod(xi(j) - xi(range));
+            y(i) = y(i) + fi(j) * bl;
         end
-    end
-    y = fi(n+1)*ones(size(x));
-    for i = n:-1:1
-        y = y.*(x-xi(i))+fi(i);
     end
 end

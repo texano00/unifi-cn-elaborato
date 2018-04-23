@@ -25,6 +25,7 @@ function [y] = hermite(xi, fi, f1i, x)
     fh(1:2:2*n+1) = fi;
     fh(2:2:2*n+2) = f1i;
     nh = length(xh)-1;
+    fh, xh
     for i = nh:-2:3
         fh(i) = (fh(i)-fh(i-2))/(xh(i)-xh(i-2));
     end
@@ -34,7 +35,9 @@ function [y] = hermite(xi, fi, f1i, x)
         end
     end
     y = fh(nh+1)*ones(size(x));
+    y
     for i = nh:-1:1
         y = y.*(x-xh(i))+fh(i);
+        y
     end
 end
