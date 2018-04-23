@@ -1,0 +1,13 @@
+% If = trapad(f, a, b, tol)
+%   Formula dei trapezi adattativa per l'approssimazione dell'integrale
+%   definito di una funzione.
+%
+% Input:
+%   -f: la funzione di cui si vuol calcolare l'integrale;
+%   -a: estremo sinistro dell'intervallo di integrazione;
+%   -b: estremo destro dell'intervallo di integrazione;
+%   -tol: la tolleranza entro la quale si richiede debba rientrare la
+%   soluzione approssimata.
+% Output:
+12 % ?int: l'approssimazione dell'integrale definito della funzione;
+% ?pt: numero di punti generati ricorsivamente.

@@ -19,7 +19,7 @@ function [If] = simpad(a, b, fun, tol)
     m2 = (m+b)/2;
     If1 = h*(feval(fun, a) + 4*feval(fun, m) + feval(fun, b));
     If = If1/2 + h*(2*feval(fun, m1) + 2*feval(fun, m2) - feval(fun, m));
-    err = abs(If-If1)/15;
+    err = abs(If-If1)/3;
     if err>tol
         IfSx = trapad(a, m, fun, tol/2);
         IfDx = trapad(m, b, fun, tol/2);
