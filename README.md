@@ -54,9 +54,9 @@
 | ----- | ----- |
 | 1     | ✔     |
 | 2     | ✔     |
-| 3     | Correggere Hermite |
-| 4     | Concludere  con Hermite |
-| 5     | X |
+| 3     | X Correggere Hermite |
+| 4     | X Concludere con Hermite |
+| 5     | ✔  Controllo algoritmo |
 | 6     | ✔     |
 | 7     | X|
 | 8     | X|
