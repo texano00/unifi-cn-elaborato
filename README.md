@@ -55,7 +55,7 @@
 | 1     | ✔     |
 | 2     | ✔     |
 | 3     | X Correggere Hermite |
-| 4     | X Concludere con Hermite |
+| 4     | X Correggere Hermite o Derivata |
 | 5     | ✔  Controllo algoritmo |
 | 6     | ✔     |
 | 7     | X|
@@ -72,8 +72,8 @@
 | ----- | ----- |
 | 1     | ✔     |
 | 2     | ✔     |
-| 3     | ✔     |
-| 4     | ✔     |
+| 3     | ✔  Controllo algoritmo |
+| 4     | ✔  Controllo algoritmo |
 | 5     | X |
 
 ## Capitolo 6
