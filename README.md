@@ -52,10 +52,10 @@
 
 | Es n° | Stato |
 | ----- | ----- |
-| 1     | X |
+| 1     | ✔     |
 | 2     | ✔     |
 | 3     | Correggere Hermite |
-| 4     | Concludere con es.1-3 |
+| 4     | Concludere  con Hermite |
 | 5     | X |
 | 6     | ✔     |
 | 7     | X|
