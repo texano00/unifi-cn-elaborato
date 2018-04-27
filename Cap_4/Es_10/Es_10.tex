@@ -1,0 +1,117 @@
+Il problema relativo ad un moto rettilineo uniformemente accelerato, in forma polinomiale è :
+	\[
+		x(t) = x_0 + v_0t + a_0t^2 \quad con \quad a_0 = \frac{1}{2}a
+	\]
+il cui grado è $n=2$.\\\
+Il problema è \textit{ben posto}, cioè ammette soluzione ed è unica, se e solo se almeno $n+1$ ascisse $x_i$ delle coppie dei dati, sono tra loro distinte.\\\
+Nel nostro caso, abbiamo le seguenti coppie di dati (tempo, spazio) :\\\
+	\[
+		(1,2.9),(1,3.1),(2,6.9),(2,7.1),(3,12.9),(3,13.1),(4,20.9),(4,21.1),(5,30.9),(5,31.1)	
+	\]\\\
+quindi $x_i=5$ ascisse discinte che sono $\geq$ di $n+1 = 2+1 = 3$, di conseguenza il problema risulta \textit{ben posto}.\\\
+A questo punto possiamo stimare, nel senso dei \textit{minimi quadrati},posizione, velocità iniziale, ed accelerazione, che equivale alla risoluzione del sistema lineare determinato:\\\
+	\[
+		V\underline{a}=\underline{y}
+	\]
+	\[
+		V=\begin{bmatrix}
+			x_0^0 & x_0^1 & \cdots & x_0^m \\
+			x_1^0 & x_1^1 & \cdots & x_1^m \\
+			\vdots & \vdots & & \vdots \\
+			x_n^0 & x_n^1 & \cdots & x_n^m \\		
+		\end{bmatrix}
+		\quad
+		\underline{a}=\begin{bmatrix}
+			a_0 \\
+			a_1 \\
+			\vdots \\
+			a_m
+		\end{bmatrix}
+		\quad
+		\underline{y}=\begin{bmatrix}
+			y_0 \\
+			y_1 \\
+			\vdots \\
+			y_n
+		\end{bmatrix}
+	\]\\\
+in cui la matrice dei coefficienti $V \in \mathbb{R}^{n+1Xm+1}$ è una matrice di tipo \textit{Vandermonde} (in realtà la trasposta di una matrice di tipo \textit{Vandermonde}), il vettore \underline{a}, è il vettore  da determinare e definisce il polinomio di approssimazione ai \textit{minimi quadrati}, ed infine il vettore \underline{y} è il vettore dei \textit{valori misurati}.\\\
+Quindi scambiando le incognite con i valori di Input abbiamo che :\\\
+	\[
+		V=\begin{bmatrix}
+			1^0 & 1^1 & 1^2 \\
+			1^0 & 1^1 & 1^2 \\
+			2^0 & 2^1 & 2^2 \\
+			2^0 & 2^1 & 2^2 \\
+			3^0 & 3^1 & 3^2 \\
+			3^0 & 3^1 & 3^2 \\
+			4^0 & 4^1 & 4^2 \\
+			4^0 & 4^1 & 4^2 \\
+			5^0 & 5^1 & 5^2 \\
+			5^0 & 5^1 & 5^2 				
+		\end{bmatrix}
+		=\begin{bmatrix}
+			1 & 1 & 1 \\
+			1 & 1 & 1 \\
+			1 & 2 & 4 \\
+			1 & 2 & 4 \\
+			1 & 3 & 9 \\
+			1 & 3 & 9 \\
+			1 & 4 & 16 \\
+			1 & 4 & 16 \\
+			1 & 5 & 25 \\
+			1 & 5 & 25 				
+		\end{bmatrix} 
+		\quad
+		\underline{a}=\begin{bmatrix}
+			x_0 \\
+			v_0 \\
+			a_0
+		\end{bmatrix}
+		\quad
+		\underline{y}=\begin{bmatrix}
+			2.9 \\
+			3.1 \\
+			6.9 \\
+			7.1 \\
+			12.9 \\
+			13.1 \\
+			20.9 \\
+			21.1 \\
+			30.9 \\
+			31.1
+		\end{bmatrix}
+	\]\\\
+ed il sistema lineare sovradeterminato da risolvere è :\\\
+	\[
+		\begin{bmatrix}
+			1 & 1 & 1 \\
+			1 & 1 & 1 \\
+			1 & 2 & 4 \\
+			1 & 2 & 4 \\
+			1 & 3 & 9 \\
+			1 & 3 & 9 \\
+			1 & 4 & 16 \\
+			1 & 4 & 16 \\
+			1 & 5 & 25 \\
+			1 & 5 & 25 				
+		\end{bmatrix}
+		\begin{bmatrix}
+			x_0 \\
+			v_0 \\
+			a_0
+		\end{bmatrix}=
+		\begin{bmatrix}
+			2.9 \\
+			3.1 \\
+			6.9 \\
+			7.1 \\
+			12.9 \\
+			13.1 \\
+			20.9 \\
+			21.1 \\
+			30.9 \\
+			31.1
+		\end{bmatrix}
+	\]\\\
+Tale sistema si risolve mediante fattorizzazione \textit{QR} (possibile poichè tutte le ascisse sono distinti)

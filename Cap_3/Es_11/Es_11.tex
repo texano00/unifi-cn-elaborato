@@ -2,21 +2,21 @@ Il seguente codice effettua la chiamata della funzione \textbf{newtonNonLin}, pa
 $f = f(x_1,x_2)=x_1^2+x_2^3-x_1x_2$, per risolvere il seguente sistema nonlineare con i relativi parametri di input:
 	\[
 	F(x)=0 \quad
-	F=\Bigg(\begin{matrix}
+	F=\begin{bmatrix}
 		\frac{\partial f}{\partial x_1} \\
 		\frac{\partial f}{\partial x_2} 
-	\end{matrix}\Bigg) = 
-	\Bigg(\begin{matrix}
+	\end{bmatrix}= 
+	\begin{bmatrix}
 		2x_1-x_2 \\
 		3x_2^2-x_1
-	\end{matrix}\Bigg)=f \quad
+	\end{bmatrix}=f \quad
 	\textit{con punto di innesco } x_1=\frac{1}{2} \quad x_2=\frac{1}{2}
 	\]
 	\[
-	J_F=\Bigg(\begin{matrix}
+	J_F=\begin{bmatrix}
 		2-x_2 & 2x_1-1 \\
 		3x_2^2-1 & 6x_2-x_1 
-	\end{matrix}\Bigg)
+	\end{bmatrix}
 	\]
 	\[
 	imax=100, \quad 

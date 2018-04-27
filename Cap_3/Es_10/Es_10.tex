@@ -4,20 +4,20 @@ Per la risoluzione di sistemi nonlineari, ovvero del tipo
 	\]
 con \textit{F} costituita dalle \textit{funzioni componenti}
 	\[
-	F(x)=\Bigg(\begin{matrix}
+	F(x)=\begin{pmatrix}
 		f_1(x) \\
 		\vdots \\
 		f_n(x)
-	\end{matrix}\Bigg) \quad
+	\end{pmatrix} \quad
 	f_1: \Omega \subseteq \mathbb{R}^n \rightarrow \mathbb{R}^n
 	\]
 ed \textit{x} il vettore delle incognite che risolvono il sistema 
 	\[
-	x=\Bigg(\begin{matrix}
+	x=\begin{pmatrix}
 		x_1 	\\
 		\cdots  \\
 		x_n
-	\end{matrix}\Bigg) \quad
+	\end{pmatrix} \quad
 	\in \mathbb{R}^n	
 	\]
 si utilizza il \textbf{metodo di Newton}, ovvero un \textit{metodo iterativo} definito da
@@ -26,11 +26,11 @@ si utilizza il \textbf{metodo di Newton}, ovvero un \textit{metodo iterativo} de
 	\]
 partendo da un'approssimazione $x^0$ assegnata. $J_F(x)$ indica la \textbf{matrice Jacobiana}, ovvero la matrice delle derivate parziali:
 	\[
-	J_F(x)=\Bigg(\begin{matrix}
+	J_F(x)=\begin{pmatrix}
 		\frac{\partial f_1}{\partial x_1}(x) & \cdots & \frac{\partial f_1}{\partial x_n}(x) \\
 		\vdots & & \vdots \\
 		\frac{\partial f_n}{\partial x_1}(x) & \cdots & \frac{\partial f_n}{\partial x_n}(x) 
-	\end{matrix}\Bigg)
+	\end{pmatrix}
 	\]\\\
 Il seguente codice MatLab implementa la risoluzioni di sistemi nonlineari tramite l'utilizzo del \textbf{metodo di Newton}:
 	\lstinputlisting[language=Matlab]{Cap_3/Es_10/newtonNonLin.m}

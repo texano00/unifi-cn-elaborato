@@ -1,43 +1,95 @@
-Il seguente codice MatLab, contiene l'implementazione di una funzione per la risoluzione di un sistema lineare $Ax = b$ con la seguenti tipologia di matrice \textit{A} :
+Il seguente codice MatLab, contiene l'implementazione di una funzione per la risoluzione di un sistema lineare $Ax = b$ con la seguente tipologia di matrice \textit{A} :\\\
 	\[
 	A = \begin{bmatrix}
-		1     		& 0      	& 0      	& 0  	 & 0 & \cdots \\ 
-    	\alpha 		& 1      	& 0      	& 0  	 & 0 & \cdots \\
-    	0      		& \alpha 	& 1      	& 0  	 & 0 & \cdots \\
-    	0      		& 0      	& \alpha 	& 1  	 & 0 & \cdots \\
-    	\cdots     	& \cdots    & \cdots    & \alpha & 1 & \cdots 
+		1 & 0 & \cdots & \cdots & 0 \\
+		\alpha & 1 & 0 & \cdots & 0 \\
+		0 & \ddots & \ddots  & \ddots & \vdots \\
+		\vdots & \ddots & \ddots & \ddots & \vdots \\
+		0 & \cdots & \cdots & \alpha & 1
   	\end{bmatrix}
   	\]
 \begin{itemize}
 	\item \textbf{Metodo matrice triangolare inferiore modificato}
 		\lstinputlisting[language=Matlab]{Cap_3/Es_7/triangolareInferioreMod.m}
-	\item \textbf{Esempio}\\\
-		Il seguente codice MatLab contiene la chiamata della funzione precedentemente definita con i rispettivi valori di input:
+	\item \textbf{Implementazione}\\\
+		Il seguente codice MatLab contiene la chiamata della funzione precedentemente definita con i rispettivi valori di input(con $n=12$, $A \in \mathbb{R}^{12X12}$, $b_1 \in \mathbb{R}^{12X12}$ e $b_2 \in \mathbb{R}^{12X12}$):
 		\[
 		A = \begin{bmatrix}
-			1 & 0 & 0 & 0 & 0 \\
-			5 & 1 & 0 & 0 & 0 \\
-			0 & 5 & 1 & 0 & 0 \\
-			0 & 0 & 5 & 1 & 0 \\
-			0 & 0 & 0 & 5 & 1
-		\end{bmatrix} \quad
-		b = \begin{bmatrix}
+			1 & 0 & \cdots & \cdots & 0 \\
+			100 & 1 & 0 & \cdots & 0 \\
+			0 & \ddots & \ddots  & \ddots & \vdots \\
+			\vdots & \ddots & \ddots & \ddots & \vdots \\
+			0 & \cdots & \cdots & 100 & 1
+			\end{bmatrix} \quad
+		b_1 = \begin{bmatrix}
 			1 \\
- 			2 \\
- 	 		3 \\
-	  		4 \\
-  			5
+ 			101 \\
+ 	 		\vdots \\
+	  		101 
+  		\end{bmatrix} \quad
+  		b_2 = 0.1*\begin{bmatrix}
+			1 \\
+ 			101 \\
+ 	 		\vdots \\
+	  		101 
   		\end{bmatrix} 
   		\]\\\
   		\lstinputlisting[language=Matlab]{Cap_3/Es_7/Es_7.m}
-  		restituendo il seguente valore:
+  		restituendo i seguenti valori:
   		\[
-  		b = \begin{bmatrix}
+  		x_1 = \begin{bmatrix}
   			1   \\
-  			-3  \\
-  			18  \\
-  			-86 \\
-  			435
-  		\end{bmatrix} 
+  			\vdots  \\
+  			1
+  		\end{bmatrix} \quad
+  		x_2 = \begin{bmatrix}
+  		    1.000000000000000e-01 \\
+  			1.000000000000014e-01 \\
+  			9.999999999985931e-02 \\
+  			1.000000000140702e-01 \\
+  			9.999999859298470e-02 \\
+     		1.000001407015318e-01 \\
+     		9.998592984681665e-02 \\
+     		1.014070153183368e-01 \\
+    		-4.070153183368319e-02 \\
+    		1.417015318336832e+01 \\
+    		-1.406915318336832e+03 \\
+     		1.407016318336832e+05
+  		\end{bmatrix}
   		\]
+	\begin{itemize}
+		\item \textbf{Studio condizionamento}\\\
+			Risulta
+				\[
+					\|A\|_\infty = \underset{i=1,...,n}{max} \sum_{j=1}^n|a_{i,j}|=101
+				\]
+				\[
+					\|A^{-1}\|_\infty = \underset{i=1,...,n}{max} \sum_{j=1}^n|a_{i,j}|=\sum_{j=1}^n|a_{n,j}|=\sum_{s=0}^{n-1}10^{2s}=\frac{10^{2n}-1}{10^2-1}=\frac{10^{2n}-1}{99}
+				\]
+				\[
+					quindi 
+					\quad
+					k_\infty(A) = \|A\|_\infty \|A^{-1}\|_\infty=101\frac{10^{2n}-1}{99}>10^{2n}
+				\]\\\
+			nel caso $n=12$, si ha $k_\infty(A)>10^{24}$ quindi il problema è malcondizionato. Su tale matrice, la function \textit{cond} restiruisce \textit{Inf}.
+			La \textit{norma} $\infty$ su una matrice è la somma delle righe, la \textit{norma} $1$ è la somma massima delle colonne; nella matrice A tutte le colonne, come tutte le righe, hanno somma 101 quindi $\|A\|_\infty=\|A\|_1=101$. Nella matrice $A^{-1}$, la \textit{norma} $\infty$ considera l'\textit{n}-esima riga mentre la \textit{norma} $1$ la prima colonna, in ogni caso, $\|A\|_\infty=\|A\|_1=\frac{10^{24}-1}{99}$. Quindi $k_\infty(A)>10^{24}$.\\\
+			Considerando il vettore $\underline{b2}$ come una perturbazione di $\underline{b1}$ si ha:
+			\[
+				\Delta\underline{b1}=\underline{b2}-\underline{b1}=\begin{bmatrix}
+				-0.9 \\
+				-90.9 \\
+				\vdots \\
+				-90.9
+				\end{bmatrix}
+			\]\\\
+			segue
+			\[
+				\frac{\|\Delta\underline{b1}\|}{\|\underline{b1}\|}\approx \frac{\sqrt{0.9+9*90.9^2}}{\sqrt{1+9*101^2}}\approx 1. 
+			\]\\\
+			Quindi:
+			\[
+				\frac{\|\Delta\underline{x}\|}{\|\underline{x}\|}\leq k(A)\Bigg(\frac{\|\Delta\underline{b1}\|}{\|\underline{b1}\|}+\frac{\|\Delta A\|}{\|{A}\|}\Bigg) = k(A)\frac{\|\Delta\underline{b1}\|}{\|\underline{b1}\|}\approx 10^{24}
+			\]\\\
+			ovvero a fronte di una perturbazione del vettore \underline{b1} di $0.1$, si ha un errore sul risultato dell'ordine di $10^{24}$.
+	\end{itemize}
 \end{itemize}
