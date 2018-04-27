@@ -61,7 +61,7 @@
 | 7     | X|
 | 8     | X|
 | 9     | X|
-| 10    | ✔  Quasi completato |
+| 10    | ✔  Controllo ultima parte |
 
 ## Capitolo 5
 
