@@ -4,7 +4,7 @@ Il problema relativo ad un moto rettilineo uniformemente accelerato, in forma po
 	\]
 il cui grado è $n=2$.\\\
 Il problema è \textit{ben posto}, cioè ammette soluzione ed è unica, se e solo se almeno $n+1$ ascisse $x_i$ delle coppie dei dati, sono tra loro distinte.\\\
-Nel nostro caso, abbiamo le seguenti coppie di dati (tempo, spazio) :\\\
+Nel nostro caso, abbiamo le seguenti coppie di dati $(tempo, spazio)=(x_i,y_i)$ per $i=0,...,n$:\\\
 	\[
 		(1,2.9),(1,3.1),(2,6.9),(2,7.1),(3,12.9),(3,13.1),(4,20.9),(4,21.1),(5,30.9),(5,31.1)	
 	\]\\\
@@ -114,4 +114,29 @@ ed il sistema lineare sovradeterminato da risolvere è :\\\
 			31.1
 		\end{bmatrix}
 	\]\\\
-Tale sistema si risolve mediante fattorizzazione \textit{QR} (possibile poichè tutte le ascisse sono distinti)
+Tale sistema si risolve mediante fattorizzazione \textit{QR} (possibile poichè tutte le ascisse sono distinti).
+Il seguente codice MatLab contiene la chiamata della funzione \textit{risolutoreQR} con Input la matrice $V$ e il vettore dei termini noti $b$:
+	\lstinputlisting[language=Matlab]{Cap_4/Es_10/Es_10.m}
+restituendo i seguenti risultati (vettore da determinare $\underline{a}$ e il vettore \textit{residuo} $\underline{r}$ e la rispettiva \textit{norma}):
+	\[
+		\underline{a}=\begin{bmatrix}
+			1.000000000000001e+00 \\
+			1.000000000000002e+00 \\
+	 	    9.999999999999994e-01
+		\end{bmatrix}
+		\quad
+		\underline{r}=\begin{bmatrix}
+			1.000000000000023e-01 \\
+   			-9.999999999999787e-02 \\
+     		1.000000000000032e-01 \\
+    		-9.999999999999609e-02 \\
+     		1.000000000000014e-01 \\
+    		-9.999999999999787e-02 \\
+     		1.000000000000014e-01 \\
+    		-1.000000000000014e-01 \\
+     		9.999999999999787e-02 \\
+    		-1.000000000000050e-01
+		\end{bmatrix}
+		\quad
+		\|r\|_2^2 = 1.000000000000009e-01
+	\]
