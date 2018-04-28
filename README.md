@@ -58,7 +58,7 @@
 | 4     | ✔                        |
 | 5     | ✔ Controllo algoritmo    |
 | 6     | ✔                        |
-| 7     | ✔ Errore                 |
+| 7     | ✔                        |
 | 8     | X                        |
 | 9     | X                        |
 | 10    | ✔ Controllo ultima parte |
