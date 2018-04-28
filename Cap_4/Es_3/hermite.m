@@ -26,7 +26,7 @@ function [y] = hermite(xi, fi, f1i, x)
     fh(2:2:2*n+2) = f1i;
     nh = length(xh)-1;
     for i = nh:-2:3
-        fh(i) = (fh(i)-fh(i-2))/(xh(i)-xh(i-2));
+        fh(i) = (fh(i)-fh(i-2))/(xh(i)-xh(i-1));
     end
     for i = 2:nh
         for j = nh+1:-1:i+1
