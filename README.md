@@ -54,8 +54,8 @@
 | ----- | ----- |
 | 1     | ✔     |
 | 2     | ✔     |
-| 3     | X Correggere Hermite |
-| 4     | X Correggere Hermite o Derivata |
+| 3     | ✔     |
+| 4     | X Correggere Hermite (vedi es3) o Derivata |
 | 5     | ✔  Controllo algoritmo |
 | 6     | ✔     |
 | 7     | X|
