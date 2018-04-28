@@ -15,7 +15,8 @@ y2 = newton(xi, fi, x);
 plot(xi, fi, x, y2);
 
 y3 = hermite(xi, fi, f1i, x);
-% Li plotto su due grafici diversi perchè xi,fi altrimenti
-% xi,fi è indistinguibile dall'ascissa del piano cartesiano
+
+% li plotto su due grafici diversi perche xi,fi altrimenti
+% xi,fi e' indistinguibile dall ascissa del piano cartesiano
 plot(xi,fi);
 plot(x,y3);
