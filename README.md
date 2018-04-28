@@ -60,7 +60,7 @@
 | 6     | ✔                        |
 | 7     | ✔                        |
 | 8     | ✔                        |
-| 9     | X                        |
+| 9     | ✔ Grafico                |
 | 10    | ✔ Controllo ultima parte |
 
 ## Capitolo 5
