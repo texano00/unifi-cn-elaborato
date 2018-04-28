@@ -50,30 +50,30 @@
 <img align="left" width="425px" src="assets/esercizielaborato_cap4/esercizielaborato_cap4-1.jpg">
 <img align="rigth" width="425px" src="assets/esercizielaborato_cap4/esercizielaborato_cap4-2.jpg">
 
-| Es n° | Stato |
-| ----- | ----- |
-| 1     | ✔     |
-| 2     | ✔     |
-| 3     | ✔     |
-| 4     | X Correggere Hermite (vedi es3) o Derivata |
-| 5     | ✔  Controllo algoritmo |
-| 6     | ✔     |
-| 7     | X|
-| 8     | X|
-| 9     | X|
-| 10    | ✔  Controllo ultima parte |
+| Es n° | Stato                    |
+| ----- | ------------------------ |
+| 1     | ✔                        |
+| 2     | ✔                        |
+| 3     | ✔                        |
+| 4     | ✔                        |
+| 5     | ✔ Controllo algoritmo    |
+| 6     | ✔                        |
+| 7     | X                        |
+| 8     | X                        |
+| 9     | X                        |
+| 10    | ✔ Controllo ultima parte |
 
 ## Capitolo 5
 
 <img align="left" width="425px" src="assets/esercizielaborato_cap5/esercizielaborato_cap5-1.jpg">
 <img align="rigth" width="425px" src="assets/esercizielaborato_cap5/esercizielaborato_cap5-2.jpg">
 
-| Es n° | Stato |
-| ----- | ----- |
-| 1     | ✔     |
-| 2     | ✔     |
-| 3     | ✔  Controllo algoritmo |
-| 4     | ✔  Controllo algoritmo |
-| 5     | X |
+| Es n° | Stato                 |
+| ----- | --------------------- |
+| 1     | ✔                     |
+| 2     | ✔                     |
+| 3     | ✔ Controllo algoritmo |
+| 4     | ✔ Controllo algoritmo |
+| 5     | X                     |
 
 ## Capitolo 6
