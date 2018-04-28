@@ -39,4 +39,5 @@ function [y] = hermite(xi, fi, f1i, x)
     for i = nh:-1:1
         y = y.*(x-xh(i))+fh(i);
     end
+    y = y.';
 end
