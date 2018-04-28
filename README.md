@@ -59,7 +59,7 @@
 | 5     | ✔ Controllo algoritmo    |
 | 6     | ✔                        |
 | 7     | ✔                        |
-| 8     | X                        |
+| 8     | ✔                        |
 | 9     | X                        |
 | 10    | ✔ Controllo ultima parte |
 
