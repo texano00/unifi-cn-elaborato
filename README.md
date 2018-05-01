@@ -60,7 +60,7 @@
 | 6     | ✔                        |
 | 7     | ✔                        |
 | 8     | ✔                        |
-| 9     | ✔                        |
+| 9     | ✔  Controllo esercizio |
 | 10    | ✔ Controllo ultima parte |
 
 ## Capitolo 5
