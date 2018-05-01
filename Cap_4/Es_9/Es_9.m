@@ -1,12 +1,7 @@
-addpath('../Es_1');
-addpath('../Es_6');
-
 % Funzione di Runge
 f = @(x) 1 ./ (1 + 25.*x.^2);
-
 a = -6;
 b = 6;
-
 n = 2:2:40;
 
 % valori nei quali mi interessa sapere il valore del polimonio interpolante

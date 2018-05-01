@@ -1,5 +1,6 @@
-p = inline('x^3-4*x^2+5*x-2');
-pd = inline('3*x^2-8*x+5');
+addpath(genpath('..\Es_2'));
+p = @(x) x^3-4*x^2+5*x-2;
+pd = @(x) 3*x^2-8*x+5;
 tolx = 10^-1;
 xn = [];
 xnm1 = [];
