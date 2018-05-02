@@ -9,7 +9,7 @@
 %
 % Output:
 %   -sx: vettore di m valori contenente la valutazione dei punti in pt
-%   della spline (NaN se un punto non è valutabile).
+%   della spline (NaN se un punto non e' valutabile).
 
 function [sx] = valutaSpline(xi, s, x)
     sx = zeros(length(x), 1);

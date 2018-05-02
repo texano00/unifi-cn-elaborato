@@ -1,2 +1,16 @@
-Il seguente codice MatLab contiene l'implementazione della \textit{spline} cubica interpolante (naturale o \textit{not-a-knot}, come specificato in ingresso) delle coppie di dati assegnate. La forma della funzione è del tipo : \textit{y = spline3( xi, fi, x, tipo )}.\\\
-\lstinputlisting[language=Matlab]{Cap_4/Es_5/spline3.m}
+Il seguente codice MatLab contiene l'implementazione della \textit{spline} cubica interpolante (naturale o \textit{not-a-knot}, come specificato in ingresso) delle coppie di dati assegnate. La forma della funzione è del tipo :\\ \textit{y = spline3( xi, fi, x, tipo )}.\\\
+	\lstinputlisting[language=Matlab]{Cap_4/Es_5/spline3.m}
+Da come si può vedere, all'interno del codice vengono richiamate le seguenti funzioni:\\\ 
+	\begin{itemize}
+		\item \textbf{dd = differenzaDivisa(xi, fi)}
+			\lstinputlisting[language=Matlab]{Cap_4/Es_5/differenzaDivisa.m}
+		\item \textbf{mi = risolviSistSplineNotAKnot(phi, xi, dd)}\\\
+			\lstinputlisting[language=Matlab]{Cap_4/Es_5/risolviSistSplineNotAKnot.m}
+		\item \textbf{mi = risolviSistSplineNaturale(phi, xi, dd)}\\\
+			\lstinputlisting[language=Matlab]{Cap_4/Es_5/risolviSistSplineNaturale.m}
+		\item \textbf{s = esprSpline3(xi, fi, mi)}\\\
+			\lstinputlisting[language=Matlab]{Cap_4/Es_5/esprSpline3.m}
+		\item \textbf{y = valutaSpline(xi, s, x)}\\\
+			\lstinputlisting[language=Matlab]{Cap_4/Es_5/valutaSpline.m}
+	\end{itemize}
+	
