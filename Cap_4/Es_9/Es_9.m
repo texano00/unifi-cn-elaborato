@@ -8,8 +8,8 @@ n = 2:2:40;
 x = linspace(a,b);
 
 for i = 1:length(n)
-  % Ascisse equidistanti
-  xi = linspace(a,b,n(i));
+  % n+1 ascisse equidistanti in [a,b]
+  xi = linspace(a,b,n(i)+1);
 
   % Calcolo le fi nella funzione di Runge
   fi = f(xi);
@@ -17,7 +17,7 @@ for i = 1:length(n)
   % Lagrange
   y = lagrange(xi,fi,x);
 
-  % Plot (cambiando n=[12,18,40])
+  % Plot
   plot(x,y)
   hold on
   
