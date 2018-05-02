@@ -17,10 +17,10 @@ for i = 1:length(n)
   % Lagrange
   y = lagrange(xi,fi,x);
 
-  % Plot
+  % Plot (cambiando n=[12,18,40])
   plot(x,y)
   hold on
-
+  
   norm(f(x) - y)
 end
 legend('2','4','6','8','10','12','14','16','18','20','22','24','26','28','30','32','34','36','38','40')

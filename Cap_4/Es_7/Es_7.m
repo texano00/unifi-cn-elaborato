@@ -8,17 +8,20 @@ n = 2:2:40;
 x = linspace(-6,6);
 
 for i = 1:length(n)
-  % Ascisse di Chebyshev
-  xi = ceby(n(i),a,b);
+    % Ascisse di Chebyshev
+    xi = ceby(n(i),a,b);
   
-  % Calcolo le fi nella funzione di Runge
-  fi = f(xi);
+    % Calcolo le fi nella funzione di Runge
+    fi = f(xi);
   
-  % Lagrange
-  y = lagrange(xi,fi,x);
+    % Lagrange
+    y = lagrange(xi,fi,x);
   
-  norm(f(x) - y)
+    % Plot 
+    plot(x, y);
+    hold on
+  
+    norm(f(x) - y)
 end
-
-figure;
-plot(xi, fi, x, y);
+legend('2','4','6','8','10','12','14','16','18','20','22','24','26','28','30','32','34','36','38','40')
+hold off
