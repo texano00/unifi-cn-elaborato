@@ -1,3 +1,5 @@
+% Soluzione Cap_3 Es_6.
+
 A = [10^(-13) 1 ; 1 1];
 LU = fattorizzazioneLU(A);
 L = tril(LU,-1)+eye(length(LU));

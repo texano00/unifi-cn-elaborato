@@ -1,13 +1,14 @@
-% bisezione(f, a, b, tolx)
+% x = bisezione(f, a, b, tolx)
 % Metodo di bisezione.
 %
 % Input:
-% f: la funzione;
-% a: estremo sinistro dell'intervallo di confidenza;
-% b: estremo destro dell'intervallo di confidenza;
-% tolx: la tolleranza desiderata;
+%  -f: la funzione;
+%  -a: estremo sinistro dell'intervallo di confidenza;
+%  -b: estremo destro dell'intervallo di confidenza;
+%  -tolx: la tolleranza desiderata;
+%
 % Output :
-% x: radici della funzione
+%  -x: radici della funzione
 
 function x = bisezione(f, a, b, tolx)
     imax = ceil( log2(b-a) - log2(tolx) );

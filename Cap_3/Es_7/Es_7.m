@@ -1,3 +1,5 @@
+% Soluzione Cap_3 Es_7.
+
 b1 = [1; 101*ones(12,1)];
 b2 = 0.1*[1; 101*ones(12,1)];
 x1 = triangolareInferioreMod(100,b1);

@@ -1,3 +1,5 @@
+% Soluzione Cap_3 Es_11.
+
 format short;
 
 zero = [1/12;1/6];

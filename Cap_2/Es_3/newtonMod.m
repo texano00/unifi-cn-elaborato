@@ -1,15 +1,16 @@
-% newtonMod(f, f1, x0, m, imax, tolx)
+% x0 = newtonMod(f, f1, x0, m, imax, tolx)
 % Metodo di Newton modificato.
 %
 % Input:
-% f: la funzione;
-% f1: la derivata della funzione;
-% x0: l'approssimazione iniziale;
-% m: la molteplicita della radice;
-% imax: il numero massimo di iterazioni;
-% tolx: la tolleranza desiderata;
+%  -f: la funzione;
+%  -f1: la derivata della funzione;
+%  -x0: l'approssimazione iniziale;
+%  -m: la molteplicita della radice;
+%  -imax: il numero massimo di iterazioni;
+%  -tolx: la tolleranza desiderata;
+%
 % Output :
-% x0: radici della funzione
+%  -x0: radici della funzione
 
 function x0 = newtonMod(f, f1, x0, m, imax, tolx)
     inm = 0;

@@ -2,10 +2,11 @@
 % Metodo per la fattorizzazione LU di una matrice.
 %
 % Input:
-% A: matrice sdp da fattorizzare.
+%  -A: matrice sdp da fattorizzare.
+%
 % Output:
-% A: matrice riscritta L e U;
-% p: vettore contente l'informazione della matrice di permutazione P.
+%  -A: matrice riscritta L e U;
+%  -p: vettore contente l'informazione della matrice di permutazione P.
 
 function [A, p] = fattorizzazioneLUpiv(A)
     [m,n]=size(A);

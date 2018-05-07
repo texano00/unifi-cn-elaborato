@@ -1,15 +1,16 @@
-% secantiSqrtAlpha(alpha, x0, x1, imax, tolx)
+% [xs,exs] = secantiSqrtAlpha(alpha, x0, x1, imax, tolx)
 % Metodo delle Secanti ottimizzato per l'approssimazione della radice
 % quadrata.
 %
 % Input:
-% alpha: l'argomento della radice quadrata;
-% x0: l'approssimazione iniziale;
-% imax: il numero massimo di iterazioni;
-% tolx: la tolleranza desiderata.
+%  -alpha: l'argomento della radice quadrata;
+%  -x0: l'approssimazione iniziale;
+%  -imax: il numero massimo di iterazioni;
+%  -tolx: la tolleranza desiderata.
+%
 % Output:
-% xs: vettore radici;
-% exs: vettore errore.
+%  -xs: vettore radici;
+%  -exs: vettore errore.
 
 function [xs, exs] = secantiSqrtAlpha(alpha, x0, x1, imax, tolx)
     format long e;

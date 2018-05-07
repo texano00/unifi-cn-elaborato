@@ -1,3 +1,5 @@
+% Soluzione Cap_3 Es_5.
+
 LDLt = [3 2 -1; 2 7 7; -1 7 30];
 xt1 = [4; 5; 3];
 b1 = LDLt*xt1;

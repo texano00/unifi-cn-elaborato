@@ -2,9 +2,9 @@
 % Fattorizzazione QR di Householder per matrici mxn con m>=n.
 %
 % Input:
-% A: la matrice da fattorizzare QR.
+%  -A: la matrice da fattorizzare QR.
 % Output:
-% A: la matrice riscritta con le informazioni dei fattori Q ed R.
+%  -A: la matrice riscritta con le informazioni dei fattori Q ed R.
 
 function A = fattorizzazioneQR(A)
     [m,n]=size(A);

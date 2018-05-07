@@ -1,11 +1,12 @@
-% triangolareInferiore(A, b)
+% x = triangolareInferiore(A, b)
 % Metodo per la risoluzione di una matrice tringolare inferiore.
 
 % Input:
-% A: matrice triangolare inferiore;
-% b: vettore dei termini noti.
+%  -A: matrice triangolare inferiore;
+%  -b: vettore dei termini noti.
+%
 % Output:
-% x: vettore delle soluzioni del sistema.
+%  -x: vettore delle soluzioni del sistema.
 
 function x = triangolareInferiore(A,b)
     x = b;

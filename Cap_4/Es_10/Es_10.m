@@ -1,3 +1,5 @@
+% Soluzione Cap_4 Es_10.
+
 A = [ ones(10,3)];
 j = 2;
 for i = 3:2:length(A)-1

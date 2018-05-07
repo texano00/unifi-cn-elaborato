@@ -4,10 +4,11 @@
 % coefficienti.
 %
 % Input:
-% A: matrice dei coefficienti mxn dove m>n;
-% b: vettore dei termini noti.
+%  -A: matrice dei coefficienti mxn dove m>n;
+%  -b: vettore dei termini noti.
+%
 % Output:
-% b: vettore delle soluzioni del sistema lineare sovradeterminato.
+%  -b: vettore delle soluzioni del sistema lineare sovradeterminato.
 
 function b = risolutoreQR(A, b)
     [m,n] = size(A);

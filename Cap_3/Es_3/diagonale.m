@@ -1,11 +1,12 @@
-% diagonale(D,b)
+% x = diagonale(D,b)
 % Metodo per il cacolo del vettore incognite di una matrice diagonale.
 %
 % Input:
-% D: matrice diagonale.
-% b: vettore dei termini noti.
+%  -D: matrice diagonale.
+%  -b: vettore dei termini noti.
+%
 % Output:
-% x: vettore delle soluzioni del sistema.
+%  -x: vettore delle soluzioni del sistema.
 
 function x = diagonale(D,b)
     x = b;

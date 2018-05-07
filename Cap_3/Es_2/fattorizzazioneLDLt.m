@@ -1,10 +1,11 @@
-% fattorizzazioneLDLt(A)
+% A = fattorizzazioneLDLt(A)
 % Metodo per la fattorizzazione LDLt di una matrice.
 
 % Input:
-% A: matrice sdp da fattorizzare.
+%  -A: matrice sdp da fattorizzare.
+%
 % Output:
-% A: matrice riscritta L, D e Lt.
+%  -A: matrice riscritta L, D e Lt.
 
 function A = fattorizzazioneLDLt(A)
     [m,n]=size(A);

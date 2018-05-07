@@ -1,14 +1,15 @@
-% aitken(f, f1, x0, imax, tolx)
+% x0 = aitken(f, f1, x0, imax, tolx)
 % Metodo di accelerazione di Aitken.
 %
 % Input:
-% f: la funzione
-% f1: la derivata della funzione;
-% x0: l'approssimazione iniziale;
-% imax: il numero massimo di iterazioni;
-% tolx: la tolleranza desiderata;
+%  -f: la funzione
+%  -f1: la derivata della funzione;
+%  -x0: l'approssimazione iniziale;
+%  -imax: il numero massimo di iterazioni;
+%  -tolx: la tolleranza desiderata;
+%
 % Output :
-% x0: radici della funzione
+%  -x0: radici della funzione
 
 function x0 = aitken(f, f1, x0, imax, tolx)
     ia = 0;

@@ -1,11 +1,12 @@
-% risolutoreLUPiv(LU,b)
+% x = risolutoreLUPiv(LU,b)
 % Metodo per la risoluzione di una matrice LUPiv.
 
 % Input:
-% LU: matrice;
-% b: vettore dei termini noti;
+%  -LU: matrice;
+%  -b: vettore dei termini noti;
+%
 % Output:
-% x: vettore delle soluzioni del sistema.
+%  -x: vettore delle soluzioni del sistema.
 
 function x = risolutoreLUpiv(LU, b)
     [LU,p] = fattorizzazioneLUpiv(LU);

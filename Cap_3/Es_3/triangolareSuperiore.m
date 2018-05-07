@@ -1,11 +1,12 @@
-% triangolareSuperiore(A, b)
+% x = triangolareSuperiore(A, b)
 % Metodo per la risoluzione di una matrice tringolare superiore.
 
 % Input:
-% A: matrice triangolare superiore;
-% b: vettore dei termini noti.
+%  -A: matrice triangolare superiore;
+%  -b: vettore dei termini noti.
+%
 % Output:
-% x: vettore delle soluzioni del sistema.
+%  -x: vettore delle soluzioni del sistema.
 
 function x = triangolareSuperiore(A,b)
     x = b;
