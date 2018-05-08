@@ -15,20 +15,23 @@ for j = 1:10
     f(j) = teta(1,h(j));
 end
 
+h
 f
+10^(-5)
+plot(h,f);
 
 % val = teta(x,h)
-% Funzione che calcola il valore di teta.
+%   Funzione che calcola il valore di teta.
 % 
 % Input:
-%  -x;
-%  -h.
+%   -x;
+%   -h.
 %
 % Ouput:
-%  -val.
+%   -val.
 
 function val = teta(x,h)
-    sum = x+h;
+    sam = x+h;
     dif = x-h;
-    val = (power(sum,4) - power(dif,4))/2*h;
+    val = (power(sam,4) - power(dif,4))/(2*h);
 end
