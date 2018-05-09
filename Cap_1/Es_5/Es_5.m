@@ -15,6 +15,4 @@ function [x,count] = Es_5(delta)
         x = x + delta;
         count = count + 1; 
     end
-    x, count
 end
-

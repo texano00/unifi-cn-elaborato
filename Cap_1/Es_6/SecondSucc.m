@@ -1,7 +1,5 @@
 % Soluzione Cap_1 Es_6 Seconda successione.
-
-format longEng
-
+%
 % -x: vettore contenente il punto inziale e successivi punti della
 % successione;
 % -r: vettore contente gli errori assoluti di convergenza.
@@ -16,5 +14,3 @@ for i = 2:7
     x(i+1) = (3+(x(i-1)*x(i)))/(x(i-1)+x(i));
     r(i+1) = x(i+1)-conv;
 end
-
-x, r

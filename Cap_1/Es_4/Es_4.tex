@@ -24,13 +24,25 @@ Dalla definizione di errore relativo si ha quindi:\\
     	\]
     	\[
     		=\varepsilon_{m}\left(1+\frac{|x+y|}{|x+y+z|}+\frac{|x|+|y|+|z|}{|x+y+z|}\right)
-    	\]
-    \item Seguendo gli stessi procedimenti del punto precedente possiamo scrivere:\\
+    	\]\\\
+    \item Tenendo presente che $x \oplus (y \oplus z) = (y \oplus z) \oplus x$, seguendo gli stessi procedimenti del punto precedente possiamo scrivere:\\
     	\[
-    	\varepsilon_{2} = \frac{(x(1+\varepsilon_{x})+(y(1+\varepsilon_{y})+z(1+\varepsilon_{z}))(1+\varepsilon_{a}))(1+\varepsilon_{b})-(x+y+z)}{x+y+z} = 
+    		\varepsilon_{2} = \frac{((y(1+\varepsilon_{y})+z(1+\varepsilon_{z}))(1+\varepsilon_{a})+x(1+\varepsilon_{x}))(1+\varepsilon_{b})-(y+z+x)}{y+z+x} \approx
     	\]
     	\[
-    	= ... \leq \left|\frac{2\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 3\cdot z\cdot\varepsilon_{m}}{x+y+z}\right| \leq \left|\frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z}\right| = 3\cdot\left|\varepsilon_{m}\right|
-    	\]\\
+    		\approx \frac{y(1+\varepsilon_{y}+\varepsilon_{a}+\varepsilon_{b})+z(1+\varepsilon_{z}+\varepsilon_{a}+\varepsilon_{b})+x(1+\varepsilon_{x}+\varepsilon_{b})-y-z-x}{y+z+x} \leq
+    	\]
+    	\[ 
+    		\leq\left|\frac{\varepsilon_{b}(y+z+x)+\varepsilon_{a}(y+z)+y\varepsilon_{y}+z\varepsilon_{z}+x\varepsilon_{x}}{(y+z+x)}\right|\leq
+    	\]
+    	\[
+    		\leq\frac{|\varepsilon_{b}||y+z+x|+|\varepsilon_{a}||y+z|+|y||\varepsilon_{y}|+|z||\varepsilon_{z}|+|x||\varepsilon_{x}|}{|y+z+x|}\leq
+    	\]
+    	\[
+    		\leq\varepsilon_{m}\frac{|y+z+x|+|y+z|+(|y|+|z|+|x|)}{|y+z+x|}=
+    	\]
+    	\[
+    		=\varepsilon_{m}\left(1+\frac{|y+z|}{|y+z+x|}+\frac{|y|+|z|+|x|}{|y+z+x|}\right)
+    	\]\\\
 \end{enumerate}
-Otteniamo quindi che i valori degli errori $\varepsilon_{1}$ e $\varepsilon_{2}$ sono $\leq 3\cdot\left|\varepsilon_{m}\right|$.
+Otteniamo quindi che i valori degli errori $\varepsilon_{1}$ e $\varepsilon_{2}$ sono condizionati rispettivamente, dai valori $\frac{|x+y|}{|x+y+z|}$ e $\frac{|y+z|}{|y+z+x|}$.

@@ -15,9 +15,6 @@ for j = 1:10
     f(j) = teta(1,h(j));
 end
 
-h
-f
-10^(-5)
 plot(h,f);
 
 % val = teta(x,h)
