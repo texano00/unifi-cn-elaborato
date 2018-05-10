@@ -1,19 +1,18 @@
 % [xn,exn] = newtonSqrtAlpha(alpha, x0, imax, tolx)
-% Metodo di Newton ottimizzato per l'approssimazione della radice
-% quadrata.
+%   Metodo di Newton ottimizzato per l'approssimazione della radice
+%   quadrata.
 %
 % Input:
-%  -alpha: l'argomento della radice quadrata;
-%  -x0: l'approssimazione iniziale;
-%  -imax: il numero massimo di iterazioni;
-%  -tolx: la tolleranza desiderata.
+%   -alpha: l'argomento della radice quadrata;
+%   -x0: l'approssimazione iniziale;
+%   -imax: il numero massimo di iterazioni;
+%   -tolx: la tolleranza desiderata.
 %
 % Output:
-%  -xn: vettore radici;
-%  -exn: vettore errore.
+%   -xn: vettore radici;
+%   -exn: vettore errore.
 
 function [xn,exn] = newtonSqrtAlpha(alpha, x0, imax, tolx)
-    format long e;
     xn = [];
     exn = [];
     i = 1; 

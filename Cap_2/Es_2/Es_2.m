@@ -17,15 +17,13 @@ xc = [];
 xs = [];
 j = 1;
 
-% Iterazione.
+% Iterazione fino a una tolleranza di 10^(-16)
 
-while tolx>eps
+while tolx>10^(-16)
     tx(j) = tolx;
-    xn(j) = newton(p, pd, 3, 1000, tolx);
-    xc(j) = corde(p, pd, 3, 1000, tolx);
-    xs(j) = secanti(p, pd, 3, 1000, tolx);
+    xn(j) = newton(p, pd, 5/3, 1000, tolx);
+    xc(j) = corde(p, pd, 5/3, 1000, tolx);
+    xs(j) = secanti(p, pd, 5/3, 1000, tolx);
     tolx = tolx/10;
     j = j+1;
 end
-
-xn, xc, xs

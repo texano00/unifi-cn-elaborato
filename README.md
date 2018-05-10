@@ -18,8 +18,8 @@
 
 <img align="left" width="425px" src="assets/esercizielaborato_cap2/esercizielaborato_cap2-1.jpg">
 
-| Es n° | Stato : Da controllare |
-| ----- | ---------------------- |
+| Es n° | Stato : Corretto |
+| ----- | ---------------- |
 | 1     | ✔ |
 | 2     | ✔ |
 | 3     | ✔ |

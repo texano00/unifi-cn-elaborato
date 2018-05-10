@@ -11,7 +11,7 @@ tx = [];
 xb = [];
 j = 1;
 
-% Iterazione. 
+% Iterazione fino a una tolleranza di circa 10^(-16) (eps)
 
 while tolx>eps
     tx(j) = tolx;
@@ -19,5 +19,3 @@ while tolx>eps
     tolx = tolx/10;
     j = j+1;
 end
-
-xb
