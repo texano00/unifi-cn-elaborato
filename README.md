@@ -31,8 +31,8 @@
 <img align="left" width="425px" src="assets/esercizielaborato_cap3/esercizielaborato_cap3-1.jpg">
 <img align="rigth" width="425px" src="assets/esercizielaborato_cap3/esercizielaborato_cap3-2.jpg">
 
-| Es n° | Stato : Da controllare |
-| ----- | -----------------------|
+| Es n° | Stato : Da correggere |
+| ----- | --------------------- |
 | 1     | ✔ |
 | 2     | ✔ |
 | 3     | ✔ |
