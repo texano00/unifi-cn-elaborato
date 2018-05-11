@@ -10,11 +10,7 @@
 
 function x = risolutoreLDLt(LDLt, b)
     LDLt = fattorizzazioneLDLt(LDLt);
-    L = tril(LDLt,-1)+eye(length(LDLt));
-    D = diag(diag(LDLt));
-    Lt = (tril(LDLt,-1)+eye(length(LDLt)))';
-    L, D, Lt
-    x1 = triangolareInferiore(L,b);
-    x2 = diagonale(D,x1);
-    x = triangolareSuperiore(Lt,x2);
+    x = triangolareInferiore(tril(LDLt,-1)+eye(length(LDLt)),b);
+    x = diagonale(diag(LDLt),x);
+    x = triangolareSuperiore((tril(LDLt,-1)+eye(length(LDLt)))',x);
 end

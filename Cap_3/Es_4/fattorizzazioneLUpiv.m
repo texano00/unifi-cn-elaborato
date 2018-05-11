@@ -11,13 +11,13 @@
 function [A, p] = fattorizzazioneLUpiv(A)
     [m,n]=size(A);
     if m~=n
-        error("La matrice non e' quadrata!");
+        error('La matrice non è quadrata!');
     end
 	p=[1:n];
     for i=1:(n-1)
         [aki, ki] = max(abs(A(i:n,i)));
         if aki==0
-            error("La matrice e' singolare!");
+            error('La matrice è singolare!');
         end
         ki = ki+i-1;
         if ki>i
