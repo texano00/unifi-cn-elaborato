@@ -1,24 +1,24 @@
 % x = triangolareSuperiore(A, b)
-% Metodo per la risoluzione di una matrice tringolare superiore.
-
+%   Metodo per la risoluzione di una matrice tringolare superiore.
+%
 % Input:
-%  -A: matrice triangolare superiore;
-%  -b: vettore dei termini noti.
+%   -A: matrice triangolare superiore;
+%   -b: vettore dei termini noti.
 %
 % Output:
-%  -x: vettore delle soluzioni del sistema.
+%   -x: vettore delle soluzioni del sistema.
 
 function x = triangolareSuperiore(A,b)
     x = b;
     if ~ismatrix(A)
-        error("A non e' una matrice");
+        error('A non è una matrice');
     end
     [n,m] = size(A);   
     if(n~=m)
-        error("A non e' una matrice quadratica");
+        error('A non è una matrice quadratica');
     end  
     if(~isvector(x))
-        error("b non e' un vettore");
+        error('b non è un vettore');
     end 
     vectorSize = size(x,1);
     if(vectorSize~=n)

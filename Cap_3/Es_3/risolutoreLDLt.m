@@ -1,12 +1,12 @@
 % x = risolutoreLDLt(LDLt,b)
-% Metodo per la risoluzione di una matrice LDLt.
-
+%   Metodo per la risoluzione di una matrice LDLt.
+%
 % Input:
-%  -LDLt: matrice;
-%  -b: vettore dei termini noti.
+%   -LDLt: matrice;
+%   -b: vettore dei termini noti.
 %
 % Output:
-%  -x: vettore delle soluzioni del sistema.
+%   -x: vettore delle soluzioni del sistema.
 
 function x = risolutoreLDLt(LDLt, b)
     LDLt = fattorizzazioneLDLt(LDLt);
