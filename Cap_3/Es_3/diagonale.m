@@ -1,30 +1,25 @@
-% x = diagonale(D,b)
+% b = diagonale(D,b)
 % Metodo per il cacolo del vettore incognite di una matrice diagonale.
 %
 % Input:
-%  -D: matrice diagonale.
+%  -d: vettore diagonale della matrice.
 %  -b: vettore dei termini noti.
 %
 % Output:
-%  -x: vettore delle soluzioni del sistema.
+%  -b: vettore delle soluzioni del sistema.
 
-function x = diagonale(D,b)
-    x = b;
-    if ~ismatrix(D)
-        error("D non e' una matrice");
-    end
-    [n,m] = size(D);
-    if(n~=m)
-        error("D non e' una quadratica");
-    end
-    if(~isvector(x))
-        error("x non e' un vettore");
+function b = diagonale(d,b)
+    if(~isvector(b))
+        error("b non e' un vettore");
     end    
-    vectorSize = size(x,1);
-    if(vectorSize~=n)
-        error('Il vettore deve avere %i riche, invece ha %i righe', n, vectorSize);
-    end    
+    if(~isvector(d))
+        error("d non e' un vettore");
+    end 
+    n = length(d);
+    if(n~=length(b))
+       error("d e b non hanno la stessa lunghezza");
+    end   
     for j=1:n
-        x(j) = x(j)/D(j,j);
+        b(j) = b(j)/d(j);
     end
 end
