@@ -14,7 +14,6 @@ function x = risolutoreLUpiv(LU, b)
     for i=1:length(LU)
         P(i, p(i)) = 1;
     end
-    b = P(b);
     x = triangolareInferiore(tril(LU,-1)+eye(length(LU)), P*b);
     x = triangolareSuperiore(triu(LU), x);
 end
