@@ -22,7 +22,7 @@ function x = triangolareSuperiore(A,b)
     end 
     vectorSize = size(x,1);
     if(vectorSize~=n)
-        error('Il vettore deve avere %i riche, invece ha %i righe', n, vectorSize);
+        error('Il vettore deve avere %i righe, invece ha %i righe', n, vectorSize);
     end   
     for j=n:-1:1
         x(j) = x(j)/A(j,j); 
