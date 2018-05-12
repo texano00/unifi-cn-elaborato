@@ -10,10 +10,7 @@
 
 function x = risolutoreLUpiv(LU, b)
     [LU,p] = fattorizzazioneLUpiv(LU);
-    P = zeros(length(LU));
-    for i=1:length(LU)
-        P(i, p(i)) = 1;
-    end
-    x = triangolareInferiore(tril(LU,-1)+eye(length(LU)), P*b);
+    b = b(p);
+    x = triangolareInferiore(tril(LU,-1)+eye(length(LU)), b);
     x = triangolareSuperiore(triu(LU), x);
 end
