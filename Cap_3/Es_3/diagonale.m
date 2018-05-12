@@ -10,10 +10,10 @@
 
 function b = diagonale(d,b)
     if(~isvector(b))
-        error('b non Ã¨ un vettore');
+        error('b non è un vettore');
     end    
     if(~isvector(d))
-        error('d non Ã¨ un vettore');
+        error('d non è un vettore');
     end 
     n = length(d);
     if(n~=length(b))
