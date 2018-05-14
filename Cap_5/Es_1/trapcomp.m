@@ -1,4 +1,4 @@
-% If = trapcomp(n, a, b, fun)
+% If = trapComp(n, a, b, fun)
 %   Formula dei trapezi composita per l'approssimazione dell'integrale
 %   definito di una funzione.
 %
@@ -12,7 +12,7 @@
 % Output:
 %   -If: l'approssimazione dell'integrale definito della funzione.
 
-function [If] = trapcomp(n, a, b, fun)
+function [If] = trapComp(n, a, b, fun)
     h = (b-a)/n;
     If = 0;
     for i = 1:n-1

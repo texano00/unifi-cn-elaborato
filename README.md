@@ -74,6 +74,6 @@
 | 2     | ✔ |
 | 3     | ✔ Controllo Algoritmo  |
 | 4     | ✔ Controllo Algorimo   |
-| 5     | X |
+| 5     | ✔ Concludere |
 
 ## Capitolo 6

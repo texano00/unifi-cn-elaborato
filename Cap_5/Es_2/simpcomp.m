@@ -1,4 +1,4 @@
-% If = simpcomp(n, a, b, fun)
+% If = simpComp(n, a, b, fun)
 %   Formula di Simpson composita per l'approssimazione dell'integrale
 %   definito di una funzione.
 %
@@ -12,7 +12,7 @@
 % Output:
 %   -If: l'approssimazione dell'integrale definito della funzione.
 
-function [If] = simpcomp(n, a, b, fun)
+function [If] = simpComp(n, a, b, fun)
     h = (b-a)/n;
     If = fun(a)-fun(b);
     for i=1:n/2

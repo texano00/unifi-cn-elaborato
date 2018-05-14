@@ -1,4 +1,4 @@
-% If = trapad(a, b, fun, tol)
+% If = trapAd(a, b, fun, tol)
 %   Formula dei trapezi adattativa per l'approssimazione dell'integrale
 %   definito di una funzione.
 %
@@ -12,15 +12,15 @@
 % Output:
 %   -If: l'approssimazione dell'integrale definito della funzione;
 
-function [If] = trapad(a, b, fun, tol)
+function [If] = trapAd(a, b, fun, tol)
     h = (b-a)/2;
 	m = (a+b)/2;
     If1 = h*(feval(fun, a) + feval(fun, b));
     If = If1/2 + h*feval(fun, m);
     err = abs(If-If1)/3;
     if err>tol
-        IfSx = trapad(a, m, fun, tol/2);
-        IfDx = trapad(m, b, fun, tol/2);
+        IfSx = trapAd(a, m, fun, tol/2);
+        IfDx = trapAd(m, b, fun, tol/2);
         If = IfSx+IfDx;
     end
 end
