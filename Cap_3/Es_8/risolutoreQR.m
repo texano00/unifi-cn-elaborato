@@ -19,6 +19,5 @@ function b = risolutoreQR(A, b)
     end
     R = triu(QR(1:n, :));
     Q = Qt';
-    R, Q, Qt, QR
     b = triangolareSuperiore(R, Qt(1:n, :)*b);
 end

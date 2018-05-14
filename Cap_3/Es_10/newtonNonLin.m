@@ -20,6 +20,5 @@ function x = newtonNonLin(f, J, x, imax, tolx)
         val = -feval(f,x);
         b = [val(1);val(2)];
         x = x + risolutoreLUpiv(J, b);
-        i, b
     end
 end
