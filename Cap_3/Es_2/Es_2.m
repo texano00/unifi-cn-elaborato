@@ -5,8 +5,8 @@
 %   -A2: matrice seconda fattorizzazione.
 %
 % Output:
-%   -LDLt1: matrice A1 fattorizzata LDLt
-%   -LDLt2: matrice A2 fattorizzata LDLt
+%   -LDLt1: matrice A1 fattorizzata LDLt;
+%   -LDLt2: matrice A2 fattorizzata LDLt.
 
 A1 = [1 -1 2 2; -1 5 -14 2;2 -14 42 2;2 2 2 65];
 LDLt1 = fattorizzazioneLDLt(A1);

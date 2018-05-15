@@ -1,14 +1,15 @@
 % A = fattorizzaQR(A)
-% Fattorizzazione QR di Householder per matrici mxn con m>=n.
+%   Fattorizzazione QR di Householder per matrici mxn con m>=n.
 %
 % Input:
-%  -A: la matrice da fattorizzare QR.
+%   -A: la matrice da fattorizzare QR.
+%
 % Output:
-%  -A: la matrice riscritta con le informazioni dei fattori Q ed R.
+%   -A: la matrice riscritta con le informazioni dei fattori Q ed R.
 
 function A = fattorizzazioneQR(A)
     [m,n]=size(A);
-	for i=1:n
+    for i=1:n
         alfa = norm(A(i:m, i), 2);
         if alfa==0
             error('La matrice non ha rango massimo');

@@ -1,12 +1,12 @@
 % A = fattorizzazioneLU(A)
-% Fattorizzazione LU di una matrice nonsingolare con tutti i minori
-% principali non nulli.
+%   Fattorizzazione LU di una matrice nonsingolare con tutti i minori
+%   principali non nulli.
 %
 % Input:
-%  -A: la matrice nonsingolare da fattorizzare LU.
+%   -A: la matrice nonsingolare da fattorizzare LU.
 %
 % Output:
-%  -A: la matrice riscritta con le informazioni dei fattori L ed U.
+%   -A: la matrice riscritta con le informazioni dei fattori L ed U.
 
 function A = fattorizzazioneLU(A)
 	[m,n]=size(A);

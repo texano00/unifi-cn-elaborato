@@ -23,14 +23,14 @@ $f = f(x_1,x_2)=x_1^2+x_2^3-x_1x_2$, per risolvere il seguente sistema nonlinear
 	tolx=10^{-t} \quad t=\{3,6\}
 	\]
 \lstinputlisting[language=Matlab]{Cap_3/Es_11/Es_11.m}
-Qui di seguito è riportata una tabella con le seguenti informazioni ($i$ numero di iterazioni eseguite, $\|n\|$ norma euclidea dell'ultimo incremento e $\|e\|$ norma euclidea dell'errore con cui viene approssimato il risultato esatto):
+Qui di seguito è riportata una tabella con le seguenti informazioni ($i$ numero di iterazioni eseguite, $\|nx_{i}\|$ norma euclidea dell'ultimo incremento e $\|e_1\|$ norma euclidea dell'errore con cui viene approssimato il risultato esatto):
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-			$tol_x=10^{-t}$ & $i$ & $\|n\|$ & $\|e\|$ \\
+			$tol_x=10^{-t}$ & $i$ & $\|nx_{i}\|$ & $\|e_{i}\|$ \\
 		\hline
-    		$10^{-3}$ & $i = 17$ & $\|n_1\| = 0.190126478566088$ & $\|e_1\| = $0.003794501517081 \\
-    		$10^{-6}$ & $i = 51$ & $\|n_2\| = 0.186343470827848$ & $\|e_2\| = $4.480819013409465e-06 \\
+    		$10^{-3}$ & $i = 17$ & $\|nx_1\| = 8.543066834330485e-04$ & $\|e_1\| = 0.003794501517081$ \\
+    		$10^{-6}$ & $i = 51$ & $\|nx_2\| = 9.788751414570120e-07$ & $\|e_2\| = 4.480819013409465e-06$ \\
 		\hline
 	\end{tabular}
 \end{center}
