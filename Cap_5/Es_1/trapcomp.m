@@ -13,10 +13,8 @@
 %   -If: l'approssimazione dell'integrale definito della funzione.
 
 function [If] = trapComp(n, a, b, fun)
-    h = (b-a)/n;
-    If = 0;
-    for i = 1:n-1
-        If = If+fun(a+i*h);
-    end
-    If = (h/2)*(2*If + fun(a) + fun(b));
+    x = linspace(a,b,n+1);
+    f = feval(fun,x);
+
+    If = ((b-a)/n) * ( sum(f) - 0.5 ( f(1) + f(end) ) )
 end
