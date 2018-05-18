@@ -12,16 +12,16 @@
 % Output:
 %   -x: vettore incognite.
 
-function x = jacobi(A, b, tol, x0, imax)
+function [x,i] = jacobi(A, b, tol, x0, imax)
     n = length(b);
     D = diag(A);
-    if nargin <= 2
+    if nargin <= 3
         x = rand(n,1);
     else
         x = x0;
     end
-    if nargin <= 3
-        imax = 100*n*max(rand(-log(tol)),1);
+    if nargin <= 4
+        imax = 100*n;
     end
     for i = 1:imax
         r = A*x-b;

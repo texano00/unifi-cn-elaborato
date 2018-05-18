@@ -10,7 +10,7 @@
 % Output:
 %   -lambda: autovalore.
 
-function lambda = potenze(A, tol, x0, imax)
+function [lambda,i] = potenze(A, tol, x0, imax)
     n = size(A,1);
     if nargin <= 2
         x = rand(n,1);
