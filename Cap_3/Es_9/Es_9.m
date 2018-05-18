@@ -1,4 +1,16 @@
 % Soluzione Cap_3 Es_9.
+%
+% Input:
+%   -A1: matrice;
+%   -b1: vettore termini noti;
+%   -A2: matrice;
+%   -b2: vettore termini noti.
+%
+% Output:
+%   -xqr1: vettore incognite QR;
+%   -xab1: vettore incognire A\b.
+%   -xqr2: vettore incognite QR;
+%   -xab2: vettore incognire A\b.
 
 A1 = [3 2 1; 1 2 3; 1 2 1; 2 1 2];
 b1 = [10; 10; 10; 10];

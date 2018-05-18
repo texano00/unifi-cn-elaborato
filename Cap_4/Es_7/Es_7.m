@@ -1,22 +1,26 @@
 % Soluzione Cap_4 Es_7.
+%
+% -f: funzione di Runge;
+% -a: punto estremo destro intervallo;
+% -b: punto estremo sinistro interballo;
+% -n: numero di valutazioni;
 
-% Funzione di Runge
 f = @(x) 1 ./ (1 + 25.*x.^2);
 a = -6;
 b = 6;
 n = 2:2:40;
 
-% valori nei quali mi interessa sapere il valore del polimonio interpolante
+% -x: valori nei quali mi interessa sapere il valore del polimonio interpolante
 x = linspace(-6,6);
 
 for i = 1:length(n)
-    % Ascisse di Chebyshev
+    % -xi: Ascisse di Chebyshev
     xi = ceby(n(i),a,b);
   
-    % Calcolo le fi nella funzione di Runge
+    % -fi: Calcolo le fi nella funzione di Runge
     fi = f(xi);
   
-    % Lagrange
+    % -y: Lagrange
     y = lagrange(xi,fi,x);
   
     % Plot 

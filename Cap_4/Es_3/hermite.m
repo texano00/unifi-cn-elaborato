@@ -16,7 +16,7 @@
 %   -y : vettore contenente il valore del polinomio interpolante calcolato
 %   sulle x.
 
-function [y] = hermite(xi, fi, f1i, x)
+function y = hermite(xi, fi, f1i, x)
     n = length(xi)-1;
     xh = zeros(2*n+2, 1);
     xh(1:2:2*n+1) = xi;

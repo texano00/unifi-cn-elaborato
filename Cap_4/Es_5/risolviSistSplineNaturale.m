@@ -13,7 +13,7 @@
 % Output:
 %   -m: vettore riscritto con gli n+1 fattori m_i calcolati.
 
-function [m] = risolviSistSplineNaturale(phi, xi, dd)
+function m = risolviSistSplineNaturale(phi, xi, dd)
 	dd = 6*dd;
     n = length(xi)+1;
     u = zeros(n-1, 1);

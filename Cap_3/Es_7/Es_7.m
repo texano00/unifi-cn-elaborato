@@ -1,15 +1,11 @@
-% Soluzione Cap_3 Es_7.
+% Soluzione Cap_3 Es_7
 %
 % Input:
-%   -b1: vettore termini noti.
-%
-% Output:
-%   -x1: vettore delle incognite.
-%
-% Input:
+%   -b1: vettore termini noti;
 %   -b2: vettore termini noti.
 %
 % Output:
+%   -x1: vettore delle incognite;
 %   -x2: vettore delle incognite.
 
 b1 = [1; 101*ones(12,1)];

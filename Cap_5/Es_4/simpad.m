@@ -10,9 +10,10 @@
 %   soluzione approssimata.
 %
 % Output:
-%   -I: l'approssimazione dell'integrale definito della funzione;
+%   -I: approssimazione dell'integrale definito della funzione;
+%   -k: numero di valutazioni funzionali.
 
-function I = simpAd(a, b, fun, tol, fa, fb, fc)
+function [I,k] = simpAd(a, b, fun, tol, fa, fb, fc, k)
     h = (b-a)/6;
     c = (a+b)/2;
     if nargin <= 4
@@ -31,6 +32,9 @@ function I = simpAd(a, b, fun, tol, fa, fb, fc)
     I = (0.5*h) * (fa + 4*f1 + 2*fc + 4*f2 + fb);
     err = abs(I-I1)/15;
     if err > tol
-        I = simpAd(fun,a,c,tol/2,fa,fc,f1) + simpAd(fun,c,b,tol/2,fc,fb,f2);
+        [IS,ks] = simpAd(a,c,fun,tol/2,fa,fc,f1,k);
+        [ID,kd] = simpAd(c,b,fun,tol/2,fc,fb,f2,k);
+        I = IS+ID;
+        k = k+ks+kd;
     end
 end

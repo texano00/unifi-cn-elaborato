@@ -13,7 +13,7 @@
 %   -s: vettore contenente le espressioni degli n polinomi che
 %   definiscono la spline cubica.
 
-function [s] = esprSpline3(xi, fi, mi)
+function s = esprSpline3(xi, fi, mi)
     s = sym('x', [length(xi)-1 1]);
 	syms x;
     for i = 2:length(xi)

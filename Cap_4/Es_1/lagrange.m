@@ -14,7 +14,7 @@
 %   -y : vettore contenente il valore del polinomio interpolante calcolato
 %   sulle x.
 
-function [y] = lagrange(xi, fi, x)
+function y = lagrange(xi, fi, x)
     n = length(xi);
     m = length(x);
     y = zeros(m,1);

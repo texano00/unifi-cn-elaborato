@@ -14,7 +14,7 @@
 %   -y: vettore di m valori contenente la valutazione dei punti in x
 %   della spline (NaN se un punto non e' valutabile).
 
-function [y] = spline3(xi, fi, x, tipo)
+function y = spline3(xi, fi, x, tipo)
     phi = zeros(length(xi)-2, 1);
     xxi = zeros(length(xi)-2, 1);
     dd = zeros(length(xi)-2, 1);

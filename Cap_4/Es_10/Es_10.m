@@ -1,6 +1,6 @@
 % Soluzione Cap_4 Es_10.
 
-A = [ ones(10,3)];
+A = ones(10,3);
 j = 2;
 for i = 3:2:length(A)-1
     A(i,2) =  j;
@@ -14,5 +14,3 @@ b = [2.9; 3.1; 6.9; 7.1; 12.9; 13.1; 20.9; 21.1; 30.9; 31.1];
 x = risolutoreQR(A,b);
 r = A*x-b;
 n = norm(r)^2;
-format long e
-x, r, n

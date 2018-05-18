@@ -10,7 +10,7 @@
 %   -fun: la funzione di cui si vuol calcolare l'integrale;
 %
 % Output:
-%   -If: l'approssimazione dell'integrale definito della funzione.
+%   -I: l'approssimazione dell'integrale definito della funzione.
 
 function I = simpComp(n, a, b, fun)
     h = (b-a)/n;

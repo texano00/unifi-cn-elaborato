@@ -13,7 +13,7 @@
 % Output:
 %   -m: vettore riscritto con gli n+1 fattori m_i calcolati.
 
-function [m] = risolviSistSplineNotAKnot(phi, xi, dd)
+function m = risolviSistSplineNotAKnot(phi, xi, dd)
     dd = [6*dd(1); 6*dd; 6*dd(length(dd))];
     n = length(xi);
     l = zeros(n+1, 1);

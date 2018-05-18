@@ -14,7 +14,7 @@
 %   -y : vettore contenente il valore del polinomio interpolante calcolato
 %   sulle x.
 
-function [y] = newton(xi, fi, x)
+function y = newton(xi, fi, x)
     n = length(xi)-1;
     for j = 1:n
         for i = n+1:-1:j+1

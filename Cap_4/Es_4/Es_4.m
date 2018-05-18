@@ -1,13 +1,16 @@
 % Soluzione Cap_4 Es_4.
 %
-% -xi: valori ascisse di interpolazione
-% -fi: valori della funzione sin() sui punti di interpolazione xi;
-% -fli: valori derivata della funzione sull ascisse di interpolazione;
-% -x: serie di punti;
-% -y: valori della funzione sin() calcolati sui punti x;
-% -y1: valori del polinomio di lagrange calcolati sui punti x;
-% -y2: valori del polinomio di newton calcolati sui punti x;
-% -y3: valori del polinomio di hermite calcolati sui punti x.
+% Input:
+%   -xi: valori ascisse di interpolazione
+%   -fi: valori della funzione sin() sui punti di interpolazione xi;
+%   -fli: valori derivata della funzione sull ascisse di interpolazione;
+%   -x: serie di punti.
+%
+% Output:
+%   -y: valori della funzione sin() calcolati sui punti x;
+%   -y1: valori del polinomio di lagrange calcolati sui punti x;
+%   -y2: valori del polinomio di newton calcolati sui punti x;
+%   -y3: valori del polinomio di hermite calcolati sui punti x.
 
 xi = zeros(3,1);
 f1i = zeros(3,1);

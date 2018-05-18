@@ -11,7 +11,7 @@
 %   -sx: vettore di m valori contenente la valutazione dei punti in x
 %   della spline (NaN se un punto non e' valutabile).
 
-function [sx] = valutaSpline(xi, s, x)
+function sx = valutaSpline(xi, s, x)
     sx = zeros(length(x), 1);
     for i=1:length(x)
         if x(i) < xi(1) || x(i) > xi(length(xi))
@@ -19,7 +19,7 @@ function [sx] = valutaSpline(xi, s, x)
         else
             for j=1:length(xi)
                 if x(i) >= xi(j-1) && x(i) <= xi(j)
-                    f = inline(s(j));
+                    f = @()(s(j));
                     sx(i)=f(x(i));
                     break;
                 end

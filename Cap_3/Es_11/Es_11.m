@@ -1,9 +1,22 @@
 % Soluzione Cap_3 Es_11.
+%
+% Input: 
+%   -min: punti minimo relativo;
+%   -x: punti iniziali;
+%   -F: sistema non lineare;
+%   -J: matrice di Jacobi;
+%   -tolx: tolleranza.
+%
+% Output:
+%   -x1: minimo relativo;
+%   -nx1: norma ultimo incremento;
+%   -e1: errore approssimazione;
+%   -x2: minimo relativo;
+%   -nx2: norma ultimo incremento;
+%   -e2: errore approssimazione.
 
 min = [1/12;1/6];
-
 x = [1/2;1/2];
-f = @(x) x(1)^2+x(2)^3-x(1)*x(2);
 F = @(x) [2*x(1)-x(2), 3*x(2)^2-x(1)];
 J = [2-x(2), 2*x(1)-1; 3*x(2)^2-1, 6*x(2)-x(1)];
 

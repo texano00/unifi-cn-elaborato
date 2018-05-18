@@ -10,7 +10,7 @@
 % Output:
 %   -dd: il valore della differenza divisa risultante.
 
-function [dd] = differenzaDivisa(xi, fi)
+function dd = differenzaDivisa(xi, fi)
     dd = 0;
 	for i=1:length(xi)
         prod = 1;
