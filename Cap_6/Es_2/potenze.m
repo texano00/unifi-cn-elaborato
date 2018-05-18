@@ -19,8 +19,7 @@ function lambda = potenze(A, tol, x0, imax)
     end
     x = x/norm(x);
     if nargin <= 3
-        n
-        imax = 1000;
+        imax = 100*n;
     end
     lambda = inf;
     for i=1:imax
