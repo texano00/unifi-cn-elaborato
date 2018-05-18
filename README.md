@@ -50,8 +50,8 @@
 <img align="left" width="425px" src="assets/esercizielaborato_cap4/esercizielaborato_cap4-1.jpg">
 <img align="rigth" width="425px" src="assets/esercizielaborato_cap4/esercizielaborato_cap4-2.jpg">
 
-| Es n° | Stato : Da controllare Prof. |
-| ----- | -----------------------------|
+| Es n° | Stato : Da controllare |
+| ----- | -----------------------|
 | 1     | ✔ |
 | 2     | ✔ |
 | 3     | ✔ |
@@ -68,8 +68,8 @@
 <img align="left" width="425px" src="assets/esercizielaborato_cap5/esercizielaborato_cap5-1.jpg">
 <img align="rigth" width="425px" src="assets/esercizielaborato_cap5/esercizielaborato_cap5-2.jpg">
 
-| Es n° | Stato : Da controllare Prof. |
-| ----- | -----------------------------|
+| Es n° | Stato : Da controllare |
+| ----- | -----------------------|
 | 1     | ✔ |
 | 2     | ✔ |
 | 3     | ✔ |
@@ -81,8 +81,8 @@
 <img align="left" width="425px" src="assets/esercizielaborato_cap6/esercizielaborato_cap6-1.jpg">
 <img align="rigth" width="425px" src="assets/esercizielaborato_cap6/esercizielaborato_cap6-2.jpg">
 
-| Es n° | Stato : Da controllare Prof. |
-| ----- | -----------------------------|
+| Es n° | Stato : Da controllare |
+| ----- | -----------------------|
 | 1     | X |
 | 2     | X |
 | 3     | X |
