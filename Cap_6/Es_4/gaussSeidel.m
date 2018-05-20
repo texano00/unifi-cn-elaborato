@@ -10,17 +10,18 @@
 %   -imax: numero massimo di iterazioni.
 %
 % Output:
-%   -x: vettore incognite.
+%   -x: vettore incognite;
+%   -i: numero iterazioni.
 
-function x = gaussSeidel(A, b, tol, x0, imax)
+function [x,i] = gaussSeidel(A, b, tol, x0, imax)
     n = length(b);
-    if nargin <= 2
+    if nargin <= 3
         x = rand(n,1);
     else
         x = x0;
     end
-    if nargin <= 3
-        imax = 100*n*max(rand(-log(tol)),1);
+    if nargin <= 4
+        imax = 100*n;
     end
     for i = 1:imax
         r = A*x-b;
@@ -32,6 +33,6 @@ function x = gaussSeidel(A, b, tol, x0, imax)
         x = x-r;
     end
     if nr > tol
-        warning('Superato il numero massimo di iterazioni prima della tolleranza %f\n',tol);
+        error('Superato il numero massimo di iterazioni prima della tolleranza %f\n',tol);
     end
 end

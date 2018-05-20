@@ -1,4 +1,4 @@
-% lambda = potenze(A, tol, x0, imax)
+% [lambda,i] = potenze(A, tol, x0, imax)
 %   Metodo che implementa efficientemente il metodo delle potenze
 %
 % Input:
@@ -8,7 +8,8 @@
 %   -imax: numero massimo di iterazioni.
 %
 % Output:
-%   -lambda: autovalore.
+%   -lambda: autovalore;
+%   -i: numero iterazioni.
 
 function [lambda,i] = potenze(A, tol, x0, imax)
     n = size(A,1);

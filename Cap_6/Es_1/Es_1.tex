@@ -1,0 +1,14 @@
+Il seguente codice MatLab contiene l'implementazione della funzione \textit{S=sparseMatrix(n)} :\\\
+	\lstinputlisting[language=Matlab]{Cap_6/Es_1/sparseMatrix.m}
+il quale restituisce una \textit{matrice sparsa} $nXn$ della forma:\\\
+	\[
+		S=A_n=\begin{pmatrix}
+			a_{11} & \cdots & a_{1n} \\
+			\vdots &		& \vdots \\
+			a_{n1} & \cdots & a_{nn} 
+		\end{pmatrix}
+	\quad
+		a_{ij}=\begin{cases}
+				 4 \textit{ se } i=j \\ -1 \textit{  se } i=j\pm1 \\  -1 \textit{  se } i=j\pm10
+				\end{cases}
+	\]

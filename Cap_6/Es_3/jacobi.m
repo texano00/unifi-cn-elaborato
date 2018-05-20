@@ -1,4 +1,4 @@
-% x = jacobi(A, b, tol, x0, imax)
+% [x,i] = jacobi(A, b, tol, x0, imax)
 %   Metodo che implementa efficientemente il metodo di Jacobi applicato ad
 %   una matrice sparsa Ax=b.
 %
@@ -10,7 +10,8 @@
 %   -imax: numero massimo di iterazioni.
 %
 % Output:
-%   -x: vettore incognite.
+%   -x: vettore incognite;
+%   -i: numero iterazioni.
 
 function [x,i] = jacobi(A, b, tol, x0, imax)
     n = length(b);

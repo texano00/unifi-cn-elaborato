@@ -1,0 +1,29 @@
+Il seguente codice MatLab contiene la soluzione dell'$Es 2$:\\\
+	\lstinputlisting[language=Matlab]{Cap_6/Es_2/Es_2.m}
+nel qualche viene richiamato:\\\
+	\begin{enumerate}
+		\item \textbf{A = sparceMatrix(n)}\\\
+			Effettua la creazione di \textit{matrici sparse} della dimensione $nXn$;\\\
+		\item \textbf{y,i = potenze(A,tol)}\\\
+			Effettua sia il calcolo dell'\textit{autovalore} della matrice $A$, sia il numero di iterazioni impiegate.\\\
+			\lstinputlisting[language=Matlab]{Cap_6/Es_2/potenze.m}	
+	\end{enumerate}
+e restituisce i seguenti risultati:\\\
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+				$n$ & \textit{numero iterazioni effettuate} & \textit{stima autovalore} \\
+			\hline
+				$100$ & $121$ & $7.820465834405439$ \\
+				$200$ & $189$ & $7.879972605974445$ \\
+				$300$ & $731$ & $7.891307947673216$ \\
+				$400$ & $397$ & $7.895211851453890$ \\
+				$500$ & $638$ & $7.897484116516885$ \\
+				$600$ & $648$ & $7.895329002979317$ \\
+				$700$ & $684$ & $7.895825209067153$ \\
+				$800$ & $335$ & $7.896213983993681$ \\
+				$900$ & $428$ & $7.897402394092676$ \\
+				$1000$ & $601$ & $7.894721032354570$ \\
+			\hline 
+		\end{tabular}
+	\end{center}

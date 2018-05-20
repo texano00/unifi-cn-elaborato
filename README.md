@@ -83,8 +83,8 @@
 
 | Es n° | Stato : Da controllare |
 | ----- | -----------------------|
-| 1     | X |
-| 2     | X |
-| 3     | X |
-| 4     | X |
+| 1     | ✔ |
+| 2     | ✔ |
+| 3     | ✔ |
+| 4     | X Controllare metodo |
 | 5     | X |
