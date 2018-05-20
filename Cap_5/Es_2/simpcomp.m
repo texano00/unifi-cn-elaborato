@@ -13,10 +13,18 @@
 %   -I: l'approssimazione dell'integrale definito della funzione.
 
 function I = simpComp(n, a, b, fun)
-    h = (b-a)/n;
-    I = fun(a)-fun(b);
-    for i=1:n/2
-        I = I + 4*fun(a+(2*i-1)*h)+2*fun((a+2*i*h));
+    if mod(n,2) ~= 0
+        error('n sottointervalli non è pari');
     end
-    I = I*(h/3);
+    x = linspace(a,b,n+1);
+    I = 0;
+    for i=0:n/2
+        I = I + 2*feval(fun,x(2*i+1));
+        if i~=0
+            I = I + 4*feval(fun,x(2*i));
+        end
+    end
+    fa = feval(fun,x(1));
+    fb = feval(fun,x(end));
+    I = ((b-a)/n)*(1/3)*(I-(fa+fb));
 end

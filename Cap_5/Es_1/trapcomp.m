@@ -1,4 +1,4 @@
-    % I = trapComp(n, a, b, fun)
+% I = trapComp(n, a, b, fun)
 %   Formula dei trapezi composita per l'approssimazione dell'integrale
 %   definito di una funzione.
 %
@@ -13,7 +13,7 @@
 %   -I: l'approssimazione dell'integrale definito della funzione.
 
 function I = trapComp(n,a,b,fun)
-    x = linscape(a,b,n+1);
+    x = linspace(a,b,n+1);
     f = feval(fun,x);
     I = ((b-a)/n)*(sum(f)-0.5*(f(1) + f(end)));
 end
