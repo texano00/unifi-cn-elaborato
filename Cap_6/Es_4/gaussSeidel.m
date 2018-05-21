@@ -21,7 +21,7 @@ function [x,i] = gaussSeidel(A, b, tol, x0, imax)
         x = x0;
     end
     if nargin <= 4
-        imax = 100*n*round(-log(tolx));
+        imax = 100*n*round(-log(tol));
     end
     for i = 1:imax
         r = A*x-b;
@@ -29,10 +29,10 @@ function [x,i] = gaussSeidel(A, b, tol, x0, imax)
         if nr <= tol
             break;
         end
-        r = mSolve(A,r);
+        r = msolve2(A,r);
         x = x-r;
     end
     if nr > tol
-        error('Superato il numero massimo di iterazioni prima della tolleranza %f\n',tol);
+        warning('Superato il numero massimo di iterazioni prima della tolleranza %f\n',tol);
     end
 end

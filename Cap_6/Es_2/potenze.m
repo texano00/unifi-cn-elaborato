@@ -20,7 +20,7 @@ function [lambda,i] = potenze(A, tol, x0, imax)
     end
     x = x/norm(x);
     if nargin <= 3
-        imax = 100*n*round(-log(tolx));
+        imax = 100*n*round(-log(tol));
     end
     lambda = inf;
     for i=1:imax

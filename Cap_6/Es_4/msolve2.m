@@ -1,10 +1,9 @@
-function u = msolve2(M,r)
-    u = r;
-    n = length(u);
-    for i=1:n
-        u(i) = u(i) / M(i,i);
-        u(i+1:n) = u(i+1:n) + M(i+1:n,i) * u(i);
+function b = msolve2(A, b)
+    for i=1:length(A)
+        for j=1:i-1
+            b(i)=b(i)-A(i,j)*b(j);
+        end
+        b(i)=b(i)/A(i,i);
     end
 end
-
         
