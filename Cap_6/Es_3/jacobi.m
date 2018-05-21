@@ -22,7 +22,7 @@ function [x,i] = jacobi(A, b, tol, x0, imax)
         x = x0;
     end
     if nargin <= 4
-        imax = 100*n;
+        imax = 100*n*round(-log(tolx));
     end
     for i = 1:imax
         r = A*x-b;
