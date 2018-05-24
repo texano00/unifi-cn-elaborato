@@ -59,9 +59,9 @@
 | 5     | ✔ Controllo Algoritmo  |
 | 6     | ✔ |
 | 7     | ✔ |
-| 8     | ✔ Controllo Lebesgue |
+| 8     | ✔ |
 | 9     | ✔ |
-| 10    | ✔ Controllo ultima parte |
+| 10    | ✔ |
 
 ## Capitolo 5
 
