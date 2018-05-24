@@ -1,10 +1,25 @@
+% Soluzione Es_4 Cap_6
+%   Calcolo vettore e numero di iterazioni impiegate , su un matrice
+%   sparsa, con metodo iterativo di Gauss-Seidel.
+%
+% Input:
+%   -n: numero dimensione matrice sparsa varia da 100 a 1000, ogni 20;
+%   -tol: tolleranza;
+%   -b: vettore unario dei termini noti;
+%   -x0: vettore nullo iniziale.
+%
+% Output:
+%   -k: vettore contenente numero di iterazioni.
+
 k = (46);
 tol = 10^(-5);
-i=1;
-for n = 100:20:1000
-    A = sparseMatrix(n);
-    b = ones(n,1);
-    x0 = zeros(n,1);
+n = 100:20:1000;
+
+for i = 1:length(n)
+    A = sparseMatrix(n(i));
+    b = ones(n(i),1);
+    x0 = zeros(n(i),1);
     [x,k(i)] = gaussSeidel(A,b,tol,x0);
-    i = i+1;
 end
+
+plot(n,k)

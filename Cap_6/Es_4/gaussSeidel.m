@@ -29,7 +29,7 @@ function [x,i] = gaussSeidel(A, b, tol, x0, imax)
         if nr <= tol
             break;
         end
-        r = msolve2(A,r);
+        r = mSolve(A,r);
         x = x-r;
     end
     if nr > tol

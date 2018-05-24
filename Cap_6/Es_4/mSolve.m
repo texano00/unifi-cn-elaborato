@@ -1,3 +1,14 @@
+% u = mSolve(M, r)
+%   Metodo per la risoluzione di sistemi lineari triangolari inferiori,
+%   accedendo agli elementi per colonna.
+%
+% Input:
+%   -M: la matrice dei coefficienti;
+%   -r: vettore dei termini noti.
+%
+% Output:
+%   -u: vettore delle soluzioni.
+
 function u = mSolve(M,r)
     u = r;
     n = length(u);

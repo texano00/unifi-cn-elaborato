@@ -4,18 +4,20 @@
 %
 % Input:
 %   -n: numero dimensione matrice sparsa varia da 100 a 1000, ogni 100;
-%   -tol: tolleranza.
+%   -tol: tolleranza;
+%   -x0: vettore iniziali ad elementi costanti.
 %
 % Output:
 %   -y: vettore contenente gli autovalori;
 %   -k: vettore contenente numero di iterazioni.
 
-y = (10);
-k = (10);
+y = ones(10,1);
+k = ones(10,1);
 tol = 10^(-5);
-i = 1;
-for n = 100:100:1000
-    A = sparseMatrix(n);
-    [y(i),k(i)] = potenze(A, tol);
-    i=i+1;
+n = 100:100:1000;
+
+for i = 1:length(n)
+    A = sparseMatrix(n(i));
+    x0 = ones(n(i),1);
+    [y(i),k(i)] = potenze(A, tol, x0);
 end
