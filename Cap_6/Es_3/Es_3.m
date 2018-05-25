@@ -11,7 +11,7 @@
 % Output:
 %   -k: vettore contenente numero di iterazioni.
 
-k = (46);
+k = ones(46,1);
 tol = 10^(-5);
 n = 100:20:1000;
 

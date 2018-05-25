@@ -11,7 +11,7 @@
 % Output:
 %   -k: vettore contenente numero di iterazioni.
 
-k = (46);
+k = ones(46,1);
 tol = 10^(-5);
 n = 100:20:1000;
 
@@ -19,7 +19,7 @@ for i = 1:length(n)
     A = sparseMatrix(n(i));
     b = ones(n(i),1);
     x0 = zeros(n(i),1);
-    [x,k(i)] = gaussSeidel(full(A),b,tol,x0);
+    [x,k(i)] = gaussSeidel(A,b,tol,x0);
 end
 
 plot(n,k)
