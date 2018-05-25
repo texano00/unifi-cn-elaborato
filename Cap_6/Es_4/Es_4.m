@@ -19,7 +19,7 @@ for i = 1:length(n)
     A = sparseMatrix(n(i));
     b = ones(n(i),1);
     x0 = zeros(n(i),1);
-    [x,k(i)] = gaussSeidel(A,b,tol,x0);
+    [x,k(i)] = gaussSeidel(full(A),b,tol,x0);
 end
 
 plot(n,k)

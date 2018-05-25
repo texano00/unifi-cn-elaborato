@@ -14,3 +14,18 @@ nel qualche viene richiamato:\\\
 	\end{itemize}
 \end{enumerate}
 e restituisce graficamente i seguenti risultati:\\\
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{Plot/Cap_6_Es_4}
+	\end{figure}
+Possiamo notare come rispetto al metodo di \textit{Jacobi}, rappresentato nel grafico del precedente esercizio, in questo caso con l'utilizzo del metodo di \textit{Gauss-Seidel}, il \textit{numero di iterazione}, è circa la metà. Infatti, anche se entrambi i metodi sono convergenti, per effetto dei loro \textit{raggi spettrali} che sono $<1$ :
+	\[
+		\rho(M^{-1}_{GS}*N_{GS})<1 \quad \rho(M^{-1}_{J}*N_{J})<1
+	\]
+il metodo di \textit{Gauss-Seidel} converge prima, proprio perchè il suo \textit{raggio spettrale} è inferiore di quello del metodo di \textit{Jacobi} :
+	\[
+		\rho(M^{-1}_{GS}*N_{GS})<\rho(M^{-1}_{J}*N_{J})
+	\]
+Ciò è dovuto dal fatto, che essendo entrami i metodi basati su \textit{splitting regolari}, uno è piu efficiente dell'altro in quanto :
+	\[
+		0<U_{GS}=N_{GS}<N_{J}=(L+U)_{J}
+	\]
