@@ -11,7 +11,8 @@
 %
 % Output:
 %   -x: vettore incognite;
-%   -i: numero iterazioni.
+%   -i: numero iterazioni;
+%   -B: matrice contenente passo-iterazione e norma.
 
 function [x,i] = jacobi(A, b, tol, x0, imax)
     n = length(b);
@@ -27,6 +28,8 @@ function [x,i] = jacobi(A, b, tol, x0, imax)
     for i = 1:imax
         r = A*x-b;
         nr = norm(r,inf);
+%        B(i,1) = i;
+%        B(i,2) = nr;
         if nr <= tol
             break;
         end
