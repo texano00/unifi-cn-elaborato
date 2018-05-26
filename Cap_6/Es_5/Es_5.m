@@ -26,3 +26,4 @@ x0 = zeros(1000,1);
 [k2,B2] = gaussSeidel(A,b,tol,x0);
 
 semilogy(B1(:,2),B1(:,1),B2(:,2),B2(:,1));
+legend('Jacobi','Gauss-Seidel');

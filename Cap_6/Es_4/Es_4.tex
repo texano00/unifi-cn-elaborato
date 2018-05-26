@@ -1,18 +1,18 @@
 Il seguente codice MatLab contiene la soluzione dell'$Es 4$:\\\
-\lstinputlisting[language=Matlab]{Cap_6/Es_4/Es_4.m}
+	\lstinputlisting[language=Matlab]{Cap_6/Es_4/Es_4.m}
 nel qualche viene richiamato:\\\
-\begin{enumerate}
-	\item \textbf{A = sparceMatrix(n)}\\\
-		Effettua la creazione di \textit{matrici sparse} della dimensione $nXn$;\\\
-	\item \textbf{y,i = gaussSeidel(A,b,tol,x0)}\\\
-		Effettua sia il calcolo del \textit{vettore incognite} della matrice $A$, sia il numero di iterazioni impiegate, avendo come \textit{Input}, oltre la 	\textit{matrice}, il \textit{vettore termini noti}, e la \textit{tolleranza}, anche un \textit{vettore iniziale, in questo cado nullo}.\\\
-		\lstinputlisting[language=Matlab]{Cap_6/Es_4/gaussSeidel.m}
-	\begin{itemize}
-		\item \textbf{u = mSolve(M,r)}\\\
-			Effettua il calcolo di una matrice \textit{triangolare inferiore}.\\\
-			\lstinputlisting[language=Matlab]{Cap_6/Es_4/mSolve.m}
-	\end{itemize}
-\end{enumerate}
+	\begin{enumerate}
+		\item \textbf{A = sparceMatrix(n)}\\\
+			Effettua la creazione di \textit{matrici sparse} della dimensione $nXn$;\\\
+		\item \textbf{y,i = gaussSeidel(A,b,tol,x0)}\\\
+			Effettua sia il calcolo del \textit{vettore incognite} della matrice $A$, sia il numero di iterazioni impiegate, avendo come \textit{Input}, oltre la 	\textit{matrice}, il \textit{vettore termini noti}, e la \textit{tolleranza}, anche un \textit{vettore iniziale, in questo cado nullo}.\\\
+			\lstinputlisting[language=Matlab]{Cap_6/Es_4/gaussSeidel.m}
+			\begin{itemize}
+				\item \textbf{u = mSolve(M,r)}\\\
+					Effettua il calcolo di una matrice \textit{triangolare inferiore}.\\\
+					\lstinputlisting[language=Matlab]{Cap_6/Es_4/mSolve.m}
+			\end{itemize}
+	\end{enumerate}
 e restituisce graficamente i seguenti risultati:\\\
 	\begin{figure}[H]
 		\includegraphics[width=\textwidth]{Plot/Cap_6_Es_4}
