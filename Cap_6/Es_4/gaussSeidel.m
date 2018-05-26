@@ -1,4 +1,4 @@
-% x = gaussSiedel(A, b, tol, x0, imax)
+% [x,i] = gaussSiedel(A, b, tol, x0, imax)
 %   Metodo che implementa efficientemente il metodo di Gauss-Seidel applicato ad
 %   una matrice sparsa Ax=b.
 %

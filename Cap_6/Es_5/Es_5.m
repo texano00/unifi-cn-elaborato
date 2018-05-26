@@ -13,8 +13,8 @@
 %   -B2: matrice contenente passo-iterazione e norma, metodo Gauss-Seidel.
 %
 % Modificare il ritorno dei metodi di Jacobi e GaussSeidel , al posto del numero di
-% passi impiegati "i", ritornare una matrice contenente passo-iterazione e
-% norma "B", togliendo i commenti per il suo calcolo all'interno dei
+% passi impiegati 'i', ritornare una matrice 'B' contenente passo-iterazione e
+% norma, togliendo i commenti per il suo calcolo all'interno dei
 % codici.
 
 tol = 10^(-5);
