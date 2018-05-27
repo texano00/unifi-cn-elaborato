@@ -15,7 +15,7 @@
 
 function s = esprSpline3(xi, fi, mi)
     s = sym('x', [length(xi)-1 1]);
-	syms x;
+    syms x;
     for i = 2:length(xi)
         hi = xi(i)-xi(i-1);
         ri = fi(i-1)-((hi^2)/6)*mi(i-1);

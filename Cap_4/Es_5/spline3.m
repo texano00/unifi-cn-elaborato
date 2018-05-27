@@ -10,6 +10,7 @@
 %   -x: vettore di m punti su cui si vuole valutare la spline.
 %   -tipo: true se la spline implementa condizioni not-a-knot, false se
 %   invece e' una spline naturale.
+%
 % Output:
 %   -y: vettore di m valori contenente la valutazione dei punti in x
 %   della spline (NaN se un punto non e' valutabile).

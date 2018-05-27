@@ -4,7 +4,7 @@
 % Input:
 %   -xi: vettore contenente le ascisse su cui calcolare la differenza
 %   divisa;
-%	-fi: vettore contenente i valori assunti dalla funzione in
+%   -fi: vettore contenente i valori assunti dalla funzione in
 %   corrispondenza dei punti in xi.
 %
 % Output:
@@ -12,13 +12,13 @@
 
 function dd = differenzaDivisa(xi, fi)
     dd = 0;
-	for i=1:length(xi)
+    for i = 1:length(xi)
         prod = 1;
-        for j=1:length(xi)
-            if j~=i
+        for j = 1:length(xi)
+            if j ~= i
                 prod = prod*(xi(i)-xi(j));
             end
         end
         dd = dd+fi(i)/prod;
-	end
+    end
 end

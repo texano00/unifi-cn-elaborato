@@ -1,4 +1,4 @@
-% sx = valutaSpline(xi, s, x)
+% x = valutaSpline(xi, s, x)
 %   Valuta una spline su una serie di punti.
 %
 % Input:
@@ -11,10 +11,10 @@
 %   -x: vettore di m valori contenente la valutazione dei punti in x
 %   della spline (NaN se un punto non e' valutabile).
 
-function [ x ] = valutaSpline(xi, s, x)
-    n=length(xi) - 1;
-    k=1;
-    j=1;
+function x = valutaSpline(xi, s, x)
+    n = length(xi) - 1;
+    k = 1;
+    j = 1;
     for i = 1 : n
         inInt = 1;
         while j <= length(x) && inInt

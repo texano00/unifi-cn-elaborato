@@ -8,7 +8,7 @@
 %   coefficienti (lunghezza n-1);
 %   -xi: vettore dei fattori xi che definiscono la matrice dei
 %   coefficienti (lunghezza n-1);
-% 	-dd: vettore delle differenze divise (lunghezza n-1).
+%   -dd: vettore delle differenze divise (lunghezza n-1).
 %
 % Output:
 %   -m: vettore riscritto con gli n+1 fattori m_i calcolati.
@@ -17,21 +17,21 @@ function m = risolviSistSplineNotAKnot(phi, xi, dd)
     dd = [6*dd(1); 6*dd; 6*dd(length(dd))];
     n = length(xi);
     l = zeros(n+1, 1);
-	u = zeros(n+2, 1);
+    u = zeros(n+2, 1);
     w = zeros(n+1, 1);
-	u(1) = 1;
+    u(1) = 1;
     w(1) = 0;
     l(1) = phi(1)/u(1);
     u(2) = 2-phi(1);
     w(2) = xi(1)-phi(1);
     l(2) = phi(2)/u(2);
-	u(3) = 2-l(2)*w(2);
+    u(3) = 2-l(2)*w(2);
     for i = 4:n
         w(i-1) = xi(i-2);
         l(i-1) = phi(i-1)/u(i-1);
         u(i) = 2-l(i-1)*w(i-1);
     end
-	w(n) = xi(n-1);
+    w(n) = xi(n-1);
     l(n) = (phi(n)-xi(n))/u(n);
     u(n+1) = 2-xi(n)-l(n-1)*w(n-1);
     w(n+1) = xi(n);
