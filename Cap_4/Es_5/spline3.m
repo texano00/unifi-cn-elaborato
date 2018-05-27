@@ -23,7 +23,7 @@ function y = spline3(xi, fi, x, tipo)
         hi1 = xi(i+1) - xi(i);
         phi(i) = hi/(hi+hi1);
         xxi(i) = hi1/(hi+hi1);
-        dd(i) = differenzaDivisa(xxi(i-1:i+1), fi(i-1:i+1));
+        dd(i) = differenzaDivisa(xi(i-1:i+1), fi(i-1:i+1));
     end
     if tipo
         mi = risolviSistSplineNotAKnot(phi, xxi, dd);
