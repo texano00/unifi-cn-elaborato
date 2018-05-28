@@ -9,7 +9,7 @@
 % -splineNotAKnot: valuta spline con condizioni NotAKnot (false);
 % -splineNaturale: valuta spline con condizioni naturale (true).
 
-f = @(x) (1./(1+x.^2));
+f = @(x) (sin(x));
 a = -5;
 b = 5;
 
