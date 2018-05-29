@@ -16,9 +16,9 @@
 %
 % Output:
 %   -I: approssimazione dell'integrale definito della funzione;
-%   -kta: numero di valutazioni funzionali.
+%   -k: numero di valutazioni funzionali.
 
-function [I,kta] = trapAd(a, b, fun, tol, fa, fb)
+function [I] = trapAd(a, b, fun, tol, fa, fb)
     global k
     h = (b-a)/2;
     if nargin <= 4
@@ -34,9 +34,8 @@ function [I,kta] = trapAd(a, b, fun, tol, fa, fb)
     I = (0.5*h)*(fa+(2*fc)+fb);
     err = abs(I-I1)/3;
     if err>tol
-        IS = trapAd(a, c, fun, tol/2, fa, fc);
-        ID = trapAd(c, b, fun, tol/2, fc, fb);
+        [IS] = trapAd(a, c, fun, tol/2, fa, fc);
+        [ID] = trapAd(c, b, fun, tol/2, fc, fb);
         I = IS+ID;
     end
-    kta = k;
 end

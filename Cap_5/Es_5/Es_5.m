@@ -14,9 +14,9 @@
 %   -errSC : errore simpson composita;
 %   -n: numero di valutazioni funzionali (sottointervalli);
 %   -ta: approssimazione con formula trapezi adattiva dell'integrale definito della funzione;
-%   -kta: numero di valutazioni funzionali;
+%   -kta: numero di valutazioni funzionali trapezi adattiva;
 %   -sa: approssimazione con formula simpson adattiva dell'integrale definito della funzione;
-%   -ksa: numero di valutazioni funzionali.
+%   -ksa: numero di valutazioni funzionali simpson adattiva.
 
 f = @(x)(exp(-x * 10^(6))); 
 a = 0;
