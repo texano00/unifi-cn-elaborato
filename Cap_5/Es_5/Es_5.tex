@@ -1,27 +1,59 @@
 Il seguente codice MatLab contiene la soluzione del problema dell'Es.5 :\\\
 	\lstinputlisting[language=Matlab]{Cap_5/Es_5/Es_5.m}
-restituendo i seguenti valori:
+restituendo i seguenti valori:\\\
 \begin{itemize}
 	\item
-		\textbf{Formula dei Trapezi Adattiva}:\\\
-		\begin{center}
-		\begin{tabular}{|c|c|c|}
-			\hline
-				$tol$ & $I=ta$ & $num. val. funz.$ \\
-    			\hline
-    				$10^{-9}$ & $1.000000011252939e-06$ & $442735$ \\
+		\textbf{Formula dei Trapezi Composita}:\\\
+			Per trovare \textit{n (sottointervalli)} tale che l'\textit{errore} commesso calcolando l'integrale con la funzione dei \textit{Trapezi Composita}, abbiamo \textit{iterato n} partendo da $1000000$ fino ad un massimo di $10000000$ con passi di $1000000$.
+			Con questo metodo "\textit{a tentativi}" abbiamo trovato che la \textit{tolleranz}a è soddisfatta quando $9000000<n<10000000$.\\\
+			\textbf{Ultime due iterazioni:}
+			\begin{center}
+			\begin{tabular}{|c|c|c|c|}
 				\hline
-		\end{tabular}
-		\end{center}
+					$tol$ & $num. val. funz. = n \quad (sottointervalli)$ & $I=tc$ & $E_1^{(n)}$ \\
+					\hline
+						$10^{-9}$ & $9000000$ & $1.001028594957969e-06$ & $1.028594957968679e-09$ \\
+						$10^{-9}$ & $10000000$ & $1.000833194477503e-06$ & $8.331944775031580e-10$ \\
+					\hline
+			\end{tabular}
+			\end{center}
+	\item
+		\textbf{Formula dei Simpson Composita}:\\\
+			Per trovare \textit{n (sottointervalli)} tale che l'\textit{errore} commesso calcolando l'integrale con la funzione dei \textit{Simpson Composita}, abbiamo \textit{iterato n} partendo da $100000$ fino ad un massimo di $2000000$ con passi di $100000$.
+			Con questo metodo \textit{a tentativi} abbiamo trovato che la \textit{a tentativi} è soddisfatta quando $1500000<n<1600000$.\\\
+			\textbf{Ultime due iterazioni:}
+			\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+					$tol$ & $num. val. funz. = n \quad (sottointervalli)$ & $I=sc$ & $E_2^{(n)}$ \\
+					\hline
+						$10^{-9}$ & $1500000$ & $1.001041922369633e-06$ & $1.041922369632577e-09$ \\
+						$10^{-9}$ & $1600000$ & $1.000809844227887e-06$ & $8.098442278867849e-10$ \\
+					\hline
+			\end{tabular}
+			\end{center}
+	\item
+		\textbf{Formula dei Trapezi Adattiva}:\\\
+			In questo caso invece siamo riusciti a trovare esattamente il numero di valutazioni necessarie per raggiungere la tollerenza richiesta.
+			\begin{center}
+			\begin{tabular}{|c|c|c|}
+				\hline
+					$tol$ & $num. val. funz.$ & $I=ta$ \\
+    				\hline
+    					$10^{-9}$ & $$ & $$ \\
+				\hline
+			\end{tabular}
+			\end{center}
 	\item
 		\textbf{Formula di Simpson Adattiva}:\\\
-		\begin{center}
-		\begin{tabular}{|c|c|c|}
-			\hline
-				$tol$ & $I=sa$ & $num. val. funz.$ \\
-    			\hline
-    				$10^{-9}$ & $1.000000016469981e-06$ & $3935$ \\
+			Come nel caso precedente, siamo riusciti a trovare esattamente il numero di valutazioni necessarie per raggiungere la tollerenza richiesta.
+			\begin{center}
+			\begin{tabular}{|c|c|c|}
 				\hline
-		\end{tabular}
-		\end{center}
+					$tol$ & $num. val. funz.$ & $I=sa$ \\
+    				\hline
+    					$10^{-9}$ & $$ & $$ \\
+					\hline
+			\end{tabular}
+			\end{center}
 \end{itemize}

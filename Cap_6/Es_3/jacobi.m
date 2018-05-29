@@ -37,6 +37,6 @@ function [x,i] = jacobi(A, b, tol, x0, imax)
         x = x-r;
     end
     if nr > tol
-        warning('Superato il numero massimo di iterazioni prima della tolleranza %f\n',tol);
+        warning('Superato il numero massimo di iterazioni prima della tolleranza');
     end
 end

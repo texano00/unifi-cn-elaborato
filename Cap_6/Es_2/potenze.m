@@ -34,6 +34,6 @@ function [lambda,i] = potenze(A, tol, x0, imax)
         x = v/norm(v);
     end
     if err > tol
-        warning('Superato il numero massimo di iterazioni prima della tolleranza %f\n',tol);
+        warning('Superato il numero massimo di iterazioni prima della tolleranza');
     end
 end

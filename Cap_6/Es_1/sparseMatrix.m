@@ -10,9 +10,8 @@
 
 function S = sparseMatrix(n)
     if n>10
-        B=[[-ones(n-1,1);0] [-ones(n-1,1);0] 4*ones(n,1) [0;-1*ones(n-1,1)] [0;-1*ones(n-1,1)]];
-        d=[-10 -1 0 1 10];
-        S = spdiags(B,d,n,n);
+        e = ones(n,1);
+        S = spdiags(e*[-1 -1 4 -1 -1],[-10,-1:1,10], n,n);
     else 
         error('Il valore di n inserito non è > di 10');
     end
