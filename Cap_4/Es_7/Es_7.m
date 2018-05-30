@@ -1,8 +1,8 @@
 % Soluzione Cap_4 Es_7.
 %
 % -f: funzione di Runge;
-% -a: punto estremo destro intervallo;
-% -b: punto estremo sinistro interballo;
+% -a: punto estremo sinistro intervallo;
+% -b: punto estremo destro interballo;
 % -n: numero di valutazioni;
 
 f = @(x) 1 ./ (1 + 25.*x.^2);
