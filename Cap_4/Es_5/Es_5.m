@@ -22,5 +22,5 @@ vfx = feval (f, x);
 
 splineNotAKnot = spline3(x,vfx,xx,false);
 splineNaturale = spline3(x,vfx,xx,true);
-
+    
 plot(xx,splineNaturale,xx,splineNotAKnot);
