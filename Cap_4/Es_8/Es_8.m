@@ -12,7 +12,7 @@ n = 2:2:40;
 
 k = ones(length(n),1);
 
-for i = 1:length(n)    
+for i = 1:length(n)
     x = ceby(n(i),a,b);
     k(i,1) = lebesgue(x);
 end
