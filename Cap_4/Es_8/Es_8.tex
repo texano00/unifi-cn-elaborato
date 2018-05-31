@@ -5,34 +5,32 @@ Il seguente codice MatLab contiene la soluzione del problema dell'Es.8, che cons
 	\lstinputlisting[language=Matlab]{Cap_4/Es_8/Es_8.m}
 In tale codice viene utilizzata la funzione \textit{leb = lebesgue(x)}:\\\
 	\lstinputlisting[language=Matlab]{Cap_4/Es_8/lebesgue.m}
-che a sue volta richiama la funzione \textit{bl = polElemLagrange(z,x,i)}: \\\
-	\lstinputlisting[language=Matlab]{Cap_4/Es_8/polElemLagrange.m}
 Nella seguente tabella è riportato come varia la \textit{costante di Lebesgue} $\Lambda$, al variare del grado \textit{n} del polinomio e si può notare come la crescita sia \textit{ottimale}, per $n\rightarrow\infty$:\\\
 	\begin{center}
 		\begin{tabular}{|c|c|}
 			\hline
-				N & $\Lambda$ \\
+				$n$ & $\Lambda$ \\
     		\hline
-    			$2$  & $$ \\ 
-    			$4$  & $$ \\ 
-    			$6$  & $$ \\ 
-    			$8$  & $$ \\ 
-    			$10$ & $$ \\ 
-    			$12$ & $$ \\ 
-    			$14$ & $$ \\ 
-    			$16$ & $$ \\ 
-   				$18$ & $$ \\ 
-    			$20$ & $$ \\ 
-    			$22$ & $$ \\ 
-    			$24$ & $$ \\ 
-    			$26$ & $$ \\ 
-    			$28$ & $$ \\ 
-    			$30$ & $$ \\ 
-    			$32$ & $$ \\ 
-    			$34$ & $$ \\ 
-    			$36$ & $$ \\ 
-    			$38$ & $$ \\ 
-    			$40$ & $$ \\ 
+    			$2$  & $1.666666666666666$ \\ 
+    			$4$  & $1.988854381999839$ \\ 
+    			$6$  & $2.202214555205514$ \\ 
+    			$8$  & $2.361856787767344$ \\ 
+    			$10$ & $2.489430376882261$ \\ 
+    			$12$ & $2.595678180795903$ \\ 
+    			$14$ & $2.686714881565622$ \\ 
+    			$16$ & $2.766353335806286$ \\ 
+   				$18$ & $2.837131699843868$ \\ 
+    			$20$ & $2.900824905574438$ \\ 
+    			$22$ & $2.958722900270132$ \\ 
+    			$24$ & $3.011792652559051$ \\ 
+    			$26$ & $3.060779407256900$ \\ 
+    			$28$ & $3.106261398046231$ \\ 
+    			$30$ & $3.148729010412491$ \\ 
+    			$32$ & $3.188554137933092$ \\ 
+    			$34$ & $3.225979168058642$ \\ 
+    			$36$ & $3.259661213032826$ \\ 
+    			$38$ & $3.348825928097521$ \\ 
+    			$40$ & $3.440889418862263$ \\ 
 			\hline
 		\end{tabular}
 	\end{center}

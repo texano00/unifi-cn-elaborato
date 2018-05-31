@@ -1,0 +1,20 @@
+% leb = lebesgue(x)
+%   Calcola il valore della costante di Lebesgue per i=2,...,N , dato il 
+%   vettore x di N nodi (ordinato). 
+%
+% Input: 
+%   -x: vettore ordinato dei nodi.
+%
+% Output: 
+%   -leb: valore della costante di Lebesgue.
+
+function leb = lebesgue4(x_c)
+    m = length(x_c);
+    x = linspace(-6,6,1001);
+    vLambda_c = zeros(size(x));
+    for i = 1:m
+        y_i = zeros(1,m);
+        y_i(i) = 1; 
+        k_c = polyfit(x_c, y_i, n(i));
+
+end

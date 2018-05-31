@@ -2,7 +2,7 @@
 %
 % -a: punto estremo sinistro intervallo;
 % -b: punto estremo destro intervallo;
-% -n: grado della costante di Lebesgue da calcolare;
+% -n: grado 
 % -x: ascisse di Chebyshev;
 % -k: vettore contenente le costanti di Lebesgue.
 
