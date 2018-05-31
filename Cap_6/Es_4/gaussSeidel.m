@@ -1,4 +1,4 @@
-% [x,i] = gaussSiedel(A, b, tol, x0, imax)
+% [x,i,B] = gaussSiedel(A, b, tol, x0, imax)
 %   Metodo che implementa efficientemente il metodo di Gauss-Seidel applicato ad
 %   una matrice sparsa Ax=b.
 %
@@ -14,7 +14,7 @@
 %   -i: numero iterazioni;
 %   -B: matrice contenente passo-iterazione e norma.
 
-function [x,i] = gaussSeidel(A, b, tol, x0, imax)
+function [x,i,B] = gaussSeidel(A, b, tol, x0, imax)
     n = length(b);
     if nargin <= 3
         x = rand(n,1);
@@ -27,8 +27,8 @@ function [x,i] = gaussSeidel(A, b, tol, x0, imax)
     for i = 1:imax
         r = A*x-b;
         nr = norm(r,inf);
-%        B(i,1) = i;
-%        B(i,2) = nr;
+        B(i,1) = i;
+        B(i,2) = nr;
         if nr <= tol
             break;
         end

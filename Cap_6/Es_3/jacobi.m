@@ -1,4 +1,4 @@
-% [x,i] = jacobi(A, b, tol, x0, imax)
+% [x,i,B] = jacobi(A, b, tol, x0, imax)
 %   Metodo che implementa efficientemente il metodo di Jacobi applicato ad
 %   una matrice sparsa Ax=b.
 %
@@ -14,7 +14,7 @@
 %   -i: numero iterazioni;
 %   -B: matrice contenente passo-iterazione e norma.
 
-function [x,i] = jacobi(A, b, tol, x0, imax)
+function [x,i,B] = jacobi(A, b, tol, x0, imax)
     n = length(b);
     D = diag(A);
     if nargin <= 3
@@ -28,8 +28,8 @@ function [x,i] = jacobi(A, b, tol, x0, imax)
     for i = 1:imax
         r = A*x-b;
         nr = norm(r,inf);
-%        B(i,1) = i;
-%        B(i,2) = nr;
+        B(i,1) = i;
+        B(i,2) = nr;
         if nr <= tol
             break;
         end

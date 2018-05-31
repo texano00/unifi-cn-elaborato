@@ -9,14 +9,16 @@
 %   -leb: valore della costante di Lebesgue.
 
 function leb = lebesgue(x_c)
-    m = length(x_c);
-    x = (linspace(-6,6,1001))';
-    vLeb = zeros(length(x),1);
+    n = length(x_c);
+    x = linspace(-6,6,1001);
+    m = length(x);
+    vLeb = zeros(m,1);
     for i = 1:m
-        y_i = zeros(m,1);
-        y_i(i) = 1; 
-        k_c = polyfit(x_c, y_i, m-1);
-        vLeb = vLeb + abs(polyval(k_c,x));
+        for j = 1:n
+            range = [1:j-1, j+1:n];
+            bl = prod(x(i) - x_c(range))/prod(x_c(j) - x_c(range));
+            vLeb(i) = vLeb(i) + abs(bl);
+        end
     end
     leb = norm(vLeb,inf);
 end

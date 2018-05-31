@@ -4,10 +4,10 @@ nel qualche viene richiamato:\\\
 	\begin{enumerate}
 		\item \textbf{A = sparceMatrix(n)}\\\
 			Effettua la creazione di \textit{matrici sparse} della dimensione $nXn$;\\\
-		\item \textbf{x,B = jacobi(A,b,tol,x0)}\\\
-			Effettua sia il calcolo del \textit{vettore incognite} della matrice $A$, sia il calcolo di una matrice $B$ contenente il \textit{passo di ogni iterazione} con il corrispettivo \textit{valore della norma}, avendo come \textit{Input}, oltre la \textit{matrice}, il \textit{vettore termini noti}, e la \textit{tolleranza}, anche un \textit{vettore iniziale, in questo caso nullo}.\\\
-		\item \textbf{x,B = gaussSeidel(A,b,tol,x0)}\\\
-			Effettua sia il calcolo del \textit{vettore incognite} della matrice $A$, sia il calcolo di una matrice $B$ contenente il \textit{passo di ogni iterazione} con il corrispettivo \textit{valore della norma}, avendo come \textit{Input}, oltre la 	\textit{matrice}, il \textit{vettore termini noti}, e la \textit{tolleranza}, anche un \textit{vettore iniziale, in questo cado nullo}.\\\
+		\item \textbf{x,i,B = jacobi(A,b,tol,x0)}\\\
+			Effettua sia il calcolo del \textit{vettore incognite} della matrice $A$, sia il numero di iterazioni impiegate, sia il calcolo di una matrice $B$ contenente il \textit{passo di ogni iterazione} con il corrispettivo \textit{valore della norma}, avendo come \textit{Input}, oltre la \textit{matrice}, il \textit{vettore termini noti}, e la \textit{tolleranza}, anche un \textit{vettore iniziale, in questo caso nullo}.\\\
+		\item \textbf{x,i,B = gaussSeidel(A,b,tol,x0)}\\\
+			Effettua sia il calcolo del \textit{vettore incognite} della matrice $A$, sia il numero di iterazioni impiegate, sia il calcolo di una matrice $B$ contenente il \textit{passo di ogni iterazione} con il corrispettivo \textit{valore della norma}, avendo come \textit{Input}, oltre la 	\textit{matrice}, il \textit{vettore termini noti}, e la \textit{tolleranza}, anche un \textit{vettore iniziale, in questo caso nullo}.\\\
 		\begin{itemize}
 			\item \textbf{u = mSolve(M,r)}\\\
 				Effettua il calcolo di una matrice \textit{triangolare inferiore}.\\\
