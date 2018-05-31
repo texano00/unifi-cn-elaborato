@@ -3,7 +3,7 @@
 % -a: punto estremo sinistro intervallo;
 % -b: punto estremo destro interballo;
 % -n: numero di valutazioni;
-% -x: valori di n punti equidistanti.
+% -x: ascisse di Chebyshev.
 
 a = -6;
 b = 6;

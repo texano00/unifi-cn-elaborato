@@ -1,9 +1,12 @@
-Il seguente codice MatLab contiene la soluzione del problema dell'Es.8:\\\
-	\lstinputlisting[language=Matlab]{Cap_4/Es_8/Es_8.m}
-La \textit{costante di Lebesgue} è così calcolata :\\\
+Il seguente codice MatLab contiene la soluzione del problema dell'Es.8, che consiste nel calcolo della \textit{costante di Lebesgue}, la cui formula è la seguente:\\\
 	\[
-		\Lambda_n = ||\lambda_n|| \quad \lambda_n(x) = \sum_{k=0}^{n} |L_(k,n)(x)|
+		\Lambda_n = ||\lambda_n|| \quad \lambda_n(x) = \sum_{k=0}^{n} |L_{(k,n)}(x)|
 	\]
+	\lstinputlisting[language=Matlab]{Cap_4/Es_8/Es_8.m}
+In tale codice viene utilizzata la funzione \textit{leb = lebesgue(x)}:\\\
+	\lstinputlisting[language=Matlab]{Cap_4/Es_8/lebesgue.m}
+che a sue volta richiama la funzione \textit{bl = polElemLagrange(z,x,i)}: \\\
+	\lstinputlisting[language=Matlab]{Cap_4/Es_8/polElemLagrange.m}
 Nella seguente tabella è riportato come varia la \textit{costante di Lebesgue} $\Lambda$, al variare del grado \textit{n} del polinomio e si può notare come la crescita sia \textit{ottimale}, per $n\rightarrow\infty$:\\\
 	\begin{center}
 		\begin{tabular}{|c|c|}
