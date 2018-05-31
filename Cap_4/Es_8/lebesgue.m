@@ -16,7 +16,6 @@ function leb = lebesgue(x)
     for i=2:length(x)
         for j=1:i
             g(j,:)=polElemLagrange(x,xx,j);
-            g(j,:)
         end
         leb(i-1)=norm(g,1);
     end
