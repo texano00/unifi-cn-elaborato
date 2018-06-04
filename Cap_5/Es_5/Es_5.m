@@ -31,7 +31,7 @@ for n = 1000000:1000000:10000000
     tc = trapComp(n,a,b,f);
     errTC = abs(id-tc);
     
-    % Memorizzo il 'n' (sottointervalli), 'tc' (trapezi composita) e 
+    % Memorizzo 'n' (sottointervalli), 'tc' (trapezi composita) e 
     % errTC (errore trapezi composita).
     A(i,1) = n;
     A(i,2) = tc;

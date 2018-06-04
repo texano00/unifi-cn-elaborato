@@ -4,6 +4,8 @@
 % Input:
 %   -A: matrice;
 %   -tol: tolleranza;
+%
+% Input Opzionali:
 %   -x0: vettore iniziale;
 %   -imax: numero massimo di iterazioni.
 %

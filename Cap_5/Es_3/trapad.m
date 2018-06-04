@@ -12,7 +12,6 @@
 % Input ricorsivi:
 %   -fa: volore della funzione estremo sinistro sottointervallo;
 %   -fb: volore della funzione estremo destro sottointervallo;
-%   -k: numero valutazioni funzionali.
 %
 % Output:
 %   -I: approssimazione dell'integrale definito della funzione;

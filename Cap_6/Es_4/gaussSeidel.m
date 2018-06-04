@@ -6,6 +6,8 @@
 %   -A: matrice sparsa;
 %   -b: vettore dei termini noti;
 %   -tol: tolleranza;
+%
+% Input Opzionali:
 %   -x0: vettore iniziale;
 %   -imax: numero massimo di iterazioni.
 %

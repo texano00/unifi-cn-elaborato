@@ -1,9 +1,9 @@
 % Soluzione Cap_4 Es_9.
 %
 % -f: funzione di Runge;
-% -a: punto estremo destro intervallo;
-% -b: punto estremo sinistro interballo;
-% -n: numero di valutazioni;
+% -a: punto estremo sinistro intervallo;
+% -b: punto estremo destro interballo;
+% -n: grado polinomio.
 
 f = @(x) 1 ./ (1 + 25.*x.^2);
 a = -6;

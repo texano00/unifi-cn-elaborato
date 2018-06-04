@@ -1,4 +1,10 @@
 % Soluzione Cap_4 Es_10.
+%
+% -A: matrice;
+% -b: vettore termini noti:
+% -x: vettore soluzione;
+% -r: vettore residuo;
+% -n: norma euclidea al quadrato del vettore residuo.
 
 A = ones(10,3);
 j = 2;

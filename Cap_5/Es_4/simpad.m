@@ -13,7 +13,6 @@
 %   -fa: volore della funzione estremo sinistro sottointervallo;
 %   -fb: volore della funzione estremo destro sottointervallo;
 %   -fc: volore della funzione punto intermedio sottointervallo;
-%   -k: numero valutazioni funzionali.
 %
 % Output:
 %   -I: approssimazione dell'integrale definito della funzione;
