@@ -16,10 +16,12 @@ k = zeros(length(n),1);
 % -x: valori nei quali mi interessa sapere il valore del polimonio interpolante e spline
 x = linspace(a,b,1000);
 
+xf = zeros(length(n),2);
+
 % -Lagrange
 for i = 1:length(n)
   % -xi: n+1 ascisse equidistanti in [a,b]
-  xi = linspace(a,b,n(i)+1);
+  x(i,1) = linspace(a,b,n(i)+1);
 
   % -fi: Calcolo le fi nella funzione di Runge
   fi = f(xi);
