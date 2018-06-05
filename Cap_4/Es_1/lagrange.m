@@ -3,8 +3,7 @@
 %   punti x.
 % 
 % Input:
-%   -xi : vettore contenente le ascisse di interpolazione su cui calcolare
-%   la differenza divisa;
+%   -xi : vettore contenente le ascisse di interpolazione
 %   -fi : vettore contenente i valori assunti dalla funzione in
 %   corrispondenza dei punti xi.
 %   -x : vettore contenente i valori su cui calcolare il polinomio

@@ -2,7 +2,7 @@
 %
 % -f: funzione di Runge;
 % -a: punto estremo sinistro intervallo;
-% -b: punto estremo destro interballo;
+% -b: punto estremo destro intervallo;
 % -n: grado polinomio.
 
 f = @(x) 1 ./ (1 + 25.*x.^2);
