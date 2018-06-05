@@ -1,4 +1,4 @@
-% [x,i,B] = jacobi(A, b, tol, x0, imax)
+% [x,i,B] = jacobi(A, b, tol[, x0, imax])
 %   Metodo che implementa efficientemente il metodo di Jacobi applicato ad
 %   una matrice sparsa Ax=b.
 %

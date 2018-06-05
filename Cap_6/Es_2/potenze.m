@@ -1,4 +1,4 @@
-% [lambda,i] = potenze(A, tol, x0, imax)
+% [lambda,i] = potenze(A, tol[, x0, imax])
 %   Metodo che implementa efficientemente il metodo delle potenze
 %
 % Input:

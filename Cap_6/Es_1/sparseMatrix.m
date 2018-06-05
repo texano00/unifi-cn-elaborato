@@ -1,5 +1,5 @@
 % S = sparceMatrix(n)
-%   Genere una matrice sparsa nXn, con n>10. 
+%   Genera una matrice sparsa nXn, con n>10. 
 %   Si utilizza la function MatLab spdiags.
 %
 % Input:
