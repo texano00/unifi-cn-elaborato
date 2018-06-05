@@ -48,8 +48,8 @@ end
 
 % Simpson composita.
 i = 1;
-B =  ones(16,3);
-for n = 1000000:1000000:10000000
+B =  ones(10,3);
+for n = 1000000:100000:2000000
     sc = simpComp(n,a,b,f);
     errSC = abs(id-sc);
     

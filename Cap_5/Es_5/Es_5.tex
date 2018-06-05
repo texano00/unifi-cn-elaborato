@@ -19,16 +19,16 @@ restituendo i seguenti valori:\\\
 			\end{center}
 	\item
 		\textbf{Formula dei Simpson Composita}:\\\
-			Per cercare di trovare \textit{n (sottointervalli)} tale che l'\textit{errore} commesso sia minore della tol fornita usando la \textit{Simpson Composita}, abbiamo \textit{iterato n} partendo da $1000000$ fino ad un massimo di $10000000$ con passi di $1000000$ non riuscendo però a raggiungere la tolleranza richiesta.
-			Con questo metodo \textit{a tentativi} abbiamo trovato una limitazione inferiore del numero dei sottointervalli richiesti per soddisfare la tolleranza, ossia $n>10000000$.\\\
+			Per trovare \textit{n (sottointervalli)} tale che l'\textit{errore} commesso sia minore della tol fornita usando la \textit{Simpson Composita}, abbiamo \textit{iterato n} partendo da $1000000$ fino ad un massimo di $2000000$ con passi di $100000$.
+			Con questo metodo \textit{a tentativi} abbiamo trovato che la \textit{tolleranza} è soddisfatta quando $1500000<n<1600000$.\\\
 			\begin{center}
 				\textbf{Ultime due iterazioni:}\\\
 			\begin{tabular}{|c|c|c|c|}
 				\hline
 					$tol$ & $num. val. funz. = n \quad (sottointervalli)$ & $I=sc$ & $E_2^{(n)}$ \\
 					\hline
-						$10^{-9}$ & $9000000$ & $2.000000105805421e-06$ & $1.000000105805421e-06$ \\
-						$10^{-9}$ & $10000000$ & $2.000000069423777e-06$ & $1.000000069423778e-06$ \\
+						$10^{-9}$ & $1500000$ & $1.001041922369633e-06$ & $1.041922369632577e-09$ \\
+						$10^{-9}$ & $1600000$ & $1.000809844227887e-06$ & $8.098442278867849e-10$ \\
 					\hline
 			\end{tabular}
 			\end{center}
