@@ -16,7 +16,7 @@ function I = simpComp(n, a, b, fun)
     if mod(n,2) ~= 0
         error('n sottointervalli non è pari');
     end
-    x = linspace(a,b,n+1);
+    x = linspace(a,b,(2*n)+1);
     I = 0;
     for i=0:n/2
         I = I + 2*feval(fun,x(2*i+1));
