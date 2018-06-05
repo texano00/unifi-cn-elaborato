@@ -4,7 +4,7 @@
 %
 % Input:
 %   -n: numero di sottointervalli sui quali applicare la formula dei
-%       trapezi semplice.
+%       trapezi composita.
 %   -a: estremo sinistro dell'intervallo di integrazione;
 %   -b: estremo destro dell'intervallo di integrazione;
 %   -fun: la funzione di cui si vuol calcolare l'integrale;

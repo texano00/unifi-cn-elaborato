@@ -1,4 +1,4 @@
-% [I,k] = trapAd(a, b, fun, tol, fa, fb, k)
+% [I,k] = trapAd(a, b, fun, tol[, fa, fb])
 %   Formula dei trapezi adattativa per l'approssimazione dell'integrale
 %   definito di una funzione.
 %
@@ -10,8 +10,8 @@
 %   soluzione approssimata.
 %
 % Input ricorsivi:
-%   -fa: volore della funzione estremo sinistro sottointervallo;
-%   -fb: volore della funzione estremo destro sottointervallo;
+%   -fa: valore della funzione nell'estremo sinistro del sottointervallo;
+%   -fb: valore della funzione nell'estremo destro del sottointervallo;
 %
 % Output:
 %   -I: approssimazione dell'integrale definito della funzione;

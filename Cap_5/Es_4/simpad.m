@@ -1,4 +1,4 @@
-% [I,k] = simpAd(a, b, fun, tol, fa, fb, fc, k)
+% [I,k] = simpAd(a, b, fun, tol[, fa, fb, fc])
 %   Formula di Simpson adattativa per l'approssimazione dell'integrale
 %   definito di una funzione.
 %
@@ -10,9 +10,9 @@
 %   soluzione approssimata.
 %
 % Input ricorsivi:
-%   -fa: volore della funzione estremo sinistro sottointervallo;
-%   -fb: volore della funzione estremo destro sottointervallo;
-%   -fc: volore della funzione punto intermedio sottointervallo;
+%   -fa: valore della funzione nell'estremo sinistro del sottointervallo;
+%   -fb: valore della funzione nell'estremo destro del sottointervallo;
+%   -fc: valore della funzione nel punto intermedio del sottointervallo;
 %
 % Output:
 %   -I: approssimazione dell'integrale definito della funzione;
